@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react"
 import { Card, CardContent } from "@/components/ui/card"
 import { TreePine, Users, Sun, Leaf, MapPin, Calendar } from "lucide-react"
+import { AnimateOnScroll } from "@/components/animate-on-scroll"
 
 const impactStats = [
   {
@@ -128,7 +129,7 @@ export function Impact() {
     <section id="impact" className="py-20 md:py-32 bg-primary text-primary-foreground">
       <div className="container mx-auto px-4">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <AnimateOnScroll animation="fade-up" className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-primary-foreground/80 font-semibold uppercase tracking-wider text-sm">Our Impact</span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mt-4 mb-6 text-balance">
             Measurable Change Across Sierra Leone
@@ -137,19 +138,21 @@ export function Impact() {
             Since our founding, we have directly and indirectly reached thousands of community 
             members through climate education, advocacy, and environmental restoration programs.
           </p>
-        </div>
+        </AnimateOnScroll>
 
         {/* Impact Stats */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
-          {impactStats.map((stat) => (
-            <Card key={stat.label} className="bg-primary-foreground/10 border-primary-foreground/20 backdrop-blur">
-              <CardContent className="p-6 text-center">
-                <stat.icon className="h-10 w-10 mx-auto mb-4 text-primary-foreground/90" />
-                <AnimatedNumber value={stat.value} suffix={stat.suffix} />
-                <p className="text-lg font-semibold text-primary-foreground mt-2">{stat.label}</p>
-                <p className="text-sm text-primary-foreground/70 mt-1">{stat.description}</p>
-              </CardContent>
-            </Card>
+          {impactStats.map((stat, index) => (
+            <AnimateOnScroll key={stat.label} animation="fade-scale" delay={index * 100}>
+              <Card className="bg-primary-foreground/10 border-primary-foreground/20 backdrop-blur hover:bg-primary-foreground/15 transition-all duration-300 hover:-translate-y-1">
+                <CardContent className="p-6 text-center">
+                  <stat.icon className="h-10 w-10 mx-auto mb-4 text-primary-foreground/90" />
+                  <AnimatedNumber value={stat.value} suffix={stat.suffix} />
+                  <p className="text-lg font-semibold text-primary-foreground mt-2">{stat.label}</p>
+                  <p className="text-sm text-primary-foreground/70 mt-1">{stat.description}</p>
+                </CardContent>
+              </Card>
+            </AnimateOnScroll>
           ))}
         </div>
 

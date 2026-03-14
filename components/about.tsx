@@ -1,7 +1,9 @@
 "use client"
 
+import Image from "next/image"
 import { Target, Eye, Award, CheckCircle2 } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
+import { AnimateOnScroll } from "@/components/animate-on-scroll"
 
 const alignments = [
   "Sierra Leone's Nationally Determined Contributions (NDCs)",
@@ -27,7 +29,7 @@ export function About() {
     <section id="about" className="py-20 md:py-32 bg-secondary/30">
       <div className="container mx-auto px-4">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <AnimateOnScroll animation="fade-up" className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-primary font-semibold uppercase tracking-wider text-sm">About Us</span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mt-4 mb-6 text-balance">
             United for a Greener Tomorrow
@@ -36,40 +38,61 @@ export function About() {
             Founded on 25 August 2023, Sunrise Movement Sierra Leone is a youth-led organization 
             working at the intersection of community action, policy reform, and youth leadership.
           </p>
-        </div>
+        </AnimateOnScroll>
+
+        {/* Team Image */}
+        <AnimateOnScroll animation="fade-scale" className="mb-16">
+          <div className="relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden shadow-xl">
+            <Image
+              src="/images/about-team.jpg"
+              alt="Sunrise Movement Sierra Leone Team"
+              fill
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+            <div className="absolute bottom-6 left-6 right-6">
+              <p className="text-white font-semibold text-lg">Our dedicated team of youth climate activists</p>
+              <p className="text-white/80 text-sm">Working together for a sustainable Sierra Leone</p>
+            </div>
+          </div>
+        </AnimateOnScroll>
 
         {/* Mission & Vision */}
         <div className="grid md:grid-cols-2 gap-8 mb-16">
-          <Card className="bg-card border-none shadow-lg hover:shadow-xl transition-shadow">
-            <CardContent className="p-8">
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center">
-                  <Target className="h-7 w-7 text-primary" />
+          <AnimateOnScroll animation="slide-left" delay={100}>
+            <Card className="bg-card border-none shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+              <CardContent className="p-8">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center">
+                    <Target className="h-7 w-7 text-primary" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-foreground">Our Mission</h3>
                 </div>
-                <h3 className="text-2xl font-bold text-foreground">Our Mission</h3>
-              </div>
-              <p className="text-muted-foreground leading-relaxed">
-                Empower young people and communities across Sierra Leone to address climate change, 
-                expand clean energy access, promote sustainable agriculture, and strengthen environmental 
-                justice through innovation, skills development, and accountable grassroots leadership.
-              </p>
-            </CardContent>
-          </Card>
+                <p className="text-muted-foreground leading-relaxed">
+                  Empower young people and communities across Sierra Leone to address climate change, 
+                  expand clean energy access, promote sustainable agriculture, and strengthen environmental 
+                  justice through innovation, skills development, and accountable grassroots leadership.
+                </p>
+              </CardContent>
+            </Card>
+          </AnimateOnScroll>
 
-          <Card className="bg-card border-none shadow-lg hover:shadow-xl transition-shadow">
-            <CardContent className="p-8">
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-14 h-14 rounded-2xl bg-accent/10 flex items-center justify-center">
-                  <Eye className="h-7 w-7 text-accent" />
+          <AnimateOnScroll animation="slide-right" delay={200}>
+            <Card className="bg-card border-none shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+              <CardContent className="p-8">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-14 h-14 rounded-2xl bg-accent/10 flex items-center justify-center">
+                    <Eye className="h-7 w-7 text-accent" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-foreground">Our Vision</h3>
                 </div>
-                <h3 className="text-2xl font-bold text-foreground">Our Vision</h3>
-              </div>
-              <p className="text-muted-foreground leading-relaxed">
-                A climate-resilient Sierra Leone where youth leadership drives environmental stewardship, 
-                sustainable livelihoods, equitable development, and inclusive access to energy and education.
-              </p>
-            </CardContent>
-          </Card>
+                <p className="text-muted-foreground leading-relaxed">
+                  A climate-resilient Sierra Leone where youth leadership drives environmental stewardship, 
+                  sustainable livelihoods, equitable development, and inclusive access to energy and education.
+                </p>
+              </CardContent>
+            </Card>
+          </AnimateOnScroll>
         </div>
 
         {/* Policy Alignment */}

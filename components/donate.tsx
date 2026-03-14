@@ -4,6 +4,7 @@ import { useState } from "react"
 import { Heart, TreePine, GraduationCap, Zap } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
+import { AnimateOnScroll } from "@/components/animate-on-scroll"
 
 const impactAreas = [
   {
@@ -54,7 +55,7 @@ export function Donate() {
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
           {/* Content */}
-          <div className="space-y-8">
+          <AnimateOnScroll animation="slide-left" className="space-y-8">
             <div>
               <span className="text-primary font-semibold uppercase tracking-wider text-sm">Support Our Mission</span>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mt-4 mb-6 text-balance">
@@ -70,8 +71,8 @@ export function Donate() {
             <div className="space-y-4">
               <h3 className="text-lg font-semibold text-foreground">Your Impact</h3>
               <div className="grid sm:grid-cols-2 gap-4">
-                {impactAreas.map((area) => (
-                  <div key={area.amount} className="flex items-start gap-3 p-4 bg-card rounded-xl border border-border">
+                {impactAreas.map((area, index) => (
+                  <div key={area.amount} className="flex items-start gap-3 p-4 bg-card rounded-xl border border-border hover:border-primary/50 hover:shadow-md transition-all duration-300">
                     <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
                       <area.icon className="h-5 w-5 text-primary" />
                     </div>
@@ -83,10 +84,11 @@ export function Donate() {
                 ))}
               </div>
             </div>
-          </div>
+          </AnimateOnScroll>
 
           {/* Donation Form */}
-          <Card className="bg-card border-border shadow-xl">
+          <AnimateOnScroll animation="slide-right" delay={200}>
+          <Card className="bg-card border-border shadow-xl hover:shadow-2xl transition-shadow duration-300">
             <CardContent className="p-8">
               <h3 className="text-2xl font-bold text-foreground mb-6">Make a Donation</h3>
               
@@ -146,6 +148,7 @@ export function Donate() {
               </p>
             </CardContent>
           </Card>
+          </AnimateOnScroll>
         </div>
       </div>
     </section>

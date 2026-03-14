@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { ChevronLeft, ChevronRight, Quote } from "lucide-react"
+import { AnimateOnScroll } from "@/components/animate-on-scroll"
 
 const testimonials = [
   {
@@ -79,7 +80,7 @@ export function Testimonials() {
     <section id="stories" className="py-20 md:py-32 bg-secondary/30">
       <div className="container mx-auto px-4">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <AnimateOnScroll animation="fade-up" className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-primary font-semibold uppercase tracking-wider text-sm">Community Voices</span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mt-4 mb-6 text-balance">
             Stories of Impact
@@ -88,7 +89,7 @@ export function Testimonials() {
             Hear from the youth, farmers, and community members whose lives have been 
             transformed through climate action.
           </p>
-        </div>
+        </AnimateOnScroll>
 
         {/* Testimonials Carousel */}
         <div className="max-w-4xl mx-auto mb-20">

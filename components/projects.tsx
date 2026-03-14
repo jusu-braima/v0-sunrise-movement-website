@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import Image from "next/image"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
@@ -23,6 +24,7 @@ import {
   ArrowRight,
   X
 } from "lucide-react"
+import { AnimateOnScroll } from "@/components/animate-on-scroll"
 
 type Project = {
   id: number
@@ -37,6 +39,7 @@ type Project = {
   impact: string[]
   icon: typeof TreePine
   color: string
+  image: string
 }
 
 const projects: Project[] = [
@@ -53,6 +56,7 @@ const projects: Project[] = [
     impact: ["10,000+ trees planted", "200 hectares restored", "50 youth trained as nursery managers"],
     icon: TreePine,
     color: "bg-emerald-500/10 text-emerald-600",
+    image: "/images/projects/reforestation.jpg",
   },
   {
     id: 2,
@@ -67,6 +71,7 @@ const projects: Project[] = [
     impact: ["15 schools electrified", "30 solar technicians trained", "3,000+ students benefiting"],
     icon: Zap,
     color: "bg-yellow-500/10 text-yellow-600",
+    image: "/images/projects/solar-energy.jpg",
   },
   {
     id: 3,
@@ -81,6 +86,7 @@ const projects: Project[] = [
     impact: ["5km of coastline cleaned", "2 tons of waste collected", "10 fishing communities engaged"],
     icon: Waves,
     color: "bg-blue-500/10 text-blue-600",
+    image: "/images/projects/coastal-cleanup.jpg",
   },
   {
     id: 4,
@@ -95,6 +101,7 @@ const projects: Project[] = [
     impact: ["800 farmers trained", "40% average yield increase", "30% reduction in chemical inputs"],
     icon: Wheat,
     color: "bg-green-500/10 text-green-600",
+    image: "/images/projects/sustainable-farming.jpg",
   },
   {
     id: 5,
@@ -109,6 +116,7 @@ const projects: Project[] = [
     impact: ["200 youth certified", "50 community projects launched", "15 districts represented"],
     icon: GraduationCap,
     color: "bg-indigo-500/10 text-indigo-600",
+    image: "/images/projects/workshop.jpg",
   },
   {
     id: 6,
@@ -123,6 +131,7 @@ const projects: Project[] = [
     impact: ["25 school clubs established", "5,000 students engaged", "100 teachers trained"],
     icon: Users,
     color: "bg-teal-500/10 text-teal-600",
+    image: "/images/hero-community.jpg",
   },
 ]
 
@@ -140,7 +149,7 @@ export function Projects() {
     <section id="projects" className="py-20 md:py-32 bg-gradient-to-b from-background to-secondary/20">
       <div className="container mx-auto px-4">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-12">
+        <AnimateOnScroll animation="fade-up" className="text-center max-w-3xl mx-auto mb-12">
           <span className="text-primary font-semibold uppercase tracking-wider text-sm">Our Work</span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mt-4 mb-6 text-balance">
             Projects & Programs
@@ -149,7 +158,7 @@ export function Projects() {
             Explore our active initiatives creating measurable environmental and social 
             impact across Sierra Leone.
           </p>
-        </div>
+        </AnimateOnScroll>
 
         {/* Category Filter */}
         <div className="flex flex-wrap justify-center gap-2 mb-12">
@@ -175,10 +184,18 @@ export function Projects() {
               onClick={() => setSelectedProject(project)}
             >
               <CardContent className="p-0">
-                {/* Project Header */}
-                <div className={`p-6 ${project.color.split(" ")[0]} relative overflow-hidden`}>
-                  <div className="absolute -right-4 -top-4 w-24 h-24 rounded-full bg-current opacity-10" />
-                  <project.icon className={`h-10 w-10 ${project.color.split(" ")[1]} relative z-10`} />
+                {/* Project Image */}
+                <div className="relative h-48 overflow-hidden">
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+                  <div className={`absolute bottom-4 left-4 w-10 h-10 rounded-lg ${project.color} flex items-center justify-center`}>
+                    <project.icon className="h-5 w-5" />
+                  </div>
                 </div>
                 
                 {/* Project Content */}

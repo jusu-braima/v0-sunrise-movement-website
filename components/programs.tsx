@@ -14,6 +14,7 @@ import {
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
+import { AnimateOnScroll } from "@/components/animate-on-scroll"
 
 const pillars = [
   {
@@ -71,7 +72,7 @@ export function Programs() {
     <section id="programs" className="py-20 md:py-32">
       <div className="container mx-auto px-4">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <AnimateOnScroll animation="fade-up" className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-primary font-semibold uppercase tracking-wider text-sm">Our Programs</span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mt-4 mb-6 text-balance">
             Eight Strategic Pillars for Impact
@@ -80,29 +81,34 @@ export function Programs() {
             Our comprehensive approach addresses climate change through interconnected programs 
             that empower communities and create lasting environmental impact.
           </p>
-        </div>
+        </AnimateOnScroll>
 
         {/* Pillars Grid */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           {pillars.map((pillar, index) => (
-            <Card 
+            <AnimateOnScroll 
               key={pillar.title} 
-              className="group bg-card border border-border hover:border-primary/50 hover:shadow-xl transition-all duration-300 cursor-pointer"
+              animation="fade-scale" 
+              delay={index * 100}
             >
-              <CardHeader className="pb-4">
-                <div className={`w-14 h-14 rounded-2xl ${pillar.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
-                  <pillar.icon className="h-7 w-7" />
-                </div>
-                <CardTitle className="text-lg font-semibold text-foreground leading-tight">
-                  {pillar.title}
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-muted-foreground">
-                  {pillar.description}
-                </p>
-              </CardContent>
-            </Card>
+              <Card 
+                className="group bg-card border border-border hover:border-primary/50 hover:shadow-xl transition-all duration-300 cursor-pointer hover:-translate-y-2 h-full"
+              >
+                <CardHeader className="pb-4">
+                  <div className={`w-14 h-14 rounded-2xl ${pillar.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                    <pillar.icon className="h-7 w-7" />
+                  </div>
+                  <CardTitle className="text-lg font-semibold text-foreground leading-tight">
+                    {pillar.title}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm text-muted-foreground">
+                    {pillar.description}
+                  </p>
+                </CardContent>
+              </Card>
+            </AnimateOnScroll>
           ))}
         </div>
 
