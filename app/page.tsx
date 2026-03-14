@@ -1,16 +1,27 @@
+import { Header } from "@/components/header"
+import { Hero } from "@/components/hero"
+import { About } from "@/components/about"
+import { Programs } from "@/components/programs"
+import { Impact } from "@/components/impact"
+import { Partners } from "@/components/partners"
+import { GetInvolved } from "@/components/get-involved"
+import { Donate } from "@/components/donate"
+import { Contact } from "@/components/contact"
+import { Footer } from "@/components/footer"
+
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center font-sans">
-      <main className="flex w-full max-w-3xl flex-col items-center gap-8 px-6 py-16 text-center sm:items-start sm:text-left">
-        <div className="flex flex-col gap-4">
-          <h1 className="text-4xl font-bold tracking-tight">
-            Sunrise Movement S/L
-          </h1>
-          <p className="max-w-md text-lg text-muted-foreground">
-            To get started, send a prompt or modify this page directly.
-          </p>
-        </div>
-      </main>
-    </div>
-  );
+    <main className="min-h-screen">
+      <Header />
+      <Hero />
+      <About />
+      <Programs />
+      <Impact />
+      <Partners />
+      <GetInvolved />
+      <Donate />
+      <Contact />
+      <Footer />
+    </main>
+  )
 }
