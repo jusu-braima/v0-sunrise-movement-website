@@ -5,12 +5,12 @@ import Link from "next/link"
 import { Mail, Phone, MapPin } from "lucide-react"
 
 const quickLinks = [
-  { label: "Home", href: "#home" },
-  { label: "About Us", href: "#about" },
-  { label: "Programs", href: "#programs" },
-  { label: "Impact", href: "#impact" },
-  { label: "Get Involved", href: "#get-involved" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "/" },
+  { label: "About Us", href: "/about" },
+  { label: "Programs", href: "/programs" },
+  { label: "Impact", href: "/impact" },
+  { label: "Get Involved", href: "/#get-involved" },
+  { label: "Contact", href: "/contact" },
 ]
 
 const programs = [

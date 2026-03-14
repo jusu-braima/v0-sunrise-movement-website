@@ -8,12 +8,12 @@ import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 
 const navItems = [
-  { label: "Home", href: "#home" },
-  { label: "About", href: "#about" },
-  { label: "Programs", href: "#programs" },
-  { label: "Impact", href: "#impact" },
-  { label: "Get Involved", href: "#get-involved" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Programs", href: "/programs" },
+  { label: "Impact", href: "/impact" },
+  { label: "Get Involved", href: "/#get-involved" },
+  { label: "Contact", href: "/contact" },
 ]
 
 export function Header() {
@@ -54,10 +54,10 @@ export function Header() {
           {/* CTA Buttons */}
           <div className="hidden lg:flex items-center gap-3">
             <Button variant="outline" size="sm" asChild>
-              <Link href="#partner">Partner With Us</Link>
+              <Link href="/#partner">Partner With Us</Link>
             </Button>
             <Button size="sm" asChild>
-              <Link href="#donate">Donate</Link>
+              <Link href="/#donate">Donate</Link>
             </Button>
           </div>
 
@@ -83,10 +83,10 @@ export function Header() {
                 ))}
                 <div className="flex flex-col gap-3 mt-6 pt-6 border-t">
                   <Button variant="outline" asChild>
-                    <Link href="#partner">Partner With Us</Link>
+                    <Link href="/#partner">Partner With Us</Link>
                   </Button>
                   <Button asChild>
-                    <Link href="#donate">Donate</Link>
+                    <Link href="/#donate">Donate</Link>
                   </Button>
                 </div>
               </nav>

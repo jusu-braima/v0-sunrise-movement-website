@@ -2,7 +2,11 @@ import { Header } from "@/components/header"
 import { Hero } from "@/components/hero"
 import { About } from "@/components/about"
 import { Programs } from "@/components/programs"
+import { Projects } from "@/components/projects"
 import { Impact } from "@/components/impact"
+import { SierraLeoneMap } from "@/components/sierra-leone-map"
+import { Testimonials } from "@/components/testimonials"
+import { News } from "@/components/news"
 import { Partners } from "@/components/partners"
 import { GetInvolved } from "@/components/get-involved"
 import { Donate } from "@/components/donate"
@@ -16,7 +20,11 @@ export default function Home() {
       <Hero />
       <About />
       <Programs />
+      <Projects />
       <Impact />
+      <SierraLeoneMap />
+      <Testimonials />
+      <News />
       <Partners />
       <GetInvolved />
       <Donate />
