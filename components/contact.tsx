@@ -1,12 +1,15 @@
 "use client"
 
 import { useState } from "react"
-import { Mail, Phone, MapPin, Send } from "lucide-react"
+import { Mail, Phone, MapPin, Send, MessageCircle } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { FieldGroup, Field, FieldLabel } from "@/components/ui/field"
+
+// WhatsApp number for Sunrise Movement Sierra Leone
+const WHATSAPP_NUMBER = "23276709191" // Without the + sign
 
 const contactInfo = [
   {
@@ -36,8 +39,6 @@ export function Contact() {
     subject: "",
     message: "",
   })
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [submitted, setSubmitted] = useState(false)
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData((prev) => ({
@@ -46,16 +47,22 @@ export function Contact() {
     }))
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  // Send message via WhatsApp
+  const handleWhatsAppSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    setIsSubmitting(true)
     
-    // Frontend-only: Show success message after brief delay
-    setTimeout(() => {
-      setIsSubmitting(false)
-      setSubmitted(true)
-      setFormData({ name: "", email: "", subject: "", message: "" })
-    }, 800)
+    // Construct WhatsApp message
+    const message = `*New Contact Form Message*%0A%0A*Name:* ${formData.name}%0A*Email:* ${formData.email}%0A*Subject:* ${formData.subject}%0A%0A*Message:*%0A${formData.message}`
+    
+    // Open WhatsApp with pre-filled message
+    const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${message}`
+    window.open(whatsappUrl, "_blank")
+  }
+
+  // Quick WhatsApp contact
+  const handleQuickWhatsApp = () => {
+    const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=Hello! I'm interested in learning more about Sunrise Movement Sierra Leone.`
+    window.open(whatsappUrl, "_blank")
   }
 
   return (
@@ -99,6 +106,20 @@ export function Contact() {
                   </div>
                 </a>
               ))}
+
+              {/* WhatsApp Quick Contact */}
+              <button
+                onClick={handleQuickWhatsApp}
+                className="w-full flex items-start gap-4 p-4 bg-[#25D366]/10 rounded-xl hover:bg-[#25D366]/20 transition-colors group border border-[#25D366]/30"
+              >
+                <div className="w-12 h-12 rounded-xl bg-[#25D366] flex items-center justify-center shrink-0">
+                  <MessageCircle className="h-6 w-6 text-white" />
+                </div>
+                <div className="text-left">
+                  <p className="text-sm text-muted-foreground">WhatsApp</p>
+                  <p className="text-foreground font-medium">Chat with us instantly</p>
+                </div>
+              </button>
             </div>
 
             {/* Contact Person */}
@@ -112,87 +133,84 @@ export function Contact() {
           {/* Contact Form */}
           <Card className="bg-card border-border shadow-lg">
             <CardContent className="p-8">
-              {submitted ? (
-                <div className="text-center py-12">
-                  <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-6">
-                    <Send className="h-8 w-8 text-primary" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-foreground mb-2">Message Sent!</h3>
-                  <p className="text-muted-foreground mb-6">
-                    Thank you for reaching out. We&apos;ll get back to you soon.
-                  </p>
-                  <Button variant="outline" onClick={() => setSubmitted(false)}>
-                    Send Another Message
-                  </Button>
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-10 h-10 rounded-lg bg-[#25D366] flex items-center justify-center">
+                  <MessageCircle className="h-5 w-5 text-white" />
                 </div>
-              ) : (
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <FieldGroup>
-                    <Field>
-                      <FieldLabel htmlFor="name">Full Name</FieldLabel>
-                      <Input
-                        id="name"
-                        name="name"
-                        type="text"
-                        placeholder="Your name"
-                        value={formData.name}
-                        onChange={handleChange}
-                        required
-                      />
-                    </Field>
+                <div>
+                  <h3 className="text-xl font-bold text-foreground">Send via WhatsApp</h3>
+                  <p className="text-sm text-muted-foreground">Your message will open in WhatsApp</p>
+                </div>
+              </div>
 
-                    <Field>
-                      <FieldLabel htmlFor="email">Email Address</FieldLabel>
-                      <Input
-                        id="email"
-                        name="email"
-                        type="email"
-                        placeholder="your@email.com"
-                        value={formData.email}
-                        onChange={handleChange}
-                        required
-                      />
-                    </Field>
+              <form onSubmit={handleWhatsAppSubmit} className="space-y-6">
+                <FieldGroup>
+                  <Field>
+                    <FieldLabel htmlFor="name">Full Name</FieldLabel>
+                    <Input
+                      id="name"
+                      name="name"
+                      type="text"
+                      placeholder="Your name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      required
+                    />
+                  </Field>
 
-                    <Field>
-                      <FieldLabel htmlFor="subject">Subject</FieldLabel>
-                      <Input
-                        id="subject"
-                        name="subject"
-                        type="text"
-                        placeholder="How can we help?"
-                        value={formData.subject}
-                        onChange={handleChange}
-                        required
-                      />
-                    </Field>
+                  <Field>
+                    <FieldLabel htmlFor="email">Email Address</FieldLabel>
+                    <Input
+                      id="email"
+                      name="email"
+                      type="email"
+                      placeholder="your@email.com"
+                      value={formData.email}
+                      onChange={handleChange}
+                      required
+                    />
+                  </Field>
 
-                    <Field>
-                      <FieldLabel htmlFor="message">Message</FieldLabel>
-                      <Textarea
-                        id="message"
-                        name="message"
-                        placeholder="Tell us more about your inquiry..."
-                        rows={5}
-                        value={formData.message}
-                        onChange={handleChange}
-                        required
-                      />
-                    </Field>
-                  </FieldGroup>
+                  <Field>
+                    <FieldLabel htmlFor="subject">Subject</FieldLabel>
+                    <Input
+                      id="subject"
+                      name="subject"
+                      type="text"
+                      placeholder="How can we help?"
+                      value={formData.subject}
+                      onChange={handleChange}
+                      required
+                    />
+                  </Field>
 
-                  <Button type="submit" size="lg" className="w-full" disabled={isSubmitting}>
-                    {isSubmitting ? (
-                      "Sending..."
-                    ) : (
-                      <>
-                        Send Message
-                        <Send className="ml-2 h-4 w-4" />
-                      </>
-                    )}
-                  </Button>
-                </form>
-              )}
+                  <Field>
+                    <FieldLabel htmlFor="message">Message</FieldLabel>
+                    <Textarea
+                      id="message"
+                      name="message"
+                      placeholder="Tell us more about your inquiry..."
+                      rows={5}
+                      value={formData.message}
+                      onChange={handleChange}
+                      required
+                    />
+                  </Field>
+                </FieldGroup>
+
+                <Button 
+                  type="submit" 
+                  size="lg" 
+                  className="w-full bg-[#25D366] hover:bg-[#128C7E] text-white"
+                >
+                  <MessageCircle className="mr-2 h-5 w-5" />
+                  Send via WhatsApp
+                </Button>
+
+                <p className="text-xs text-center text-muted-foreground">
+                  Clicking send will open WhatsApp with your pre-filled message
+                </p>
+              </form>
             </CardContent>
           </Card>
         </div>

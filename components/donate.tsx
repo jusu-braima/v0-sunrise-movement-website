@@ -1,60 +1,72 @@
 "use client"
 
 import { useState } from "react"
-import { Heart, TreePine, GraduationCap, Zap, CheckCircle2 } from "lucide-react"
+import { Heart, TreePine, GraduationCap, Zap, CheckCircle2, CreditCard, ArrowLeft, Loader2 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { AnimateOnScroll } from "@/components/animate-on-scroll"
+import dynamic from "next/dynamic"
+
+// Dynamic import for Stripe checkout to avoid SSR issues
+const Checkout = dynamic(() => import("@/components/checkout"), { 
+  ssr: false,
+  loading: () => (
+    <div className="flex items-center justify-center py-12">
+      <Loader2 className="h-8 w-8 animate-spin text-primary" />
+      <span className="ml-3 text-muted-foreground">Loading payment...</span>
+    </div>
+  )
+})
 
 const impactAreas = [
   {
     icon: TreePine,
     amount: 25,
     impact: "Plants 10 trees in community reforestation projects",
+    productId: "donate-25",
   },
   {
     icon: GraduationCap,
     amount: 50,
     impact: "Trains 1 youth in climate leadership skills",
+    productId: "donate-50",
   },
   {
     icon: Zap,
     amount: 100,
     impact: "Provides clean energy access to 1 household",
+    productId: "donate-100",
   },
   {
     icon: Heart,
     amount: 250,
     impact: "Supports a full community climate workshop",
+    productId: "donate-250",
   },
 ]
 
-const donationAmounts = [25, 50, 100, 250, 500]
+const donationAmounts = [
+  { amount: 25, productId: "donate-25" },
+  { amount: 50, productId: "donate-50" },
+  { amount: 100, productId: "donate-100" },
+  { amount: 250, productId: "donate-250" },
+  { amount: 500, productId: "donate-500" },
+]
 
 export function Donate() {
   const [selectedAmount, setSelectedAmount] = useState<number>(50)
-  const [customAmount, setCustomAmount] = useState<string>("")
+  const [selectedProductId, setSelectedProductId] = useState<string>("donate-50")
   const [donationType, setDonationType] = useState<"one-time" | "monthly">("one-time")
-  const [showThankYou, setShowThankYou] = useState(false)
+  const [showCheckout, setShowCheckout] = useState(false)
 
-  const handleAmountClick = (amount: number) => {
+  const handleAmountClick = (amount: number, productId: string) => {
     setSelectedAmount(amount)
-    setCustomAmount("")
+    setSelectedProductId(productId)
   }
 
-  const handleCustomAmountChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const value = e.target.value.replace(/[^0-9]/g, "")
-    setCustomAmount(value)
-    if (value) {
-      setSelectedAmount(0)
-    }
-  }
-
-  const finalAmount = customAmount ? parseInt(customAmount, 10) : selectedAmount
-
-  const handleDonate = () => {
-    if (finalAmount > 0) {
-      setShowThankYou(true)
+  const handleProceedToCheckout = () => {
+    if (selectedAmount > 0 && selectedProductId) {
+      setShowCheckout(true)
     }
   }
 
@@ -79,10 +91,20 @@ export function Donate() {
             <div className="space-y-4">
               <h3 className="text-lg font-semibold text-foreground">Your Impact</h3>
               <div className="grid sm:grid-cols-2 gap-4">
-                {impactAreas.map((area, index) => (
-                  <div key={area.amount} className="flex items-start gap-3 p-4 bg-card rounded-xl border border-border hover:border-primary/50 hover:shadow-md transition-all duration-300">
-                    <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
-                      <area.icon className="h-5 w-5 text-primary" />
+                {impactAreas.map((area) => (
+                  <div 
+                    key={area.amount} 
+                    onClick={() => handleAmountClick(area.amount, area.productId)}
+                    className={`flex items-start gap-3 p-4 bg-card rounded-xl border cursor-pointer transition-all duration-300 ${
+                      selectedAmount === area.amount 
+                        ? "border-primary shadow-md bg-primary/5" 
+                        : "border-border hover:border-primary/50 hover:shadow-md"
+                    }`}
+                  >
+                    <div className={`w-10 h-10 rounded-lg flex items-center justify-center shrink-0 transition-colors ${
+                      selectedAmount === area.amount ? "bg-primary text-primary-foreground" : "bg-primary/10"
+                    }`}>
+                      <area.icon className={`h-5 w-5 ${selectedAmount === area.amount ? "" : "text-primary"}`} />
                     </div>
                     <div>
                       <p className="font-semibold text-foreground">${area.amount}</p>
@@ -94,98 +116,106 @@ export function Donate() {
             </div>
           </AnimateOnScroll>
 
-          {/* Donation Form */}
+          {/* Donation Form / Stripe Checkout */}
           <AnimateOnScroll animation="slide-right" delay={200}>
-          <Card className="bg-card border-border shadow-xl hover:shadow-2xl transition-shadow duration-300">
-            <CardContent className="p-8">
-              <h3 className="text-2xl font-bold text-foreground mb-6">Make a Donation</h3>
-              
-              {/* Amount Selection */}
-              <div className="space-y-4 mb-8">
-                <label className="text-sm font-medium text-foreground">Select Amount (USD)</label>
-                <div className="grid grid-cols-3 gap-3">
-                  {donationAmounts.map((amount) => (
-                    <button
-                      key={amount}
-                      onClick={() => handleAmountClick(amount)}
-                      className={`py-3 px-4 rounded-lg border-2 font-semibold transition-all ${
-                        selectedAmount === amount && !customAmount
-                          ? "border-primary bg-primary text-primary-foreground"
-                          : "border-border hover:border-primary/50 text-foreground"
-                      }`}
-                    >
-                      ${amount}
-                    </button>
-                  ))}
-                  <div className="col-span-3">
-                    <div className="relative">
-                      <span className="absolute left-4 top-1/2 -translate-y-1/2 text-muted-foreground font-semibold">$</span>
-                      <input
-                        type="text"
-                        placeholder="Custom amount"
-                        value={customAmount}
-                        onChange={handleCustomAmountChange}
-                        className="w-full py-3 pl-8 pr-4 rounded-lg border-2 border-border focus:border-primary focus:outline-none bg-background text-foreground"
-                      />
+            <Card className="bg-card border-border shadow-xl hover:shadow-2xl transition-shadow duration-300">
+              <CardContent className="p-8">
+                {showCheckout ? (
+                  <div className="space-y-4">
+                    <div className="flex items-center gap-3 mb-6">
+                      <Button 
+                        variant="ghost" 
+                        size="sm" 
+                        onClick={() => setShowCheckout(false)}
+                        className="hover:bg-primary/10"
+                      >
+                        <ArrowLeft className="h-4 w-4 mr-2" />
+                        Back
+                      </Button>
+                      <div>
+                        <h3 className="text-xl font-bold text-foreground">Complete Your Donation</h3>
+                        <p className="text-sm text-muted-foreground">${selectedAmount} {donationType} donation</p>
+                      </div>
+                    </div>
+                    
+                    {/* Stripe Embedded Checkout */}
+                    <div className="min-h-[400px]">
+                      <Checkout productId={selectedProductId} />
                     </div>
                   </div>
-                </div>
-              </div>
+                ) : (
+                  <>
+                    <h3 className="text-2xl font-bold text-foreground mb-6">Make a Donation</h3>
+                    
+                    {/* Amount Selection */}
+                    <div className="space-y-4 mb-8">
+                      <label className="text-sm font-medium text-foreground">Select Amount (USD)</label>
+                      <div className="grid grid-cols-3 gap-3">
+                        {donationAmounts.map((item) => (
+                          <button
+                            key={item.amount}
+                            onClick={() => handleAmountClick(item.amount, item.productId)}
+                            className={`py-3 px-4 rounded-lg border-2 font-semibold transition-all ${
+                              selectedAmount === item.amount
+                                ? "border-primary bg-primary text-primary-foreground"
+                                : "border-border hover:border-primary/50 text-foreground"
+                            }`}
+                          >
+                            ${item.amount}
+                          </button>
+                        ))}
+                      </div>
+                    </div>
 
-              {/* Donation Type */}
-              <div className="space-y-4 mb-8">
-                <label className="text-sm font-medium text-foreground">Donation Type</label>
-                <div className="grid grid-cols-2 gap-3">
-                  <button 
-                    onClick={() => setDonationType("one-time")}
-                    className={`py-3 px-4 rounded-lg border-2 font-semibold transition-all ${
-                      donationType === "one-time" 
-                        ? "border-primary bg-primary text-primary-foreground" 
-                        : "border-border hover:border-primary/50 text-foreground"
-                    }`}
-                  >
-                    One-Time
-                  </button>
-                  <button 
-                    onClick={() => setDonationType("monthly")}
-                    className={`py-3 px-4 rounded-lg border-2 font-semibold transition-all ${
-                      donationType === "monthly" 
-                        ? "border-primary bg-primary text-primary-foreground" 
-                        : "border-border hover:border-primary/50 text-foreground"
-                    }`}
-                  >
-                    Monthly
-                  </button>
-                </div>
-              </div>
+                    {/* Donation Type */}
+                    <div className="space-y-4 mb-8">
+                      <label className="text-sm font-medium text-foreground">Donation Type</label>
+                      <div className="grid grid-cols-2 gap-3">
+                        <button 
+                          onClick={() => setDonationType("one-time")}
+                          className={`py-3 px-4 rounded-lg border-2 font-semibold transition-all ${
+                            donationType === "one-time" 
+                              ? "border-primary bg-primary text-primary-foreground" 
+                              : "border-border hover:border-primary/50 text-foreground"
+                          }`}
+                        >
+                          One-Time
+                        </button>
+                        <button 
+                          onClick={() => setDonationType("monthly")}
+                          className={`py-3 px-4 rounded-lg border-2 font-semibold transition-all ${
+                            donationType === "monthly" 
+                              ? "border-primary bg-primary text-primary-foreground" 
+                              : "border-border hover:border-primary/50 text-foreground"
+                          }`}
+                        >
+                          Monthly
+                        </button>
+                      </div>
+                    </div>
 
-              {/* Submit */}
-              {showThankYou ? (
-                <div className="text-center py-4">
-                  <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                    <CheckCircle2 className="h-8 w-8 text-primary" />
-                  </div>
-                  <p className="text-lg font-semibold text-foreground mb-2">Thank You!</p>
-                  <p className="text-sm text-muted-foreground mb-4">
-                    Your generous support helps us create a greener Sierra Leone.
-                  </p>
-                  <Button variant="outline" onClick={() => setShowThankYou(false)}>
-                    Make Another Donation
-                  </Button>
-                </div>
-              ) : (
-                <>
-                  <Button size="lg" className="w-full text-lg py-6" onClick={handleDonate}>
-                    <Heart className="mr-2 h-5 w-5" />
-                    Donate {finalAmount > 0 ? `$${finalAmount}` : ""}
-                  </Button>
-                  <p className="text-xs text-muted-foreground text-center mt-4">
-                    Your donation helps fund climate action programs across Sierra Leone.
-                  </p>
-                </>
-              )}
-            </CardContent>
-          </Card>
+                    {/* Proceed to Checkout */}
+                    <Button 
+                      size="lg" 
+                      className="w-full text-lg py-6 group" 
+                      onClick={handleProceedToCheckout}
+                    >
+                      <CreditCard className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
+                      Donate ${selectedAmount} with Stripe
+                    </Button>
+                    
+                    <div className="flex items-center justify-center gap-2 mt-4">
+                      <svg className="h-5 w-auto" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.5 20.5L15 16L13.5 11.5H18.5L17 16L18.5 20.5H13.5Z" fill="currentColor" className="text-muted-foreground"/>
+                      </svg>
+                      <p className="text-xs text-muted-foreground">
+                        Secure payment powered by Stripe
+                      </p>
+                    </div>
+                  </>
+                )}
+              </CardContent>
+            </Card>
           </AnimateOnScroll>
         </div>
       </div>
