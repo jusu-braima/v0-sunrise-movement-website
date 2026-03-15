@@ -1,7 +1,8 @@
 "use client"
 
+import { useState } from "react"
 import Image from "next/image"
-import { Calendar, ArrowRight, Tag } from "lucide-react"
+import { Calendar, ArrowRight, Tag, CheckCircle2 } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
@@ -65,8 +66,19 @@ const upcomingEvents = [
 ]
 
 export function News() {
+  const [email, setEmail] = useState("")
+  const [subscribed, setSubscribed] = useState(false)
+  
   const featuredNews = newsItems.find(item => item.featured)
   const otherNews = newsItems.filter(item => !item.featured)
+  
+  const handleSubscribe = (e: React.FormEvent) => {
+    e.preventDefault()
+    if (email) {
+      setSubscribed(true)
+      setEmail("")
+    }
+  }
 
   return (
     <section id="news" className="py-20 md:py-32">
@@ -187,20 +199,35 @@ export function News() {
             {/* Newsletter Signup */}
             <Card className="bg-primary text-primary-foreground">
               <CardContent className="p-6">
-                <h3 className="text-lg font-bold mb-2">Stay Updated</h3>
-                <p className="text-primary-foreground/80 text-sm mb-4">
-                  Subscribe to receive news about our programs and impact.
-                </p>
-                <form className="space-y-3">
-                  <input
-                    type="email"
-                    placeholder="Enter your email"
-                    className="w-full px-4 py-2.5 rounded-lg bg-primary-foreground/10 border border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/60 focus:outline-none focus:border-primary-foreground/50"
-                  />
-                  <Button variant="secondary" className="w-full">
-                    Subscribe
-                  </Button>
-                </form>
+                {subscribed ? (
+                  <div className="text-center py-2">
+                    <CheckCircle2 className="h-10 w-10 mx-auto mb-3 text-primary-foreground" />
+                    <h3 className="text-lg font-bold mb-2">You&apos;re Subscribed!</h3>
+                    <p className="text-primary-foreground/80 text-sm">
+                      Thank you for joining our community.
+                    </p>
+                  </div>
+                ) : (
+                  <>
+                    <h3 className="text-lg font-bold mb-2">Stay Updated</h3>
+                    <p className="text-primary-foreground/80 text-sm mb-4">
+                      Subscribe to receive news about our programs and impact.
+                    </p>
+                    <form onSubmit={handleSubscribe} className="space-y-3">
+                      <input
+                        type="email"
+                        placeholder="Enter your email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        required
+                        className="w-full px-4 py-2.5 rounded-lg bg-primary-foreground/10 border border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/60 focus:outline-none focus:border-primary-foreground/50"
+                      />
+                      <Button type="submit" variant="secondary" className="w-full">
+                        Subscribe
+                      </Button>
+                    </form>
+                  </>
+                )}
               </CardContent>
             </Card>
           </div>

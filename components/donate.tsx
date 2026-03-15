@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { Heart, TreePine, GraduationCap, Zap } from "lucide-react"
+import { Heart, TreePine, GraduationCap, Zap, CheckCircle2 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { AnimateOnScroll } from "@/components/animate-on-scroll"
@@ -34,6 +34,8 @@ const donationAmounts = [25, 50, 100, 250, 500]
 export function Donate() {
   const [selectedAmount, setSelectedAmount] = useState<number>(50)
   const [customAmount, setCustomAmount] = useState<string>("")
+  const [donationType, setDonationType] = useState<"one-time" | "monthly">("one-time")
+  const [showThankYou, setShowThankYou] = useState(false)
 
   const handleAmountClick = (amount: number) => {
     setSelectedAmount(amount)
@@ -49,6 +51,12 @@ export function Donate() {
   }
 
   const finalAmount = customAmount ? parseInt(customAmount, 10) : selectedAmount
+
+  const handleDonate = () => {
+    if (finalAmount > 0) {
+      setShowThankYou(true)
+    }
+  }
 
   return (
     <section id="donate" className="py-20 md:py-32 bg-gradient-to-br from-primary/5 via-background to-accent/5">
@@ -128,24 +136,54 @@ export function Donate() {
               <div className="space-y-4 mb-8">
                 <label className="text-sm font-medium text-foreground">Donation Type</label>
                 <div className="grid grid-cols-2 gap-3">
-                  <button className="py-3 px-4 rounded-lg border-2 border-primary bg-primary text-primary-foreground font-semibold">
+                  <button 
+                    onClick={() => setDonationType("one-time")}
+                    className={`py-3 px-4 rounded-lg border-2 font-semibold transition-all ${
+                      donationType === "one-time" 
+                        ? "border-primary bg-primary text-primary-foreground" 
+                        : "border-border hover:border-primary/50 text-foreground"
+                    }`}
+                  >
                     One-Time
                   </button>
-                  <button className="py-3 px-4 rounded-lg border-2 border-border hover:border-primary/50 text-foreground font-semibold transition-colors">
+                  <button 
+                    onClick={() => setDonationType("monthly")}
+                    className={`py-3 px-4 rounded-lg border-2 font-semibold transition-all ${
+                      donationType === "monthly" 
+                        ? "border-primary bg-primary text-primary-foreground" 
+                        : "border-border hover:border-primary/50 text-foreground"
+                    }`}
+                  >
                     Monthly
                   </button>
                 </div>
               </div>
 
               {/* Submit */}
-              <Button size="lg" className="w-full text-lg py-6">
-                <Heart className="mr-2 h-5 w-5" />
-                Donate {finalAmount > 0 ? `$${finalAmount}` : ""}
-              </Button>
-
-              <p className="text-xs text-muted-foreground text-center mt-4">
-                Secure payment processing. Your donation may be tax-deductible.
-              </p>
+              {showThankYou ? (
+                <div className="text-center py-4">
+                  <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                    <CheckCircle2 className="h-8 w-8 text-primary" />
+                  </div>
+                  <p className="text-lg font-semibold text-foreground mb-2">Thank You!</p>
+                  <p className="text-sm text-muted-foreground mb-4">
+                    Your generous support helps us create a greener Sierra Leone.
+                  </p>
+                  <Button variant="outline" onClick={() => setShowThankYou(false)}>
+                    Make Another Donation
+                  </Button>
+                </div>
+              ) : (
+                <>
+                  <Button size="lg" className="w-full text-lg py-6" onClick={handleDonate}>
+                    <Heart className="mr-2 h-5 w-5" />
+                    Donate {finalAmount > 0 ? `$${finalAmount}` : ""}
+                  </Button>
+                  <p className="text-xs text-muted-foreground text-center mt-4">
+                    Your donation helps fund climate action programs across Sierra Leone.
+                  </p>
+                </>
+              )}
             </CardContent>
           </Card>
           </AnimateOnScroll>

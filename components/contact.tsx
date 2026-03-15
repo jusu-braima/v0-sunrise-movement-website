@@ -46,16 +46,16 @@ export function Contact() {
     }))
   }
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
     
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000))
-    
-    setIsSubmitting(false)
-    setSubmitted(true)
-    setFormData({ name: "", email: "", subject: "", message: "" })
+    // Frontend-only: Show success message after brief delay
+    setTimeout(() => {
+      setIsSubmitting(false)
+      setSubmitted(true)
+      setFormData({ name: "", email: "", subject: "", message: "" })
+    }, 800)
   }
 
   return (

@@ -24,17 +24,17 @@ export function Header() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 sm:gap-3">
+          <Link href="/" className="flex items-center gap-3 sm:gap-4">
             <Image
               src="/images/logo.jpg"
               alt="Sunrise Movement Sierra Leone"
-              width={44}
-              height={44}
-              className="rounded-full w-10 h-10 sm:w-11 sm:h-11"
+              width={52}
+              height={52}
+              className="rounded-full w-11 h-11 sm:w-13 sm:h-13"
             />
             <div className="flex flex-col">
-              <p className="text-xs sm:text-sm font-bold text-primary leading-tight">Sunrise Movement</p>
-              <p className="text-[10px] sm:text-xs text-muted-foreground font-medium">Sierra Leone</p>
+              <p className="text-sm sm:text-base md:text-lg font-bold text-primary leading-tight tracking-tight">Sunrise Movement</p>
+              <p className="text-xs sm:text-sm text-muted-foreground font-semibold">Sierra Leone</p>
             </div>
           </Link>
 
