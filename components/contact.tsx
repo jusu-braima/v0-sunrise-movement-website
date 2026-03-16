@@ -65,6 +65,10 @@ export function Contact() {
     window.open(whatsappUrl, "_blank")
   }
 
+  // Google Maps embed URL for Bo, Sierra Leone
+  const GOOGLE_MAPS_EMBED = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31637.88750567721!2d-11.7476!3d7.9647!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xf0b5e4d8f4a6f9d%3A0x1c3c8a6f8e4d8a0b!2sBo%2C%20Sierra%20Leone!5e0!3m2!1sen!2sus!4v1710000000000!5m2!1sen!2sus"
+  const GOOGLE_MAPS_LINK = "https://www.google.com/maps/place/Bo,+Sierra+Leone"
+
   return (
     <section id="contact" className="py-20 md:py-32">
       <div className="container mx-auto px-4">
@@ -94,7 +98,9 @@ export function Contact() {
               {contactInfo.map((info) => (
                 <a
                   key={info.label}
-                  href={info.href}
+                  href={info.label === "Address" ? GOOGLE_MAPS_LINK : info.href}
+                  target={info.label === "Address" ? "_blank" : undefined}
+                  rel={info.label === "Address" ? "noopener noreferrer" : undefined}
                   className="flex items-start gap-4 p-4 bg-secondary/50 rounded-xl hover:bg-secondary transition-colors group"
                 >
                   <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
@@ -103,6 +109,9 @@ export function Contact() {
                   <div>
                     <p className="text-sm text-muted-foreground">{info.label}</p>
                     <p className="text-foreground font-medium">{info.value}</p>
+                    {info.label === "Address" && (
+                      <p className="text-xs text-primary mt-1">Click to view on Google Maps</p>
+                    )}
                   </div>
                 </a>
               ))}
@@ -127,6 +136,32 @@ export function Contact() {
               <p className="text-sm text-muted-foreground mb-1">Contact Person</p>
               <p className="text-xl font-semibold text-foreground">Alicious Bessiama</p>
               <p className="text-muted-foreground">Founder, Sunrise Movement Sierra Leone</p>
+            </div>
+
+            {/* Google Maps */}
+            <div className="rounded-xl overflow-hidden border border-border shadow-lg">
+              <div className="relative">
+                <iframe
+                  src={GOOGLE_MAPS_EMBED}
+                  width="100%"
+                  height="250"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Sunrise Movement Sierra Leone Location"
+                  className="w-full"
+                />
+                <a
+                  href={GOOGLE_MAPS_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="absolute bottom-3 right-3 bg-background/90 backdrop-blur-sm px-3 py-1.5 rounded-lg text-sm font-medium text-primary hover:bg-background transition-colors flex items-center gap-2 shadow-md"
+                >
+                  <MapPin className="h-4 w-4" />
+                  Open in Google Maps
+                </a>
+              </div>
             </div>
           </div>
 

@@ -14,7 +14,8 @@ import {
   Users, 
   Phone,
   Handshake,
-  Heart
+  Heart,
+  X
 } from "lucide-react"
 
 const navItems = [
@@ -46,65 +47,81 @@ export function Header() {
           : "bg-background/80 backdrop-blur-sm"
       }`}
     >
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-18 md:h-20">
+      <div className="container mx-auto px-3 sm:px-4 lg:px-6">
+        <div className="flex items-center justify-between h-16 sm:h-18 md:h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 sm:gap-4 group">
+          <Link href="/" className="flex items-center gap-2 sm:gap-3 group shrink-0">
             <div className="relative">
               <Image
                 src="/images/logo.jpg"
                 alt="Sunrise Movement Sierra Leone"
                 width={56}
                 height={56}
-                className="rounded-full w-12 h-12 sm:w-14 sm:h-14 ring-2 ring-primary/20 group-hover:ring-primary/50 transition-all duration-300"
+                className="rounded-full w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 ring-2 ring-primary/20 group-hover:ring-primary/50 transition-all duration-300"
               />
               <div className="absolute inset-0 rounded-full bg-primary/10 scale-0 group-hover:scale-110 transition-transform duration-300" />
             </div>
             <div className="flex flex-col">
-              <p className="text-base sm:text-lg md:text-xl font-bold text-primary leading-tight tracking-tight group-hover:text-primary/80 transition-colors">
+              <p className="text-sm sm:text-base md:text-lg font-bold text-primary leading-tight tracking-tight group-hover:text-primary/80 transition-colors whitespace-nowrap">
                 Sunrise Movement
               </p>
-              <p className="text-xs sm:text-sm md:text-base text-muted-foreground font-semibold">
+              <p className="text-[10px] sm:text-xs md:text-sm text-muted-foreground font-semibold">
                 Sierra Leone
               </p>
             </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-1">
+          <nav className="hidden xl:flex items-center gap-0.5">
             {navItems.map((item) => (
               <Link
                 key={item.label}
                 href={item.href}
-                className="group relative flex items-center gap-2 px-4 py-2 text-sm font-medium text-foreground/80 hover:text-primary transition-all duration-300 rounded-lg hover:bg-primary/5"
+                className="group relative flex items-center gap-1.5 px-3 py-2 text-sm font-medium text-foreground/80 hover:text-primary transition-all duration-300 rounded-lg hover:bg-primary/5"
               >
-                <item.icon className="h-4 w-4 text-primary/60 group-hover:text-primary group-hover:scale-110 transition-all duration-300" />
+                <item.icon className="h-3.5 w-3.5 text-primary/60 group-hover:text-primary group-hover:scale-110 transition-all duration-300" />
                 <span>{item.label}</span>
                 <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-primary group-hover:w-3/4 transition-all duration-300 rounded-full" />
               </Link>
             ))}
           </nav>
 
+          {/* Tablet Navigation - Condensed */}
+          <nav className="hidden lg:flex xl:hidden items-center gap-0.5">
+            {navItems.map((item) => (
+              <Link
+                key={item.label}
+                href={item.href}
+                className="group relative flex items-center justify-center p-2 text-foreground/80 hover:text-primary transition-all duration-300 rounded-lg hover:bg-primary/5"
+                title={item.label}
+              >
+                <item.icon className="h-5 w-5 text-primary/60 group-hover:text-primary group-hover:scale-110 transition-all duration-300" />
+                <span className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-primary group-hover:w-3/4 transition-all duration-300 rounded-full" />
+              </Link>
+            ))}
+          </nav>
+
           {/* Desktop CTA Buttons */}
-          <div className="hidden lg:flex items-center gap-3">
+          <div className="hidden lg:flex items-center gap-2">
             <Button 
               variant="outline" 
-              size="default" 
+              size="sm" 
               asChild 
               className="group border-primary/30 hover:border-primary hover:bg-primary/5 transition-all duration-300"
             >
-              <Link href="/#partner" className="flex items-center gap-2">
-                <Handshake className="h-4 w-4 text-primary group-hover:scale-110 transition-transform duration-300" />
-                <span>Partner With Us</span>
+              <Link href="/#partner" className="flex items-center gap-1.5">
+                <Handshake className="h-3.5 w-3.5 text-primary group-hover:scale-110 transition-transform duration-300" />
+                <span className="hidden xl:inline">Partner With Us</span>
+                <span className="xl:hidden">Partner</span>
               </Link>
             </Button>
             <Button 
-              size="default" 
+              size="sm" 
               asChild 
               className="group bg-primary hover:bg-primary/90 shadow-lg hover:shadow-primary/25 transition-all duration-300"
             >
-              <Link href="/#donate" className="flex items-center gap-2">
-                <Heart className="h-4 w-4 group-hover:scale-110 transition-transform duration-300" />
+              <Link href="/#donate" className="flex items-center gap-1.5">
+                <Heart className="h-3.5 w-3.5 group-hover:scale-110 transition-transform duration-300" />
                 <span>Donate</span>
               </Link>
             </Button>
