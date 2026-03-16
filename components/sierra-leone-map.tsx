@@ -3,15 +3,17 @@
 import { useState } from "react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { MapPin, Users, TreePine, Zap } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import { MapPin, Users, TreePine, Zap, ExternalLink } from "lucide-react"
 
 type Location = {
   id: string
   name: string
   type: "headquarters" | "active" | "project"
-  coordinates: { x: number; y: number }
   description: string
   stats: { label: string; value: string }[]
+  googleMapsUrl: string
+  embedUrl: string
 }
 
 const locations: Location[] = [
@@ -19,39 +21,46 @@ const locations: Location[] = [
     id: "bo",
     name: "Bo District",
     type: "headquarters",
-    coordinates: { x: 42, y: 72 },
     description: "Our headquarters and primary operations center. Home to reforestation, agriculture, and youth leadership programs.",
     stats: [
       { label: "People Reached", value: "12,000+" },
       { label: "Trees Planted", value: "8,000+" },
       { label: "Youth Trained", value: "150+" },
     ],
+    googleMapsUrl: "https://www.google.com/maps/place/Bo,+Sierra+Leone",
+    embedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126551.55002270883!2d-11.81574565!3d7.96472!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xf0bcc87c5e4a651%3A0x4ea5b2b2f3c3a4e1!2sBo%2C%20Sierra%20Leone!5e0!3m2!1sen!2sus!4v1710000000000!5m2!1sen!2sus",
   },
   {
     id: "bombali",
     name: "Bombali District",
     type: "active",
-    coordinates: { x: 48, y: 32 },
     description: "Northern operations hub with focus on clean energy access and sustainable agriculture training.",
     stats: [
       { label: "People Reached", value: "5,000+" },
       { label: "Schools Electrified", value: "10" },
       { label: "Farmers Trained", value: "400+" },
     ],
+    googleMapsUrl: "https://www.google.com/maps/place/Bombali+District,+Sierra+Leone",
+    embedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d506206.2000907137!2d-12.3!3d9.1!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xf0a8e1f7c5a7b1d%3A0x2b3c4d5e6f7a8b9c!2sBombali%20District%2C%20Sierra%20Leone!5e0!3m2!1sen!2sus!4v1710000000001!5m2!1sen!2sus",
   },
   {
     id: "freetown",
     name: "Western Area (Freetown)",
     type: "project",
-    coordinates: { x: 22, y: 48 },
     description: "Coastal conservation programs and youth advocacy initiatives in the capital region.",
     stats: [
       { label: "People Reached", value: "3,000+" },
       { label: "Coastline Cleaned", value: "5km" },
       { label: "Youth Volunteers", value: "50+" },
     ],
+    googleMapsUrl: "https://www.google.com/maps/place/Freetown,+Sierra+Leone",
+    embedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126551.55002270883!2d-13.2871!3d8.4657!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xf04c2d9e3d4c5b7%3A0x1a2b3c4d5e6f7890!2sFreetown%2C%20Sierra%20Leone!5e0!3m2!1sen!2sus!4v1710000000002!5m2!1sen!2sus",
   },
 ]
+
+// Default map showing all of Sierra Leone
+const SIERRA_LEONE_MAP_EMBED = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2024816.1576458!2d-12.5!3d8.5!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xf0106183a89dd47%3A0x8f5e5c5c5c5c5c5c!2sSierra%20Leone!5e0!3m2!1sen!2sus!4v1710000000003!5m2!1sen!2sus"
+const SIERRA_LEONE_MAPS_URL = "https://www.google.com/maps/place/Sierra+Leone"
 
 export function SierraLeoneMap() {
   const [selectedLocation, setSelectedLocation] = useState<Location | null>(null)
@@ -63,7 +72,7 @@ export function SierraLeoneMap() {
         <div className="text-center max-w-3xl mx-auto mb-12">
           <span className="text-primary font-semibold uppercase tracking-wider text-sm">Where We Work</span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mt-4 mb-6 text-balance">
-            Our Reach Across Sierra Leone
+            Explore Our Locations
           </h2>
           <p className="text-lg text-muted-foreground">
             From our headquarters in Bo to communities across the country, 
@@ -71,99 +80,84 @@ export function SierraLeoneMap() {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Map Visualization */}
-          <div className="relative">
-            <div className="aspect-square max-w-lg mx-auto relative">
-              {/* Sierra Leone Outline - Simplified SVG */}
-              <svg 
-                viewBox="0 0 100 100" 
-                className="w-full h-full"
-                style={{ filter: "drop-shadow(0 4px 12px rgba(0,0,0,0.1))" }}
+        <div className="grid lg:grid-cols-2 gap-8 items-start">
+          {/* Google Maps Embed */}
+          <div className="space-y-4">
+            <div className="relative rounded-2xl overflow-hidden shadow-xl border border-border">
+              <iframe
+                src={selectedLocation?.embedUrl || SIERRA_LEONE_MAP_EMBED}
+                width="100%"
+                height="450"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title={selectedLocation ? `${selectedLocation.name} on Google Maps` : "Sierra Leone Map"}
+                className="w-full"
+              />
+              <a
+                href={selectedLocation?.googleMapsUrl || SIERRA_LEONE_MAPS_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="absolute bottom-4 right-4 bg-background/95 backdrop-blur-sm px-4 py-2 rounded-lg text-sm font-medium text-primary hover:bg-background transition-colors flex items-center gap-2 shadow-lg border border-border"
               >
-                {/* Background shape representing Sierra Leone */}
-                <path
-                  d="M15,30 Q10,40 12,55 Q15,70 25,82 Q35,90 50,88 Q65,85 72,75 Q78,65 75,50 Q73,35 65,25 Q55,15 40,18 Q25,22 15,30 Z"
-                  fill="hsl(var(--primary) / 0.1)"
-                  stroke="hsl(var(--primary))"
-                  strokeWidth="0.5"
-                />
-                
-                {/* District regions (simplified) */}
-                <path
-                  d="M35,20 Q45,25 55,22 Q60,30 55,40 Q45,45 35,40 Q30,30 35,20 Z"
-                  fill="hsl(var(--primary) / 0.15)"
-                  stroke="hsl(var(--primary) / 0.3)"
-                  strokeWidth="0.3"
-                  className="transition-all hover:fill-primary/30"
-                />
-                <path
-                  d="M30,55 Q40,50 50,55 Q55,65 50,75 Q40,80 30,75 Q25,65 30,55 Z"
-                  fill="hsl(var(--primary) / 0.2)"
-                  stroke="hsl(var(--primary) / 0.3)"
-                  strokeWidth="0.3"
-                  className="transition-all hover:fill-primary/30"
-                />
-              </svg>
+                <ExternalLink className="h-4 w-4" />
+                Open in Google Maps
+              </a>
+            </div>
 
-              {/* Location Markers */}
+            {/* Location Selector Buttons */}
+            <div className="flex flex-wrap gap-2">
+              <Button
+                variant={selectedLocation === null ? "default" : "outline"}
+                size="sm"
+                onClick={() => setSelectedLocation(null)}
+                className="flex items-center gap-2"
+              >
+                <MapPin className="h-4 w-4" />
+                All Locations
+              </Button>
               {locations.map((location) => (
-                <button
+                <Button
                   key={location.id}
+                  variant={selectedLocation?.id === location.id ? "default" : "outline"}
+                  size="sm"
                   onClick={() => setSelectedLocation(location)}
-                  className={`absolute transform -translate-x-1/2 -translate-y-1/2 transition-all duration-300 ${
-                    selectedLocation?.id === location.id ? "scale-125 z-20" : "hover:scale-110 z-10"
-                  }`}
-                  style={{
-                    left: `${location.coordinates.x}%`,
-                    top: `${location.coordinates.y}%`,
-                  }}
-                  aria-label={`View ${location.name}`}
+                  className="flex items-center gap-2"
                 >
-                  <div className={`relative ${
+                  <span className={`w-2 h-2 rounded-full ${
                     location.type === "headquarters" 
-                      ? "w-8 h-8" 
-                      : "w-6 h-6"
-                  }`}>
-                    {/* Pulse effect for headquarters */}
-                    {location.type === "headquarters" && (
-                      <span className="absolute inset-0 rounded-full bg-primary animate-ping opacity-30" />
-                    )}
-                    <div className={`w-full h-full rounded-full flex items-center justify-center ${
-                      location.type === "headquarters"
-                        ? "bg-primary text-primary-foreground"
-                        : location.type === "active"
-                        ? "bg-accent text-accent-foreground"
-                        : "bg-card border-2 border-primary text-primary"
-                    }`}>
-                      <MapPin className={location.type === "headquarters" ? "h-4 w-4" : "h-3 w-3"} />
-                    </div>
-                  </div>
-                </button>
+                      ? "bg-primary" 
+                      : location.type === "active" 
+                      ? "bg-accent" 
+                      : "bg-muted-foreground"
+                  }`} />
+                  {location.name}
+                </Button>
               ))}
             </div>
 
             {/* Legend */}
-            <div className="flex flex-wrap justify-center gap-4 mt-8">
+            <div className="flex flex-wrap gap-4 p-4 bg-card rounded-xl border border-border">
               <div className="flex items-center gap-2">
-                <div className="w-4 h-4 rounded-full bg-primary" />
+                <div className="w-3 h-3 rounded-full bg-primary" />
                 <span className="text-sm text-muted-foreground">Headquarters</span>
               </div>
               <div className="flex items-center gap-2">
-                <div className="w-4 h-4 rounded-full bg-accent" />
+                <div className="w-3 h-3 rounded-full bg-accent" />
                 <span className="text-sm text-muted-foreground">Active Operations</span>
               </div>
               <div className="flex items-center gap-2">
-                <div className="w-4 h-4 rounded-full bg-card border-2 border-primary" />
+                <div className="w-3 h-3 rounded-full bg-muted-foreground" />
                 <span className="text-sm text-muted-foreground">Project Site</span>
               </div>
             </div>
           </div>
 
           {/* Location Details */}
-          <div>
+          <div className="space-y-6">
             {selectedLocation ? (
-              <Card className="bg-card border-none shadow-xl animate-fade-up">
+              <Card className="bg-card border-none shadow-xl">
                 <CardContent className="p-8">
                   <div className="flex items-start justify-between mb-6">
                     <div>
@@ -186,7 +180,7 @@ export function SierraLeoneMap() {
                   
                   <p className="text-muted-foreground mb-6">{selectedLocation.description}</p>
                   
-                  <div className="grid grid-cols-3 gap-4">
+                  <div className="grid grid-cols-3 gap-4 mb-6">
                     {selectedLocation.stats.map((stat) => (
                       <div key={stat.label} className="text-center p-3 bg-secondary/50 rounded-lg">
                         <p className="text-lg font-bold text-foreground">{stat.value}</p>
@@ -194,6 +188,13 @@ export function SierraLeoneMap() {
                       </div>
                     ))}
                   </div>
+
+                  <Button asChild className="w-full">
+                    <a href={selectedLocation.googleMapsUrl} target="_blank" rel="noopener noreferrer">
+                      <MapPin className="h-4 w-4 mr-2" />
+                      Get Directions
+                    </a>
+                  </Button>
                 </CardContent>
               </Card>
             ) : (
@@ -204,30 +205,68 @@ export function SierraLeoneMap() {
                   </div>
                   <h3 className="text-xl font-bold text-foreground mb-2">Explore Our Locations</h3>
                   <p className="text-muted-foreground">
-                    Click on a marker to learn about our work in each region.
+                    Click on a location button to learn about our work in each region and view it on the map.
                   </p>
                 </CardContent>
               </Card>
             )}
 
             {/* Summary Stats */}
-            <div className="grid grid-cols-3 gap-4 mt-6">
-              <div className="text-center p-4 bg-card rounded-xl border border-border">
+            <div className="grid grid-cols-3 gap-4">
+              <div className="text-center p-4 bg-card rounded-xl border border-border hover:border-primary/50 transition-colors">
                 <Users className="h-6 w-6 text-primary mx-auto mb-2" />
                 <p className="text-xl font-bold text-foreground">20,000+</p>
                 <p className="text-xs text-muted-foreground">Total Reached</p>
               </div>
-              <div className="text-center p-4 bg-card rounded-xl border border-border">
+              <div className="text-center p-4 bg-card rounded-xl border border-border hover:border-primary/50 transition-colors">
                 <TreePine className="h-6 w-6 text-primary mx-auto mb-2" />
                 <p className="text-xl font-bold text-foreground">10,000+</p>
                 <p className="text-xs text-muted-foreground">Trees Planted</p>
               </div>
-              <div className="text-center p-4 bg-card rounded-xl border border-border">
+              <div className="text-center p-4 bg-card rounded-xl border border-border hover:border-primary/50 transition-colors">
                 <Zap className="h-6 w-6 text-primary mx-auto mb-2" />
                 <p className="text-xl font-bold text-foreground">15</p>
                 <p className="text-xs text-muted-foreground">Schools Powered</p>
               </div>
             </div>
+
+            {/* All Locations List */}
+            <Card className="bg-card border border-border">
+              <CardContent className="p-6">
+                <h4 className="font-semibold text-foreground mb-4">All Operation Areas</h4>
+                <div className="space-y-3">
+                  {locations.map((location) => (
+                    <button
+                      key={location.id}
+                      onClick={() => setSelectedLocation(location)}
+                      className={`w-full flex items-center justify-between p-3 rounded-lg transition-all ${
+                        selectedLocation?.id === location.id
+                          ? "bg-primary/10 border border-primary/30"
+                          : "bg-secondary/50 hover:bg-secondary border border-transparent"
+                      }`}
+                    >
+                      <div className="flex items-center gap-3">
+                        <div className={`w-3 h-3 rounded-full ${
+                          location.type === "headquarters" 
+                            ? "bg-primary" 
+                            : location.type === "active" 
+                            ? "bg-accent" 
+                            : "bg-muted-foreground"
+                        }`} />
+                        <span className="font-medium text-foreground">{location.name}</span>
+                      </div>
+                      <Badge variant="outline" className="text-xs">
+                        {location.type === "headquarters" 
+                          ? "HQ" 
+                          : location.type === "active" 
+                          ? "Active" 
+                          : "Project"}
+                      </Badge>
+                    </button>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </div>
