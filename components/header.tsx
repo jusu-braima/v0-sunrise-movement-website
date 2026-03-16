@@ -43,8 +43,8 @@ export function Header() {
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
-          ? "bg-primary/95 backdrop-blur-md shadow-lg border-b border-primary-foreground/10" 
-          : "bg-primary/90 backdrop-blur-sm"
+          ? "bg-background/95 backdrop-blur-md shadow-lg border-b border-primary/10" 
+          : "bg-background/80 backdrop-blur-sm"
       }`}
     >
       <div className="container mx-auto px-3 sm:px-4 lg:px-6">
@@ -62,26 +62,41 @@ export function Header() {
               <div className="absolute inset-0 rounded-full bg-primary/10 scale-0 group-hover:scale-110 transition-transform duration-300" />
             </div>
             <div className="flex flex-col">
-              <p className="text-sm sm:text-base md:text-lg font-bold text-primary-foreground leading-tight tracking-tight group-hover:text-white transition-colors whitespace-nowrap">
+              <p className="text-sm sm:text-base md:text-lg font-bold text-primary leading-tight tracking-tight group-hover:text-primary/80 transition-colors whitespace-nowrap">
                 Sunrise Movement
               </p>
-              <p className="text-[10px] sm:text-xs md:text-sm text-primary-foreground/70 font-semibold">
+              <p className="text-[10px] sm:text-xs md:text-sm text-muted-foreground font-semibold">
                 Sierra Leone
               </p>
             </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-0.5">
+          <nav className="hidden xl:flex items-center gap-0.5">
             {navItems.map((item) => (
               <Link
                 key={item.label}
                 href={item.href}
-                className="group relative flex items-center gap-1.5 px-3 py-2 text-sm font-medium text-primary-foreground/80 hover:text-white transition-all duration-300 rounded-lg hover:bg-white/10"
+                className="group relative flex items-center gap-1.5 px-3 py-2 text-sm font-medium text-foreground/80 hover:text-primary transition-all duration-300 rounded-lg hover:bg-primary/5"
               >
-                <item.icon className="h-3.5 w-3.5 text-primary-foreground/60 group-hover:text-white group-hover:scale-110 transition-all duration-300" />
+                <item.icon className="h-3.5 w-3.5 text-primary/60 group-hover:text-primary group-hover:scale-110 transition-all duration-300" />
                 <span>{item.label}</span>
-                <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-white group-hover:w-3/4 transition-all duration-300 rounded-full" />
+                <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-primary group-hover:w-3/4 transition-all duration-300 rounded-full" />
+              </Link>
+            ))}
+          </nav>
+
+          {/* Tablet Navigation - Condensed */}
+          <nav className="hidden lg:flex xl:hidden items-center gap-0.5">
+            {navItems.map((item) => (
+              <Link
+                key={item.label}
+                href={item.href}
+                className="group relative flex items-center justify-center p-2 text-foreground/80 hover:text-primary transition-all duration-300 rounded-lg hover:bg-primary/5"
+                title={item.label}
+              >
+                <item.icon className="h-5 w-5 text-primary/60 group-hover:text-primary group-hover:scale-110 transition-all duration-300" />
+                <span className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-primary group-hover:w-3/4 transition-all duration-300 rounded-full" />
               </Link>
             ))}
           </nav>
@@ -92,17 +107,18 @@ export function Header() {
               variant="outline" 
               size="sm" 
               asChild 
-              className="group border-white/30 hover:border-white hover:bg-white/10 text-primary-foreground transition-all duration-300"
+              className="group border-primary/30 hover:border-primary hover:bg-primary/5 transition-all duration-300"
             >
               <Link href="/#partner" className="flex items-center gap-1.5">
-                <Handshake className="h-3.5 w-3.5 text-primary-foreground group-hover:scale-110 transition-transform duration-300" />
-                <span>Partner With Us</span>
+                <Handshake className="h-3.5 w-3.5 text-primary group-hover:scale-110 transition-transform duration-300" />
+                <span className="hidden xl:inline">Partner With Us</span>
+                <span className="xl:hidden">Partner</span>
               </Link>
             </Button>
             <Button 
               size="sm" 
               asChild 
-              className="group bg-white text-primary hover:bg-white/90 shadow-lg hover:shadow-white/25 transition-all duration-300"
+              className="group bg-primary hover:bg-primary/90 shadow-lg hover:shadow-primary/25 transition-all duration-300"
             >
               <Link href="/#donate" className="flex items-center gap-1.5">
                 <Heart className="h-3.5 w-3.5 group-hover:scale-110 transition-transform duration-300" />
@@ -114,8 +130,8 @@ export function Header() {
           {/* Mobile Menu */}
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild className="lg:hidden">
-              <Button variant="ghost" size="icon" className="hover:bg-white/10">
-                <Menu className="h-6 w-6 text-primary-foreground" />
+              <Button variant="ghost" size="icon" className="hover:bg-primary/10">
+                <Menu className="h-6 w-6 text-primary" />
                 <span className="sr-only">Toggle menu</span>
               </Button>
             </SheetTrigger>
