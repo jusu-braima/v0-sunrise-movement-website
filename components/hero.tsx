@@ -85,14 +85,32 @@ export function Hero() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 animate-fade-up-delay-3">
-              <Button size="lg" asChild>
+              <Button 
+                size="lg" 
+                asChild
+                className="relative overflow-hidden group bg-primary hover:bg-primary/90 shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 transition-all duration-300 hover:scale-105 active:scale-95"
+              >
                 <Link href="#get-involved">
-                  Join the Movement
-                  <ArrowRight className="ml-2 h-4 w-4" />
+                  <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
+                  <span className="relative flex items-center">
+                    Join the Movement
+                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
+                  </span>
                 </Link>
               </Button>
-              <Button size="lg" variant="outline" asChild>
-                <Link href="#about">Learn More</Link>
+              <Button 
+                size="lg" 
+                variant="outline" 
+                asChild
+                className="relative overflow-hidden group border-2 border-primary/50 hover:border-primary hover:bg-primary/10 shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 active:scale-95"
+              >
+                <Link href="#about">
+                  <span className="absolute inset-0 bg-gradient-to-r from-primary/0 via-primary/10 to-primary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <span className="relative flex items-center">
+                    <span className="w-2 h-2 rounded-full bg-primary mr-2 animate-pulse" />
+                    Learn More
+                  </span>
+                </Link>
               </Button>
             </div>
 
