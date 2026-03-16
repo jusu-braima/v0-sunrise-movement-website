@@ -135,36 +135,36 @@ export function Header() {
                 <span className="sr-only">Toggle menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-[300px] sm:w-[380px] p-0 border-l border-primary/20">
+            <SheetContent side="right" className="w-[300px] sm:w-[380px] p-0 border-l border-primary/20 bg-primary">
               <div className="flex flex-col h-full">
                 {/* Mobile Menu Header */}
-                <div className="flex items-center justify-between p-6 border-b border-border">
+                <div className="flex items-center justify-between p-6 border-b border-white/10">
                   <div className="flex items-center gap-3">
                     <Image
                       src="/images/logo.jpg"
                       alt="Sunrise Movement Sierra Leone"
                       width={48}
                       height={48}
-                      className="rounded-full ring-2 ring-primary/20"
+                      className="rounded-full ring-2 ring-white/30"
                     />
                     <div>
-                      <p className="font-bold text-primary">Sunrise Movement</p>
-                      <p className="text-xs text-muted-foreground">Sierra Leone</p>
+                      <p className="font-bold text-white">Sunrise Movement</p>
+                      <p className="text-xs text-white/70">Sierra Leone</p>
                     </div>
                   </div>
                 </div>
                 
-                {/* Mobile Navigation */}
-                <nav className="flex-1 px-4 py-6">
+                {/* Mobile Navigation - Scrollable */}
+                <nav className="flex-1 px-4 py-6 overflow-y-auto">
                   <div className="flex flex-col gap-2">
                     {navItems.map((item) => (
                       <Link
                         key={item.label}
                         href={item.href}
                         onClick={() => setIsOpen(false)}
-                        className="group flex items-center gap-3 px-4 py-3 text-foreground hover:text-primary hover:bg-primary/5 rounded-xl transition-all duration-300"
+                        className="group flex items-center gap-3 px-4 py-3 text-white/90 hover:text-white hover:bg-white/10 rounded-xl transition-all duration-300"
                       >
-                        <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                        <div className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center group-hover:bg-white group-hover:text-primary transition-colors">
                           <item.icon className="h-5 w-5" />
                         </div>
                         <span className="font-medium">{item.label}</span>
@@ -174,15 +174,15 @@ export function Header() {
                 </nav>
                 
                 {/* Mobile CTA Buttons */}
-                <div className="p-4 border-t border-border">
+                <div className="p-4 border-t border-white/10">
                   <div className="flex flex-col gap-3">
-                    <Button variant="outline" asChild className="w-full justify-center gap-2">
+                    <Button variant="outline" asChild className="w-full justify-center gap-2 border-white/30 text-white hover:bg-white/10 hover:text-white">
                       <Link href="/#partner" onClick={() => setIsOpen(false)}>
-                        <Handshake className="h-4 w-4 text-primary" />
+                        <Handshake className="h-4 w-4" />
                         Partner With Us
                       </Link>
                     </Button>
-                    <Button asChild className="w-full justify-center gap-2">
+                    <Button asChild className="w-full justify-center gap-2 bg-white text-primary hover:bg-white/90">
                       <Link href="/#donate" onClick={() => setIsOpen(false)}>
                         <Heart className="h-4 w-4" />
                         Donate Now
