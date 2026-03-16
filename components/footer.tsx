@@ -2,7 +2,7 @@
 
 import Image from "next/image"
 import Link from "next/link"
-import { Mail, Phone, MapPin } from "lucide-react"
+import { Mail, Phone, MapPin, Facebook, Linkedin, Instagram } from "lucide-react"
 
 const quickLinks = [
   { label: "Home", href: "/" },
@@ -109,6 +109,40 @@ export function Footer() {
                 </span>
               </li>
             </ul>
+
+            {/* Social Media Links */}
+            <div className="mt-6 pt-6 border-t border-background/10">
+              <h5 className="text-sm font-semibold text-background mb-4">Follow Us</h5>
+              <div className="flex items-center gap-3">
+                <a
+                  href="https://www.facebook.com/profile.php?id=61550758236703"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 rounded-full bg-background/10 flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+                  aria-label="Follow us on Facebook"
+                >
+                  <Facebook className="h-5 w-5" />
+                </a>
+                <a
+                  href="https://www.linkedin.com/company/sunrise-movement-sierra-leone/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 rounded-full bg-background/10 flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+                  aria-label="Follow us on LinkedIn"
+                >
+                  <Linkedin className="h-5 w-5" />
+                </a>
+                <a
+                  href="https://www.instagram.com/srm.sl?igsh=MXQzYTI2eWNyNWF6Mw=="
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 rounded-full bg-background/10 flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+                  aria-label="Follow us on Instagram"
+                >
+                  <Instagram className="h-5 w-5" />
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
