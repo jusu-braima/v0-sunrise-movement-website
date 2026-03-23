@@ -173,18 +173,18 @@ export function News() {
                   key={event.title} 
                   className="bg-card border border-border hover:border-primary/50 transition-all duration-300 cursor-pointer hover:-translate-x-1"
                 >
-                  <CardContent className="p-4">
-                    <div className="flex gap-4">
-                      <div className="w-14 h-14 rounded-lg bg-primary/10 flex flex-col items-center justify-center shrink-0">
-                        <span className="text-xs text-primary font-medium">
+                  <CardContent className="p-3 sm:p-4">
+                    <div className="flex gap-3 sm:gap-4">
+                      <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-lg bg-primary/10 flex flex-col items-center justify-center shrink-0">
+                        <span className="text-[10px] sm:text-xs text-primary font-medium">
                           {event.date.split(" ")[0]}
                         </span>
-                        <span className="text-lg font-bold text-primary">
+                        <span className="text-base sm:text-lg font-bold text-primary">
                           {event.date.split(" ")[1].replace(",", "")}
                         </span>
                       </div>
-                      <div className="min-w-0">
-                        <Badge variant="outline" className="mb-2 text-xs">{event.type}</Badge>
+                      <div className="min-w-0 flex-1">
+                        <Badge variant="outline" className="mb-1 sm:mb-2 text-xs">{event.type}</Badge>
                         <h4 className="font-semibold text-foreground text-sm leading-tight mb-1 line-clamp-2">
                           {event.title}
                         </h4>

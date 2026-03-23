@@ -150,12 +150,12 @@ export function Donate() {
                     {/* Amount Selection */}
                     <div className="space-y-4 mb-8">
                       <label className="text-sm font-medium text-foreground">Select Amount (USD)</label>
-                      <div className="grid grid-cols-3 gap-3">
+                      <div className="grid grid-cols-3 gap-2 sm:gap-3">
                         {donationAmounts.map((item) => (
                           <button
                             key={item.amount}
                             onClick={() => handleAmountClick(item.amount, item.productId)}
-                            className={`py-3 px-4 rounded-lg border-2 font-semibold transition-all ${
+                            className={`py-2 sm:py-3 px-2 sm:px-4 rounded-lg border-2 font-semibold transition-all text-sm sm:text-base ${
                               selectedAmount === item.amount
                                 ? "border-primary bg-primary text-primary-foreground"
                                 : "border-border hover:border-primary/50 text-foreground"

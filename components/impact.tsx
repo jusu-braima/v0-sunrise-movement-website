@@ -157,16 +157,16 @@ export function Impact() {
         </div>
 
         {/* Goals Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
           {goals.map((goal) => (
-            <div key={goal.title} className="space-y-4">
+            <div key={goal.title} className="space-y-4 p-4 sm:p-0 bg-primary-foreground/5 sm:bg-transparent rounded-xl">
               <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-xl bg-primary-foreground/10 flex items-center justify-center">
-                  <goal.icon className="h-6 w-6 text-primary-foreground" />
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-primary-foreground/10 flex items-center justify-center shrink-0">
+                  <goal.icon className="h-5 w-5 sm:h-6 sm:w-6 text-primary-foreground" />
                 </div>
-                <h3 className="text-xl font-semibold text-primary-foreground">{goal.title}</h3>
+                <h3 className="text-lg sm:text-xl font-semibold text-primary-foreground">{goal.title}</h3>
               </div>
-              <ul className="space-y-3">
+              <ul className="space-y-2 sm:space-y-3">
                 {goal.items.map((item) => (
                   <li key={item} className="flex items-start gap-2 text-primary-foreground/80">
                     <span className="w-1.5 h-1.5 rounded-full bg-primary-foreground/60 mt-2 shrink-0" />

@@ -94,21 +94,21 @@ export function Contact() {
               </p>
             </div>
 
-            <div className="space-y-6">
+            <div className="space-y-4 sm:space-y-6">
               {contactInfo.map((info) => (
                 <a
                   key={info.label}
                   href={info.label === "Address" ? GOOGLE_MAPS_LINK : info.href}
                   target={info.label === "Address" ? "_blank" : undefined}
                   rel={info.label === "Address" ? "noopener noreferrer" : undefined}
-                  className="flex items-start gap-4 p-4 bg-secondary/50 rounded-xl hover:bg-secondary transition-colors group"
+                  className="flex items-start gap-3 sm:gap-4 p-3 sm:p-4 bg-secondary/50 rounded-xl hover:bg-secondary transition-colors group"
                 >
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
-                    <info.icon className="h-6 w-6 text-primary group-hover:text-primary-foreground transition-colors" />
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                    <info.icon className="h-5 w-5 sm:h-6 sm:w-6 text-primary group-hover:text-primary-foreground transition-colors" />
                   </div>
-                  <div>
+                  <div className="min-w-0">
                     <p className="text-sm text-muted-foreground">{info.label}</p>
-                    <p className="text-foreground font-medium">{info.value}</p>
+                    <p className="text-foreground font-medium text-sm sm:text-base break-words">{info.value}</p>
                     {info.label === "Address" && (
                       <p className="text-xs text-primary mt-1">Click to view on Google Maps</p>
                     )}
@@ -119,14 +119,14 @@ export function Contact() {
               {/* WhatsApp Quick Contact */}
               <button
                 onClick={handleQuickWhatsApp}
-                className="w-full flex items-start gap-4 p-4 bg-[#25D366]/10 rounded-xl hover:bg-[#25D366]/20 transition-colors group border border-[#25D366]/30"
+                className="w-full flex items-start gap-3 sm:gap-4 p-3 sm:p-4 bg-[#25D366]/10 rounded-xl hover:bg-[#25D366]/20 transition-colors group border border-[#25D366]/30"
               >
-                <div className="w-12 h-12 rounded-xl bg-[#25D366] flex items-center justify-center shrink-0">
-                  <MessageCircle className="h-6 w-6 text-white" />
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-[#25D366] flex items-center justify-center shrink-0">
+                  <MessageCircle className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
                 </div>
                 <div className="text-left">
                   <p className="text-sm text-muted-foreground">WhatsApp</p>
-                  <p className="text-foreground font-medium">Chat with us instantly</p>
+                  <p className="text-foreground font-medium text-sm sm:text-base">Chat with us instantly</p>
                 </div>
               </button>
             </div>

@@ -119,14 +119,14 @@ export function About() {
           </div>
 
           <div>
-            <h3 className="text-2xl font-bold text-foreground mb-6">SDG Contributions</h3>
-            <div className="grid grid-cols-2 gap-4">
+            <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-4 sm:mb-6">SDG Contributions</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
               {sdgs.map((sdg) => (
                 <div
                   key={sdg.number}
-                  className="flex items-center gap-3 p-4 bg-card rounded-xl border border-border hover:border-primary/50 hover:shadow-md transition-all"
+                  className="flex items-center gap-3 p-3 sm:p-4 bg-card rounded-xl border border-border hover:border-primary/50 hover:shadow-md transition-all"
                 >
-                  <div className="w-10 h-10 rounded-lg bg-primary text-primary-foreground flex items-center justify-center font-bold">
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-primary text-primary-foreground flex items-center justify-center font-bold text-sm sm:text-base shrink-0">
                     {sdg.number}
                   </div>
                   <span className="text-sm font-medium text-foreground">{sdg.name}</span>

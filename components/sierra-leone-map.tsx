@@ -87,13 +87,13 @@ export function SierraLeoneMap() {
               <iframe
                 src={selectedLocation?.embedUrl || SIERRA_LEONE_MAP_EMBED}
                 width="100%"
-                height="450"
+                height="350"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 title={selectedLocation ? `${selectedLocation.name} on Google Maps` : "Sierra Leone Map"}
-                className="w-full"
+                className="w-full md:h-[450px]"
               />
               <a
                 href={selectedLocation?.googleMapsUrl || SIERRA_LEONE_MAPS_URL}
@@ -107,15 +107,15 @@ export function SierraLeoneMap() {
             </div>
 
             {/* Location Selector Buttons */}
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-1.5 sm:gap-2">
               <Button
                 variant={selectedLocation === null ? "default" : "outline"}
                 size="sm"
                 onClick={() => setSelectedLocation(null)}
-                className="flex items-center gap-2"
+                className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm h-8 sm:h-9"
               >
-                <MapPin className="h-4 w-4" />
-                All Locations
+                <MapPin className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
+                <span className="hidden xs:inline">All</span> Locations
               </Button>
               {locations.map((location) => (
                 <Button
@@ -123,33 +123,33 @@ export function SierraLeoneMap() {
                   variant={selectedLocation?.id === location.id ? "default" : "outline"}
                   size="sm"
                   onClick={() => setSelectedLocation(location)}
-                  className="flex items-center gap-2"
+                  className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm h-8 sm:h-9"
                 >
-                  <span className={`w-2 h-2 rounded-full ${
+                  <span className={`w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full ${
                     location.type === "headquarters" 
                       ? "bg-primary" 
                       : location.type === "active" 
                       ? "bg-accent" 
                       : "bg-muted-foreground"
                   }`} />
-                  {location.name}
+                  <span className="truncate max-w-[100px] sm:max-w-none">{location.name}</span>
                 </Button>
               ))}
             </div>
 
             {/* Legend */}
-            <div className="flex flex-wrap gap-4 p-4 bg-card rounded-xl border border-border">
-              <div className="flex items-center gap-2">
-                <div className="w-3 h-3 rounded-full bg-primary" />
-                <span className="text-sm text-muted-foreground">Headquarters</span>
+            <div className="flex flex-wrap gap-3 sm:gap-4 p-3 sm:p-4 bg-card rounded-xl border border-border">
+              <div className="flex items-center gap-1.5 sm:gap-2">
+                <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-primary" />
+                <span className="text-xs sm:text-sm text-muted-foreground">Headquarters</span>
               </div>
-              <div className="flex items-center gap-2">
-                <div className="w-3 h-3 rounded-full bg-accent" />
-                <span className="text-sm text-muted-foreground">Active Operations</span>
+              <div className="flex items-center gap-1.5 sm:gap-2">
+                <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-accent" />
+                <span className="text-xs sm:text-sm text-muted-foreground">Active Operations</span>
               </div>
-              <div className="flex items-center gap-2">
-                <div className="w-3 h-3 rounded-full bg-muted-foreground" />
-                <span className="text-sm text-muted-foreground">Project Site</span>
+              <div className="flex items-center gap-1.5 sm:gap-2">
+                <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-muted-foreground" />
+                <span className="text-xs sm:text-sm text-muted-foreground">Project Site</span>
               </div>
             </div>
           </div>
@@ -180,11 +180,11 @@ export function SierraLeoneMap() {
                   
                   <p className="text-muted-foreground mb-6">{selectedLocation.description}</p>
                   
-                  <div className="grid grid-cols-3 gap-4 mb-6">
+                  <div className="grid grid-cols-3 gap-2 sm:gap-4 mb-6">
                     {selectedLocation.stats.map((stat) => (
-                      <div key={stat.label} className="text-center p-3 bg-secondary/50 rounded-lg">
-                        <p className="text-lg font-bold text-foreground">{stat.value}</p>
-                        <p className="text-xs text-muted-foreground">{stat.label}</p>
+                      <div key={stat.label} className="text-center p-2 sm:p-3 bg-secondary/50 rounded-lg">
+                        <p className="text-sm sm:text-lg font-bold text-foreground">{stat.value}</p>
+                        <p className="text-[10px] sm:text-xs text-muted-foreground leading-tight">{stat.label}</p>
                       </div>
                     ))}
                   </div>
@@ -212,21 +212,21 @@ export function SierraLeoneMap() {
             )}
 
             {/* Summary Stats */}
-            <div className="grid grid-cols-3 gap-4">
-              <div className="text-center p-4 bg-card rounded-xl border border-border hover:border-primary/50 transition-colors">
-                <Users className="h-6 w-6 text-primary mx-auto mb-2" />
-                <p className="text-xl font-bold text-foreground">20,000+</p>
-                <p className="text-xs text-muted-foreground">Total Reached</p>
+            <div className="grid grid-cols-3 gap-2 sm:gap-4">
+              <div className="text-center p-2 sm:p-4 bg-card rounded-xl border border-border hover:border-primary/50 transition-colors">
+                <Users className="h-5 w-5 sm:h-6 sm:w-6 text-primary mx-auto mb-1 sm:mb-2" />
+                <p className="text-base sm:text-xl font-bold text-foreground">20,000+</p>
+                <p className="text-[10px] sm:text-xs text-muted-foreground">Total Reached</p>
               </div>
-              <div className="text-center p-4 bg-card rounded-xl border border-border hover:border-primary/50 transition-colors">
-                <TreePine className="h-6 w-6 text-primary mx-auto mb-2" />
-                <p className="text-xl font-bold text-foreground">10,000+</p>
-                <p className="text-xs text-muted-foreground">Trees Planted</p>
+              <div className="text-center p-2 sm:p-4 bg-card rounded-xl border border-border hover:border-primary/50 transition-colors">
+                <TreePine className="h-5 w-5 sm:h-6 sm:w-6 text-primary mx-auto mb-1 sm:mb-2" />
+                <p className="text-base sm:text-xl font-bold text-foreground">10,000+</p>
+                <p className="text-[10px] sm:text-xs text-muted-foreground">Trees Planted</p>
               </div>
-              <div className="text-center p-4 bg-card rounded-xl border border-border hover:border-primary/50 transition-colors">
-                <Zap className="h-6 w-6 text-primary mx-auto mb-2" />
-                <p className="text-xl font-bold text-foreground">15</p>
-                <p className="text-xs text-muted-foreground">Schools Powered</p>
+              <div className="text-center p-2 sm:p-4 bg-card rounded-xl border border-border hover:border-primary/50 transition-colors">
+                <Zap className="h-5 w-5 sm:h-6 sm:w-6 text-primary mx-auto mb-1 sm:mb-2" />
+                <p className="text-base sm:text-xl font-bold text-foreground">15</p>
+                <p className="text-[10px] sm:text-xs text-muted-foreground">Schools Powered</p>
               </div>
             </div>
 

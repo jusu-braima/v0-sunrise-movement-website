@@ -115,14 +115,14 @@ export function Hero() {
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-8 border-t border-border animate-fade-up-delay-3">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 pt-6 sm:pt-8 border-t border-border animate-fade-up-delay-3">
               {stats.map((stat) => (
-                <div key={stat.label} className="text-center">
-                  <stat.icon className="h-6 w-6 mx-auto mb-2 text-primary" />
-                  <div className="text-2xl md:text-3xl font-bold text-foreground">
+                <div key={stat.label} className="text-center p-2 sm:p-0">
+                  <stat.icon className="h-5 w-5 sm:h-6 sm:w-6 mx-auto mb-1 sm:mb-2 text-primary" />
+                  <div className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground">
                     <AnimatedCounter end={stat.value} suffix={stat.suffix} />
                   </div>
-                  <p className="text-xs md:text-sm text-muted-foreground">{stat.label}</p>
+                  <p className="text-[10px] sm:text-xs md:text-sm text-muted-foreground leading-tight">{stat.label}</p>
                 </div>
               ))}
             </div>
