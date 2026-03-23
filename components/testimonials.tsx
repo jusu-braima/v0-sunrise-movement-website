@@ -95,18 +95,18 @@ export function Testimonials() {
         <div className="max-w-4xl mx-auto mb-20">
           <div className="relative">
             <Card className="bg-card border-none shadow-xl overflow-hidden">
-              <CardContent className="p-8 md:p-12">
-                <Quote className="h-12 w-12 text-primary/20 mb-6" />
-                <blockquote className="text-xl md:text-2xl text-foreground font-medium leading-relaxed mb-8">
+              <CardContent className="p-6 sm:p-8 md:p-12">
+                <Quote className="h-8 w-8 sm:h-12 sm:w-12 text-primary/20 mb-4 sm:mb-6" />
+                <blockquote className="text-lg sm:text-xl md:text-2xl text-foreground font-medium leading-relaxed mb-6 sm:mb-8">
                   &ldquo;{testimonials[currentIndex].quote}&rdquo;
                 </blockquote>
-                <div className="flex items-center gap-4">
-                  <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-xl">
+                <div className="flex items-center gap-3 sm:gap-4">
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-lg sm:text-xl shrink-0">
                     {testimonials[currentIndex].name.charAt(0)}
                   </div>
                   <div>
-                    <p className="font-semibold text-foreground">{testimonials[currentIndex].name}</p>
-                    <p className="text-sm text-muted-foreground">{testimonials[currentIndex].role}</p>
+                    <p className="font-semibold text-foreground text-sm sm:text-base">{testimonials[currentIndex].name}</p>
+                    <p className="text-xs sm:text-sm text-muted-foreground">{testimonials[currentIndex].role}</p>
                   </div>
                 </div>
               </CardContent>

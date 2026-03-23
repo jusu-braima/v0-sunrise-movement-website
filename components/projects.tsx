@@ -1531,23 +1531,24 @@ export function Projects() {
 
         {/* Pagination */}
         {totalPages > 1 && (
-          <div className="flex justify-center items-center gap-2 mt-10">
+          <div className="flex flex-wrap justify-center items-center gap-2 mt-8 sm:mt-10">
             <Button
               variant="outline"
               size="sm"
               onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
               disabled={currentPage === 1}
+              className="h-9"
             >
               <ChevronLeft className="h-4 w-4" />
-              Previous
+              <span className="hidden sm:inline ml-1">Previous</span>
             </Button>
-            <div className="flex gap-1">
+            <div className="flex gap-1 flex-wrap justify-center">
               {Array.from({ length: totalPages }, (_, i) => i + 1).map(page => (
                 <Button
                   key={page}
                   variant={currentPage === page ? "default" : "outline"}
                   size="sm"
-                  className="w-10"
+                  className="w-8 sm:w-10 h-9"
                   onClick={() => setCurrentPage(page)}
                 >
                   {page}
@@ -1559,8 +1560,9 @@ export function Projects() {
               size="sm"
               onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
               disabled={currentPage === totalPages}
+              className="h-9"
             >
-              Next
+              <span className="hidden sm:inline mr-1">Next</span>
               <ChevronRight className="h-4 w-4" />
             </Button>
           </div>
@@ -1568,21 +1570,21 @@ export function Projects() {
 
         {/* Project Detail Modal */}
         <Dialog open={!!selectedProject} onOpenChange={() => setSelectedProject(null)}>
-          <DialogContent className="max-w-2xl">
+          <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
             {selectedProject && (
               <>
                 <DialogHeader>
-                  <div className="flex items-start gap-4 mb-4">
-                    <div className={`w-14 h-14 rounded-xl ${selectedProject.color} flex items-center justify-center shrink-0`}>
-                      <selectedProject.icon className="h-7 w-7" />
+                  <div className="flex items-start gap-3 sm:gap-4 mb-4">
+                    <div className={`w-10 h-10 sm:w-14 sm:h-14 rounded-xl ${selectedProject.color} flex items-center justify-center shrink-0`}>
+                      <selectedProject.icon className="h-5 w-5 sm:h-7 sm:w-7" />
                     </div>
-                    <div>
-                      <DialogTitle className="text-xl font-bold text-foreground">
+                    <div className="min-w-0 flex-1">
+                      <DialogTitle className="text-lg sm:text-xl font-bold text-foreground">
                         {selectedProject.title}
                       </DialogTitle>
-                      <div className="flex items-center gap-2 mt-2">
-                        <Badge variant="secondary">{selectedProject.category}</Badge>
-                        <Badge variant={selectedProject.status === "Active" ? "default" : "outline"}>
+                      <div className="flex flex-wrap items-center gap-2 mt-2">
+                        <Badge variant="secondary" className="text-xs">{selectedProject.category}</Badge>
+                        <Badge variant={selectedProject.status === "Active" ? "default" : "outline"} className="text-xs">
                           {selectedProject.status}
                         </Badge>
                       </div>
@@ -1595,24 +1597,24 @@ export function Projects() {
                 </DialogDescription>
 
                 {/* Project Details */}
-                <div className="grid sm:grid-cols-3 gap-4 mt-6">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 mt-4 sm:mt-6">
                   <div className="flex items-center gap-3 p-3 bg-secondary/50 rounded-lg">
-                    <MapPin className="h-5 w-5 text-primary" />
-                    <div>
+                    <MapPin className="h-4 w-4 sm:h-5 sm:w-5 text-primary shrink-0" />
+                    <div className="min-w-0">
                       <p className="text-xs text-muted-foreground">Location</p>
-                      <p className="text-sm font-medium text-foreground">{selectedProject.location}</p>
+                      <p className="text-sm font-medium text-foreground truncate">{selectedProject.location}</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-3 p-3 bg-secondary/50 rounded-lg">
-                    <Users className="h-5 w-5 text-primary" />
-                    <div>
+                    <Users className="h-4 w-4 sm:h-5 sm:w-5 text-primary shrink-0" />
+                    <div className="min-w-0">
                       <p className="text-xs text-muted-foreground">Beneficiaries</p>
-                      <p className="text-sm font-medium text-foreground">{selectedProject.beneficiaries}</p>
+                      <p className="text-sm font-medium text-foreground truncate">{selectedProject.beneficiaries}</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-3 p-3 bg-secondary/50 rounded-lg">
-                    <Calendar className="h-5 w-5 text-primary" />
-                    <div>
+                    <Calendar className="h-4 w-4 sm:h-5 sm:w-5 text-primary shrink-0" />
+                    <div className="min-w-0">
                       <p className="text-xs text-muted-foreground">Started</p>
                       <p className="text-sm font-medium text-foreground">{selectedProject.startDate}</p>
                     </div>
@@ -1634,11 +1636,11 @@ export function Projects() {
                   </div>
                 </div>
 
-                <div className="flex gap-3 mt-6">
-                  <Button className="flex-1" asChild>
+                <div className="flex flex-col sm:flex-row gap-3 mt-4 sm:mt-6">
+                  <Button className="flex-1" size="sm" asChild>
                     <a href="#donate">Support This Project</a>
                   </Button>
-                  <Button variant="outline" className="flex-1" asChild>
+                  <Button variant="outline" className="flex-1" size="sm" asChild>
                     <a href="#contact">Learn More</a>
                   </Button>
                 </div>
