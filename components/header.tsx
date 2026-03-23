@@ -199,7 +199,7 @@ export function Header() {
                     <Button asChild className="w-full justify-center gap-2 bg-white text-primary hover:bg-white/90">
                       <Link href="/#donate" onClick={() => setIsOpen(false)}>
                         <Heart className="h-4 w-4" />
-                        Donate Now
+                        Donate
                       </Link>
                     </Button>
                   </div>
