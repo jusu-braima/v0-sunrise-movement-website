@@ -108,10 +108,10 @@ export function Header() {
               variant="outline" 
               size="sm" 
               asChild 
-              className="group border-white/50 text-white hover:border-white hover:bg-white/10 transition-all duration-300"
+              className="group border-white/50 text-black hover:border-white hover:bg-white/10 transition-all duration-300"
             >
               <Link href="/#partner" className="flex items-center gap-1.5">
-                <Handshake className="h-3.5 w-3.5 text-white group-hover:scale-110 transition-transform duration-300" />
+                <Handshake className="h-3.5 w-3.5 text-black group-hover:scale-110 transition-transform duration-300" />
                 <span className="hidden xl:inline">Partner With Us</span>
                 <span className="xl:hidden">Partner</span>
               </Link>
@@ -180,7 +180,7 @@ export function Header() {
                 {/* Mobile CTA Buttons */}
                 <div className="p-4 border-t border-white/10">
                   <div className="flex flex-col gap-3">
-                    <Button variant="outline" asChild className="w-full justify-center gap-2 border-white/30 text-white hover:bg-white/10 hover:text-white">
+                    <Button variant="outline" asChild className="w-full justify-center gap-2 border-white/30 text-black hover:bg-white/10 hover:text-black">
                       <Link href="/#partner" onClick={() => setIsOpen(false)}>
                         <Handshake className="h-4 w-4" />
                         Partner With Us
