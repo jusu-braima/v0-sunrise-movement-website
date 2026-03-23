@@ -212,6 +212,25 @@ export function Donate() {
                         Secure payment powered by Stripe
                       </p>
                     </div>
+                    
+                    {/* QR Code Section */}
+                    <div className="mt-8 pt-6 border-t border-border">
+                      <p className="text-sm font-medium text-foreground text-center mb-4">Or scan to donate</p>
+                      <div className="flex justify-center">
+                        <a 
+                          href="https://donate.stripe.com/test_bIYdU22iD8bMfLOdQR" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="block transition-transform hover:scale-105"
+                        >
+                          <img 
+                            src="/images/donation-qr.png" 
+                            alt="Scan QR code to donate via Stripe" 
+                            className="w-48 h-48 rounded-xl shadow-lg"
+                          />
+                        </a>
+                      </div>
+                    </div>
                   </>
                 )}
               </CardContent>

@@ -61,6 +61,51 @@ const team = [
     role: "Founder & Executive Director",
     bio: "A passionate youth climate advocate committed to environmental justice and sustainable development in Sierra Leone.",
   },
+  {
+    name: "Sample Person 2",
+    role: "Deputy Director",
+    bio: "Sample bio - update with real information.",
+  },
+  {
+    name: "Sample Person 3",
+    role: "Programs Manager",
+    bio: "Sample bio - update with real information.",
+  },
+  {
+    name: "Sample Person 4",
+    role: "Communications Lead",
+    bio: "Sample bio - update with real information.",
+  },
+  {
+    name: "Sample Person 5",
+    role: "Finance Officer",
+    bio: "Sample bio - update with real information.",
+  },
+  {
+    name: "Sample Person 6",
+    role: "Community Outreach Coordinator",
+    bio: "Sample bio - update with real information.",
+  },
+  {
+    name: "Sample Person 7",
+    role: "Youth Engagement Lead",
+    bio: "Sample bio - update with real information.",
+  },
+  {
+    name: "Sample Person 8",
+    role: "Environmental Projects Lead",
+    bio: "Sample bio - update with real information.",
+  },
+  {
+    name: "Sample Person 9",
+    role: "Partnerships Coordinator",
+    bio: "Sample bio - update with real information.",
+  },
+  {
+    name: "Sample Person 10",
+    role: "Volunteer Coordinator",
+    bio: "Sample bio - update with real information.",
+  },
 ]
 
 export default function AboutPage() {
@@ -179,18 +224,18 @@ export default function AboutPage() {
             </h2>
           </div>
 
-          <div className="max-w-md mx-auto">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 max-w-6xl mx-auto">
             {team.map((member) => (
               <Card key={member.name} className="bg-card border-none shadow-lg overflow-hidden">
-                <CardContent className="p-8 text-center">
-                  <div className="w-24 h-24 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-6">
-                    <span className="text-3xl font-bold text-primary">
+                <CardContent className="p-6 text-center">
+                  <div className="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                    <span className="text-2xl font-bold text-primary">
                       {member.name.split(" ").map(n => n[0]).join("")}
                     </span>
                   </div>
-                  <h3 className="text-xl font-bold text-foreground">{member.name}</h3>
-                  <p className="text-primary font-medium mt-1">{member.role}</p>
-                  <p className="text-muted-foreground mt-4">{member.bio}</p>
+                  <h3 className="text-lg font-bold text-foreground">{member.name}</h3>
+                  <p className="text-primary font-medium text-sm mt-1">{member.role}</p>
+                  <p className="text-muted-foreground text-sm mt-3 line-clamp-3">{member.bio}</p>
                 </CardContent>
               </Card>
             ))}

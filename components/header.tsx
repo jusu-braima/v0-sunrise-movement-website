@@ -24,7 +24,7 @@ const navItems = [
   { label: "About", href: "/about", icon: Info },
   { label: "Programs", href: "/programs", icon: Layers },
   { label: "Impact", href: "/impact", icon: BarChart3 },
-  { label: "Get Involved", href: "/#get-involved", icon: Users },
+  { label: "Get Involved", href: "/#get-involved", icon: Users, textBlack: true },
   { label: "Contact", href: "/contact", icon: Phone },
 ]
 
@@ -78,9 +78,13 @@ export function Header() {
               <Link
                 key={item.label}
                 href={item.href}
-                className="group relative flex items-center gap-1.5 px-3 py-2 text-sm font-medium text-white/90 hover:text-white transition-all duration-300 rounded-lg hover:bg-white/10"
+                className={`group relative flex items-center gap-1.5 px-3 py-2 text-sm font-medium transition-all duration-300 rounded-lg hover:bg-white/10 ${
+                  item.textBlack ? "text-black hover:text-black" : "text-white/90 hover:text-white"
+                }`}
               >
-                <item.icon className="h-3.5 w-3.5 text-white/70 group-hover:text-white group-hover:scale-110 transition-all duration-300" />
+                <item.icon className={`h-3.5 w-3.5 group-hover:scale-110 transition-all duration-300 ${
+                  item.textBlack ? "text-black" : "text-white/70 group-hover:text-white"
+                }`} />
                 <span>{item.label}</span>
                 <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-white group-hover:w-3/4 transition-all duration-300 rounded-full" />
               </Link>
@@ -93,10 +97,14 @@ export function Header() {
               <Link
                 key={item.label}
                 href={item.href}
-                className="group relative flex items-center justify-center p-2 text-white/90 hover:text-white transition-all duration-300 rounded-lg hover:bg-white/10"
+                className={`group relative flex items-center justify-center p-2 transition-all duration-300 rounded-lg hover:bg-white/10 ${
+                  item.textBlack ? "text-black hover:text-black" : "text-white/90 hover:text-white"
+                }`}
                 title={item.label}
               >
-                <item.icon className="h-5 w-5 text-white/70 group-hover:text-white group-hover:scale-110 transition-all duration-300" />
+                <item.icon className={`h-5 w-5 group-hover:scale-110 transition-all duration-300 ${
+                  item.textBlack ? "text-black" : "text-white/70 group-hover:text-white"
+                }`} />
                 <span className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-white group-hover:w-3/4 transition-all duration-300 rounded-full" />
               </Link>
             ))}
@@ -108,10 +116,10 @@ export function Header() {
               variant="outline" 
               size="sm" 
               asChild 
-              className="group border-white/50 text-white hover:border-white hover:bg-white/10 transition-all duration-300"
+              className="group border-white/50 text-black hover:border-white hover:bg-white/10 transition-all duration-300"
             >
               <Link href="/#partner" className="flex items-center gap-1.5">
-                <Handshake className="h-3.5 w-3.5 text-white group-hover:scale-110 transition-transform duration-300" />
+                <Handshake className="h-3.5 w-3.5 text-black group-hover:scale-110 transition-transform duration-300" />
                 <span className="hidden xl:inline">Partner With Us</span>
                 <span className="xl:hidden">Partner</span>
               </Link>
@@ -166,7 +174,9 @@ export function Header() {
                         key={item.label}
                         href={item.href}
                         onClick={() => setIsOpen(false)}
-                        className="group flex items-center gap-3 px-4 py-3 text-white/90 hover:text-white hover:bg-white/10 rounded-xl transition-all duration-300"
+                        className={`group flex items-center gap-3 px-4 py-3 hover:bg-white/10 rounded-xl transition-all duration-300 ${
+                          item.textBlack ? "text-black hover:text-black" : "text-white/90 hover:text-white"
+                        }`}
                       >
                         <div className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center group-hover:bg-white group-hover:text-primary transition-colors">
                           <item.icon className="h-5 w-5" />
@@ -180,7 +190,7 @@ export function Header() {
                 {/* Mobile CTA Buttons */}
                 <div className="p-4 border-t border-white/10">
                   <div className="flex flex-col gap-3">
-                    <Button variant="outline" asChild className="w-full justify-center gap-2 border-white/30 text-white hover:bg-white/10 hover:text-white">
+                    <Button variant="outline" asChild className="w-full justify-center gap-2 border-white/30 text-black hover:bg-white/10 hover:text-black">
                       <Link href="/#partner" onClick={() => setIsOpen(false)}>
                         <Handshake className="h-4 w-4" />
                         Partner With Us
@@ -189,7 +199,7 @@ export function Header() {
                     <Button asChild className="w-full justify-center gap-2 bg-white text-primary hover:bg-white/90">
                       <Link href="/#donate" onClick={() => setIsOpen(false)}>
                         <Heart className="h-4 w-4" />
-                        Donate Now
+                        Donate
                       </Link>
                     </Button>
                   </div>
