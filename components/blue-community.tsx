@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import { AnimateOnScroll } from "@/components/animate-on-scroll"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -67,7 +68,16 @@ export function BlueCommunity() {
           {/* Main Content */}
           <AnimateOnScroll animation="fade-right">
             <Card className="bg-white/80 dark:bg-card/80 backdrop-blur-sm border-cyan-200 dark:border-cyan-800 overflow-hidden">
-              <CardContent className="p-6">
+              <div className="relative h-48 overflow-hidden">
+                <Image
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.22.26-6MKL1XIX8VMgXuO4xl2afErHkZTRUS.jpeg"
+                  alt="Beach cleanup and coastal conservation"
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-white/90 dark:from-card/90 via-transparent to-transparent" />
+              </div>
+              <CardContent className="p-6 -mt-8 relative">
                 <div className="flex items-center gap-3 mb-6">
                   <div className="w-14 h-14 rounded-full bg-gradient-to-br from-cyan-400 to-blue-600 flex items-center justify-center">
                     <Droplets className="w-7 h-7 text-white" />

@@ -23,16 +23,16 @@ const projectImages = [
     alt: "Lalehun Solar Energy Initiative team with students",
   },
   {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.00.40%20%281%29-X2DbWr4hL35WIvSsCIM5KH3AGhVoCf.jpeg",
+    alt: "Volunteers with solar project banner",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.00.39%20%281%29-L0L4AOwXrREfF1ADBgkGXWGZuoV8Zk.jpeg",
+    alt: "Solar project with students",
+  },
+  {
     src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.00.55-aNlKKVTLCuISzWW159CKIW4fb7OUWE.jpeg",
     alt: "Students gathered at project launch",
-  },
-  {
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.01.05-wBgOE95UFKmWMrIbySOKwNpxAfRqcf.jpeg",
-    alt: "Volunteer team with solar energy banner",
-  },
-  {
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.00.39-H5AEbmfHfGbB2CHOkT0jVmTGruYdNl.jpeg",
-    alt: "Community members at project launch",
   },
 ]
 
