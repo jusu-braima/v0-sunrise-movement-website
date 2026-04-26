@@ -2,7 +2,9 @@ import { Header } from "@/components/header"
 import { Hero } from "@/components/hero"
 import { About } from "@/components/about"
 import { Programs } from "@/components/programs"
+import { LalehunProject } from "@/components/lalehun-project"
 import { Projects } from "@/components/projects"
+import { PhotoGallery } from "@/components/photo-gallery"
 import { Impact } from "@/components/impact"
 import { SierraLeoneMap } from "@/components/sierra-leone-map"
 import { Testimonials } from "@/components/testimonials"
@@ -20,7 +22,9 @@ export default function Home() {
       <Hero />
       <About />
       <Programs />
+      <LalehunProject />
       <Projects />
+      <PhotoGallery />
       <Impact />
       <SierraLeoneMap />
       <Testimonials />

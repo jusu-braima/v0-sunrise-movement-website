@@ -1,7 +1,9 @@
 "use client"
 
-import { CheckCircle2, Shield, BarChart3, Globe, Heart } from "lucide-react"
+import Image from "next/image"
+import { CheckCircle2, Shield, BarChart3, Globe, Heart, Award } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 
@@ -51,6 +53,28 @@ export function Partners() {
                 scalable, evidence-based programs that create measurable environmental and social impact.
               </p>
             </div>
+
+            {/* Award Highlight */}
+            <Card className="bg-gradient-to-r from-yellow-50 to-amber-50 dark:from-yellow-950/30 dark:to-amber-950/30 border-yellow-200 dark:border-yellow-800">
+              <CardContent className="p-4 flex items-center gap-4">
+                <div className="relative w-16 h-16 shrink-0">
+                  <Image
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.23.26-GQOF8ZAJMW5ZPzTAb6qlaSV1235pRK.jpeg"
+                    alt="SDG 13 World Gold Award"
+                    fill
+                    className="object-cover rounded-lg"
+                  />
+                </div>
+                <div className="flex-1">
+                  <Badge className="bg-yellow-500 text-white mb-1">
+                    <Award className="w-3 h-3 mr-1" />
+                    Award Winner
+                  </Badge>
+                  <p className="text-sm font-semibold text-foreground">SDG 13 Climate Action World Gold Award</p>
+                  <p className="text-xs text-muted-foreground">Global Sustainability Awards 2025</p>
+                </div>
+              </CardContent>
+            </Card>
 
             {/* Registrations */}
             <div className="space-y-4">

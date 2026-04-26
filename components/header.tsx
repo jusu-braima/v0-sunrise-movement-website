@@ -16,13 +16,15 @@ import {
   Phone,
   Handshake,
   Heart,
-  X
+  X,
+  Camera
 } from "lucide-react"
 
 const navItems = [
   { label: "Home", href: "/", icon: Home },
   { label: "About", href: "/about", icon: Info },
   { label: "Programs", href: "/programs", icon: Layers },
+  { label: "Gallery", href: "/#gallery", icon: Camera },
   { label: "Impact", href: "/impact", icon: BarChart3 },
   { label: "Get Involved", href: "/#get-involved", icon: Users },
   { label: "Contact", href: "/contact", icon: Phone },

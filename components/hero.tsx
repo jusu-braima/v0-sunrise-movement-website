@@ -54,7 +54,7 @@ export function Hero() {
           loop
           playsInline
           className="absolute inset-0 w-full h-full object-cover"
-          poster="/images/hero-community.jpg"
+          poster="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.24.27-LaypVYtvCav5iLy06NhEI23rIindml.jpeg"
         >
           <source src="https://videos.pexels.com/video-files/3571264/3571264-uhd_2560_1440_30fps.mp4" type="video/mp4" />
         </video>

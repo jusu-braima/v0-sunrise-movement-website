@@ -40,19 +40,46 @@ export function About() {
           </p>
         </AnimateOnScroll>
 
-        {/* Team Image */}
+        {/* Team Images */}
         <AnimateOnScroll animation="fade-scale" className="mb-16">
-          <div className="relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden shadow-xl">
-            <Image
-              src="/images/about-team.jpg"
-              alt="Sunrise Movement Sierra Leone Team"
-              fill
-              className="object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
-            <div className="absolute bottom-6 left-6 right-6">
-              <p className="text-white font-semibold text-lg">Our dedicated team of youth climate activists</p>
-              <p className="text-white/80 text-sm">Working together for a sustainable Sierra Leone</p>
+          <div className="grid md:grid-cols-3 gap-4">
+            {/* Main Team Photo */}
+            <div className="md:col-span-2 relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden shadow-xl group">
+              <Image
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.01.25%20%281%29-XAI6Jzsv0e0DuY29yy2vSD82nU6Ptz.jpeg"
+                alt="Sunrise Movement Sierra Leone Team in green SM-SL t-shirts"
+                fill
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+              <div className="absolute bottom-6 left-6 right-6">
+                <p className="text-white font-semibold text-lg">Our dedicated team of youth climate activists</p>
+                <p className="text-white/80 text-sm">Working together for a sustainable Sierra Leone</p>
+              </div>
+            </div>
+            
+            {/* Side Images */}
+            <div className="flex flex-col gap-4">
+              <div className="relative h-[140px] md:h-[190px] rounded-xl overflow-hidden shadow-lg group">
+                <Image
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.01.24-uLYMyXCbn3uznrFoAtlJyT4HhkdBN3.jpeg"
+                  alt="Team with raised fists in solidarity"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                <p className="absolute bottom-3 left-3 text-white text-sm font-medium">United in Action</p>
+              </div>
+              <div className="relative h-[140px] md:h-[190px] rounded-xl overflow-hidden shadow-lg group">
+                <Image
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.01.11-UtxfXZfO1blkKX8pxO8V6UCBZdqRJN.jpeg"
+                  alt="Team holding hands showing unity"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                <p className="absolute bottom-3 left-3 text-white text-sm font-medium">Stronger Together</p>
+              </div>
             </div>
           </div>
         </AnimateOnScroll>
