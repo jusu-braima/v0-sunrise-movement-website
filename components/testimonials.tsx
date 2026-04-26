@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import Image from "next/image"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { ChevronLeft, ChevronRight, Quote } from "lucide-react"
@@ -11,25 +12,25 @@ const testimonials = [
     quote: "Sunrise Movement Sierra Leone taught me that my voice matters in the fight against climate change. Now I lead environmental workshops in my community.",
     name: "Aminata Kamara",
     role: "Youth Climate Ambassador, Bo District",
-    image: "/images/testimonials/aminata.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.24.50-caSc6rLI35J6T3sevw6hSl5WdxaFmb.jpeg",
   },
   {
     quote: "The sustainable agriculture training transformed how our village farms. We now grow more food while protecting our soil and water sources.",
     name: "Mohamed Sesay",
     role: "Community Farmer, Bombali District",
-    image: "/images/testimonials/mohamed.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.00.53-ZLF4blEVYSzBs7yBiImSa9Zf8XA9in.jpeg",
   },
   {
     quote: "Through clean energy programs, my family received solar lighting. My children can now study at night, and we no longer rely on kerosene.",
     name: "Fatmata Bangura",
-    role: "Community Member, Bo",
-    image: "/images/testimonials/fatmata.jpg",
+    role: "Community Member, Lalehun",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.00.52%20%281%29-KWQA0piMZhibT4J5KqjpNQm0sV3Ez3.jpeg",
   },
   {
     quote: "Being part of SM-SL's marine conservation initiative opened my eyes to protecting our coastlines. We've cleaned over 2km of beach together.",
     name: "Ibrahim Conteh",
     role: "Youth Volunteer, Freetown",
-    image: "/images/testimonials/ibrahim.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.22.28-NJLSlteNVMXWN1S21PCg5uUOchHt5E.jpeg",
   },
 ]
 
@@ -101,8 +102,13 @@ export function Testimonials() {
                   &ldquo;{testimonials[currentIndex].quote}&rdquo;
                 </blockquote>
                 <div className="flex items-center gap-3 sm:gap-4">
-                  <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-lg sm:text-xl shrink-0">
-                    {testimonials[currentIndex].name.charAt(0)}
+                  <div className="relative w-12 h-12 sm:w-14 sm:h-14 rounded-full overflow-hidden shrink-0">
+                    <Image
+                      src={testimonials[currentIndex].image}
+                      alt={testimonials[currentIndex].name}
+                      fill
+                      className="object-cover"
+                    />
                   </div>
                   <div>
                     <p className="font-semibold text-foreground text-sm sm:text-base">{testimonials[currentIndex].name}</p>

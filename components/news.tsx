@@ -12,35 +12,39 @@ import { AnimateOnScroll } from "@/components/animate-on-scroll"
 const newsItems = [
   {
     id: 1,
-    title: "SM-SL Launches Youth Climate Ambassador Program in Bombali District",
-    excerpt: "50 young leaders selected to receive intensive training in climate advocacy, community organizing, and environmental policy. The program aims to build a network of climate champions across northern Sierra Leone.",
-    date: "March 10, 2026",
-    category: "Programs",
+    title: "Lalehun Solar Energy Initiative Launched in Penguia Chiefdom",
+    excerpt: "Sunrise Movement Sierra Leone has launched the Lalehun Solar Energy Initiative to enhance clean energy access, strengthen education systems, and advance youth empowerment. The project will train 60 local youth in solar installation with a focus on young women.",
+    date: "April 20, 2026",
+    category: "Clean Energy",
     featured: true,
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.00.56-duDECbr4fPcKoObj3ZzcSPbNWns7AY.jpeg",
   },
   {
     id: 2,
-    title: "Community Reforestation Project Reaches 10,000 Trees Milestone",
-    excerpt: "Our grassroots reforestation initiative in Bo District has successfully planted and nurtured over 10,000 native trees since its launch.",
-    date: "March 5, 2026",
-    category: "Environment",
+    title: "SM-SL Wins SDG 13 World Gold Award at Global Sustainability Awards",
+    excerpt: "Sunrise Movement Sierra Leone has been recognized with the prestigious SDG 13 Climate Action World Gold Award at the Global Sustainability Awards 2025, honoring our impact on climate action.",
+    date: "March 15, 2026",
+    category: "Awards",
     featured: false,
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.23.26-GQOF8ZAJMW5ZPzTAb6qlaSV1235pRK.jpeg",
   },
   {
     id: 3,
-    title: "Partnership Announced with National Youth Commission for Climate Education",
-    excerpt: "New collaboration will integrate climate literacy into youth development programs nationwide, reaching thousands of young Sierra Leoneans.",
-    date: "February 28, 2026",
-    category: "Partnerships",
+    title: "Youth Climate March to COP30 Held in Freetown",
+    excerpt: "Hundreds of youth activists joined the COP30 Foot Walk in Freetown, demanding climate accountability with the message: Climate Promises Must Be Kept - Our Future Cannot Wait.",
+    date: "March 8, 2026",
+    category: "Advocacy",
     featured: false,
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.24.27-LaypVYtvCav5iLy06NhEI23rIindml.jpeg",
   },
   {
     id: 4,
-    title: "Clean Energy Workshop Trains 30 Solar Technicians",
-    excerpt: "Graduates now equipped to install and maintain solar systems in rural communities, creating green jobs while expanding energy access.",
-    date: "February 20, 2026",
-    category: "Training",
+    title: "SM-SL Representatives Attend Youth Academy on Climate Adaptation in Kenya",
+    excerpt: "Our team participated in the Youth Academy on Climate Adaptation and Leadership in Kenya, building capacity for climate resilience across Africa.",
+    date: "February 25, 2026",
+    category: "Conferences",
     featured: false,
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.23.44-3UO3ek9aw8wUme0vlKc9YdGw9VVLZt.jpeg",
   },
 ]
 
@@ -109,7 +113,7 @@ export function News() {
                   <CardContent className="p-0">
                     <div className="relative aspect-video overflow-hidden">
                       <Image
-                        src="/images/projects/workshop.jpg"
+                        src={featuredNews.image}
                         alt={featuredNews.title}
                         fill
                         className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -142,20 +146,31 @@ export function News() {
               {otherNews.slice(0, 3).map((item, index) => (
                 <AnimateOnScroll key={item.id} animation="fade-up" delay={200 + index * 100}>
                   <Card 
-                    className="bg-card border border-border hover:border-primary/50 hover:shadow-lg transition-all duration-300 group cursor-pointer hover:-translate-y-1 h-full"
+                    className="bg-card border border-border hover:border-primary/50 hover:shadow-lg transition-all duration-300 group cursor-pointer hover:-translate-y-1 h-full overflow-hidden"
                   >
-                    <CardContent className="p-6">
-                      <div className="flex items-center gap-3 mb-3">
-                        <Badge variant="secondary">{item.category}</Badge>
-                        <span className="flex items-center gap-1 text-xs text-muted-foreground">
-                          <Calendar className="h-3 w-3" />
-                          {item.date}
-                        </span>
+                    <CardContent className="p-0">
+                      <div className="relative h-32 overflow-hidden">
+                        <Image
+                          src={item.image}
+                          alt={item.title}
+                          fill
+                          className="object-cover transition-transform duration-500 group-hover:scale-105"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
                       </div>
-                      <h3 className="text-lg font-semibold text-foreground mb-2 group-hover:text-primary transition-colors line-clamp-2">
-                        {item.title}
-                      </h3>
-                      <p className="text-sm text-muted-foreground line-clamp-3">{item.excerpt}</p>
+                      <div className="p-4">
+                        <div className="flex items-center gap-3 mb-2">
+                          <Badge variant="secondary" className="text-xs">{item.category}</Badge>
+                          <span className="flex items-center gap-1 text-xs text-muted-foreground">
+                            <Calendar className="h-3 w-3" />
+                            {item.date}
+                          </span>
+                        </div>
+                        <h3 className="text-base font-semibold text-foreground mb-2 group-hover:text-primary transition-colors line-clamp-2">
+                          {item.title}
+                        </h3>
+                        <p className="text-sm text-muted-foreground line-clamp-2">{item.excerpt}</p>
+                      </div>
                     </CardContent>
                   </Card>
                 </AnimateOnScroll>

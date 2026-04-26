@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import { Heart, Users, Megaphone, HandHeart } from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
@@ -12,6 +13,7 @@ const opportunities = [
     description: "Contribute your skills and time to our climate programs. We welcome youth passionate about environmental action.",
     cta: "Apply Now",
     href: "#contact",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.01.25%20%281%29-XAI6Jzsv0e0DuY29yy2vSD82nU6Ptz.jpeg",
   },
   {
     icon: Heart,
@@ -19,6 +21,7 @@ const opportunities = [
     description: "Your financial support directly funds community programs, youth training, and environmental restoration projects.",
     cta: "Give Today",
     href: "#donate",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.00.55-aNlKKVTLCuISzWW159CKIW4fb7OUWE.jpeg",
   },
   {
     icon: Megaphone,
@@ -26,6 +29,7 @@ const opportunities = [
     description: "Share our mission on social media, attend events, and help spread awareness about climate action in Sierra Leone.",
     cta: "Follow Us",
     href: "#contact",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.24.27-LaypVYtvCav5iLy06NhEI23rIindml.jpeg",
   },
   {
     icon: HandHeart,
@@ -33,6 +37,7 @@ const opportunities = [
     description: "Align your organization with impactful climate work through CSR initiatives, sponsorships, or technical support.",
     cta: "Partner With Us",
     href: "#contact",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.22.06-PD3A9oxZHYsAuLJgKhXyIIWRwMGX2g.jpeg",
   },
 ]
 
@@ -57,18 +62,27 @@ export function GetInvolved() {
           {opportunities.map((opp, index) => (
             <AnimateOnScroll key={opp.title} animation="fade-scale" delay={index * 100}>
               <Card 
-                className="group bg-card border border-border hover:border-primary hover:shadow-xl transition-all duration-300 flex flex-col hover:-translate-y-2 h-full"
+                className="group bg-card border border-border hover:border-primary hover:shadow-xl transition-all duration-300 flex flex-col hover:-translate-y-2 h-full overflow-hidden"
               >
-                <CardHeader className="pb-4">
-                  <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
-                    <opp.icon className="h-7 w-7 text-primary group-hover:text-primary-foreground transition-colors duration-300" />
+                <div className="relative h-36 overflow-hidden">
+                  <Image
+                    src={opp.image}
+                    alt={opp.title}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                  <div className="absolute bottom-3 left-3 w-10 h-10 rounded-xl bg-primary/90 flex items-center justify-center">
+                    <opp.icon className="h-5 w-5 text-primary-foreground" />
                   </div>
-                  <CardTitle className="text-xl font-semibold text-foreground">
+                </div>
+                <CardHeader className="pb-2 pt-4">
+                  <CardTitle className="text-lg font-semibold text-foreground">
                     {opp.title}
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="flex flex-col flex-1">
-                  <p className="text-muted-foreground mb-6 flex-1">
+                <CardContent className="flex flex-col flex-1 pt-0">
+                  <p className="text-sm text-muted-foreground mb-4 flex-1">
                     {opp.description}
                   </p>
                   <Button variant="outline" className="w-full group-hover:bg-primary group-hover:text-primary-foreground group-hover:border-primary transition-colors duration-300" asChild>
