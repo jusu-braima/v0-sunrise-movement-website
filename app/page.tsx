@@ -13,7 +13,6 @@ import { Testimonials } from "@/components/testimonials"
 import { News } from "@/components/news"
 import { Partners } from "@/components/partners"
 import { GetInvolved } from "@/components/get-involved"
-import { Donate } from "@/components/donate"
 import { Contact } from "@/components/contact"
 import { Footer } from "@/components/footer"
 
@@ -35,7 +34,6 @@ export default function Home() {
       <News />
       <Partners />
       <GetInvolved />
-      <Donate />
       <Contact />
       <Footer />
     </main>
