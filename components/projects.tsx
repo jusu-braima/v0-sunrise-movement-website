@@ -59,7 +59,7 @@ const projects: Project[] = [
     impact: ["10,000+ trees planted", "200 hectares restored", "50 youth trained"],
     icon: TreePine,
     color: "bg-emerald-500/10 text-emerald-600",
-    image: "/images/projects/reforestation.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.23.37-yAQRchlrMbzyBMIu0xyyAx43yeMki4.jpeg",
   },
   {
     id: 2,
@@ -286,7 +286,7 @@ const projects: Project[] = [
     impact: ["15 schools electrified", "30 solar technicians trained", "3,000+ students benefiting"],
     icon: Zap,
     color: "bg-yellow-500/10 text-yellow-600",
-    image: "/images/projects/solar-energy.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.00.56-duDECbr4fPcKoObj3ZzcSPbNWns7AY.jpeg",
   },
   {
     id: 17,
@@ -513,7 +513,7 @@ const projects: Project[] = [
     impact: ["5km coastline cleaned", "2 tons waste collected", "10 communities engaged"],
     icon: Waves,
     color: "bg-blue-500/10 text-blue-600",
-    image: "/images/projects/coastal-cleanup.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.22.28-NJLSlteNVMXWN1S21PCg5uUOchHt5E.jpeg",
   },
   {
     id: 32,
@@ -740,7 +740,7 @@ const projects: Project[] = [
     impact: ["800 farmers trained", "40% yield increase", "30% less chemicals"],
     icon: Wheat,
     color: "bg-green-500/10 text-green-600",
-    image: "/images/projects/sustainable-farming.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.23.36-Bq5BacYev1XxshwO3GxpaYgN1rM5po.jpeg",
   },
   {
     id: 47,

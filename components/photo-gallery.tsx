@@ -37,7 +37,7 @@ const galleryImages: GalleryImage[] = [
     alt: "Team holding hands in unity",
     category: "Team",
   },
-  // Climate Marches
+  // Climate Marches / Advocacy
   {
     src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.24.27-LaypVYtvCav5iLy06NhEI23rIindml.jpeg",
     alt: "COP30 Climate March in Freetown",
@@ -53,7 +53,17 @@ const galleryImages: GalleryImage[] = [
     alt: "Climate march with banners",
     category: "Advocacy",
   },
-  // School Outreach
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.24.10-RQiGuqkRtGBTWVFu57unsuoVBk8q6k.jpeg",
+    alt: "Make Earth Cool Again sign",
+    category: "Advocacy",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.23.59-DxX4YeJZ0qtyBrmyIr0mfELCwyrnet.jpeg",
+    alt: "There is no Planet B sign",
+    category: "Advocacy",
+  },
+  // School Outreach / Education
   {
     src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.24.11-b86eNj3DZmZM2V0mPs6rNPJmsLX5ni.jpeg",
     alt: "Speaking to students at school assembly",
@@ -67,6 +77,21 @@ const galleryImages: GalleryImage[] = [
   {
     src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.26.02-qgSEHTNJpP380x32WGk4CTvdjmuC7f.jpeg",
     alt: "Interactive classroom session",
+    category: "Education",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.24.50-caSc6rLI35J6T3sevw6hSl5WdxaFmb.jpeg",
+    alt: "Student presenting to peers",
+    category: "Education",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.24.33-7cOmsj1sE6CC1znzGaVmQR2RVJ8znX.jpeg",
+    alt: "School with Education is Power mural",
+    category: "Education",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.26.02%281%29-LvWDoR0OrGahfxeWii3iYGUmOFlM9k.jpeg",
+    alt: "Volunteer with megaphone at school",
     category: "Education",
   },
   // Conferences
@@ -85,7 +110,22 @@ const galleryImages: GalleryImage[] = [
     alt: "International delegates group photo",
     category: "Conferences",
   },
-  // Beach Cleanup
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.22.46-I01sGTnKqJk6gIOhFZun7iSpAsUoKe.jpeg",
+    alt: "Regional Youth Climate Change Conference",
+    category: "Conferences",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.23.46-7zK6eOuyyF3hsh0EqvEqCqDlWZOgWB.jpeg",
+    alt: "Youth Academy delegates networking",
+    category: "Conferences",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.23.26-GQOF8ZAJMW5ZPzTAb6qlaSV1235pRK.jpeg",
+    alt: "SDG 13 World Gold Award certificate",
+    category: "Conferences",
+  },
+  // Beach Cleanup / Environment
   {
     src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.22.28-NJLSlteNVMXWN1S21PCg5uUOchHt5E.jpeg",
     alt: "Beach cleanup volunteers",
@@ -96,7 +136,17 @@ const galleryImages: GalleryImage[] = [
     alt: "Collecting waste from beach",
     category: "Environment",
   },
-  // Solar Project
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.22.24-vYr2N2nXaMC9ntCQFNIcMBmIkp0UEn.jpeg",
+    alt: "Beach cleanup action",
+    category: "Environment",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.22.25-yzYwgGtkhJsaHcERe9yQepkK6f9GCy.jpeg",
+    alt: "Youth removing debris from beach",
+    category: "Environment",
+  },
+  // Solar Project / Clean Energy
   {
     src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.00.56-duDECbr4fPcKoObj3ZzcSPbNWns7AY.jpeg",
     alt: "Lalehun Solar Energy Initiative launch",
@@ -104,7 +154,27 @@ const galleryImages: GalleryImage[] = [
   },
   {
     src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.00.39%20%281%29-L0L4AOwXrREfF1ADBgkGXWGZuoV8Zk.jpeg",
-    alt: "Solar project community gathering",
+    alt: "Solar project with students",
+    category: "Clean Energy",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.00.40%20%281%29-X2DbWr4hL35WIvSsCIM5KH3AGhVoCf.jpeg",
+    alt: "Volunteers with solar project banner",
+    category: "Clean Energy",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.00.39-H5AEbmfHfGbB2CHOkT0jVmTGruYdNl.jpeg",
+    alt: "Community members at solar launch",
+    category: "Clean Energy",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.01.05-wBgOE95UFKmWMrIbySOKwNpxAfRqcf.jpeg",
+    alt: "Solar team with project banner",
+    category: "Clean Energy",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.00.55-aNlKKVTLCuISzWW159CKIW4fb7OUWE.jpeg",
+    alt: "Students at solar project launch",
     category: "Clean Energy",
   },
   // Community
@@ -118,9 +188,50 @@ const galleryImages: GalleryImage[] = [
     alt: "Intergenerational community gathering",
     category: "Community",
   },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.00.52-MuET5Bc8ep8IFNcPC6ccnP07TklcLQ.jpeg",
+    alt: "Community meeting with youth",
+    category: "Community",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.00.54-EfgPqz3ty5gFbBT8hIzoa9RKdp44CX.jpeg",
+    alt: "Villagers at community event",
+    category: "Community",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.00.08-UD6iGIMV6H1JgLw9wJ3LK8fFSG82qa.jpeg",
+    alt: "Students at community gathering",
+    category: "Community",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.00.40-ICKSjE6ldb3sCPcbwRlzXubTIvCRa7.jpeg",
+    alt: "Community members under shelter",
+    category: "Community",
+  },
+  // Workshops
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.23.34-lAO2vzLtpwMhppLjU7zUYa0mMcDkjr.jpeg",
+    alt: "Trocaire workshop with laptops",
+    category: "Workshops",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.26.14-EtfFPiTvGlLgoEJAgENugoUnRIHhvR.jpeg",
+    alt: "Working session with partners",
+    category: "Workshops",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.23.37-yAQRchlrMbzyBMIu0xyyAx43yeMki4.jpeg",
+    alt: "Agricultural field training",
+    category: "Workshops",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.23.36-Bq5BacYev1XxshwO3GxpaYgN1rM5po.jpeg",
+    alt: "Farm visit and training",
+    category: "Workshops",
+  },
 ]
 
-const categories = ["All", "Team", "Advocacy", "Education", "Conferences", "Environment", "Clean Energy", "Community"]
+const categories = ["All", "Team", "Advocacy", "Education", "Conferences", "Environment", "Clean Energy", "Community", "Workshops"]
 
 export function PhotoGallery() {
   const [selectedCategory, setSelectedCategory] = useState("All")
