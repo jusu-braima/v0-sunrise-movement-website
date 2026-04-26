@@ -4,6 +4,7 @@ import { About } from "@/components/about"
 import { Programs } from "@/components/programs"
 import { LalehunProject } from "@/components/lalehun-project"
 import { ClimateConference } from "@/components/climate-conference"
+import { BlueCommunity } from "@/components/blue-community"
 import { Projects } from "@/components/projects"
 import { PhotoGallery } from "@/components/photo-gallery"
 import { Impact } from "@/components/impact"
@@ -25,6 +26,7 @@ export default function Home() {
       <Programs />
       <LalehunProject />
       <ClimateConference />
+      <BlueCommunity />
       <Projects />
       <PhotoGallery />
       <Impact />
