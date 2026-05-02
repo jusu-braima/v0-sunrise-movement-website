@@ -1638,7 +1638,7 @@ export function Projects() {
 
                 <div className="flex flex-col sm:flex-row gap-3 mt-4 sm:mt-6">
                   <Button className="flex-1" size="sm" asChild>
-                    <a href="#donate">Support This Project</a>
+                    <a href="#partner">Partner With Us</a>
                   </Button>
                   <Button variant="outline" className="flex-1" size="sm" asChild>
                     <a href="#contact">Learn More</a>

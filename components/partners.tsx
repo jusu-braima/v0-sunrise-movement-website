@@ -92,13 +92,10 @@ export function Partners() {
               </div>
             </div>
 
-            {/* CTAs */}
+            {/* CTA */}
             <div className="flex flex-col sm:flex-row gap-4">
               <Button size="lg" asChild>
                 <Link href="#contact">Become a Partner</Link>
-              </Button>
-              <Button size="lg" variant="outline" asChild>
-                <Link href="#donate">Support Our Work</Link>
               </Button>
             </div>
           </div>

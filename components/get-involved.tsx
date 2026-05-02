@@ -1,7 +1,7 @@
 "use client"
 
 import Image from "next/image"
-import { Heart, Users, Megaphone, HandHeart } from "lucide-react"
+import { Users, Megaphone, HandHeart } from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { AnimateOnScroll } from "@/components/animate-on-scroll"
@@ -14,14 +14,6 @@ const opportunities = [
     cta: "Apply Now",
     href: "#contact",
     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.01.25%20%281%29-XAI6Jzsv0e0DuY29yy2vSD82nU6Ptz.jpeg",
-  },
-  {
-    icon: Heart,
-    title: "Donate",
-    description: "Your financial support directly funds community programs, youth training, and environmental restoration projects.",
-    cta: "Give Today",
-    href: "#donate",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.00.55-aNlKKVTLCuISzWW159CKIW4fb7OUWE.jpeg",
   },
   {
     icon: Megaphone,
@@ -58,7 +50,7 @@ export function GetInvolved() {
         </AnimateOnScroll>
 
         {/* Opportunities Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
           {opportunities.map((opp, index) => (
             <AnimateOnScroll key={opp.title} animation="fade-scale" delay={index * 100}>
               <Card 
