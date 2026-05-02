@@ -74,7 +74,7 @@ const projects: Project[] = [
     impact: ["8,000 trees planted", "150 hectares under restoration", "40 forest guardians trained"],
     icon: TreePine,
     color: "bg-emerald-500/10 text-emerald-600",
-    image: "/images/projects/reforestation.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.23.36-Bq5BacYev1XxshwO3GxpaYgN1rM5po.jpeg",
   },
   {
     id: 3,
@@ -89,7 +89,7 @@ const projects: Project[] = [
     impact: ["5,000 mangroves planted", "3km coastline protected", "20 communities engaged"],
     icon: TreePine,
     color: "bg-emerald-500/10 text-emerald-600",
-    image: "/images/projects/reforestation.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.23.36-Bq5BacYev1XxshwO3GxpaYgN1rM5po.jpeg",
   },
   {
     id: 4,
@@ -104,7 +104,7 @@ const projects: Project[] = [
     impact: ["6,000 trees planted", "5 watersheds protected", "Clean water for 4,000 people"],
     icon: TreePine,
     color: "bg-emerald-500/10 text-emerald-600",
-    image: "/images/projects/reforestation.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.23.36-Bq5BacYev1XxshwO3GxpaYgN1rM5po.jpeg",
   },
   {
     id: 5,
@@ -119,7 +119,7 @@ const projects: Project[] = [
     impact: ["4,000 fruit trees planted", "100 hectares converted", "35% income increase"],
     icon: TreePine,
     color: "bg-emerald-500/10 text-emerald-600",
-    image: "/images/projects/reforestation.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.23.36-Bq5BacYev1XxshwO3GxpaYgN1rM5po.jpeg",
   },
   {
     id: 6,
@@ -134,7 +134,7 @@ const projects: Project[] = [
     impact: ["12 sacred groves protected", "300 hectares conserved", "15 species documented"],
     icon: TreePine,
     color: "bg-emerald-500/10 text-emerald-600",
-    image: "/images/projects/reforestation.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.23.36-Bq5BacYev1XxshwO3GxpaYgN1rM5po.jpeg",
   },
   {
     id: 7,
@@ -149,7 +149,7 @@ const projects: Project[] = [
     impact: ["15,000 bamboo planted", "10km corridors established", "30 artisans trained"],
     icon: TreePine,
     color: "bg-emerald-500/10 text-emerald-600",
-    image: "/images/projects/reforestation.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.23.36-Bq5BacYev1XxshwO3GxpaYgN1rM5po.jpeg",
   },
   {
     id: 8,
@@ -164,7 +164,7 @@ const projects: Project[] = [
     impact: ["20,000 seedlings ready", "500 hectares targeted", "100 forest monitors trained"],
     icon: TreePine,
     color: "bg-emerald-500/10 text-emerald-600",
-    image: "/images/projects/reforestation.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.23.36-Bq5BacYev1XxshwO3GxpaYgN1rM5po.jpeg",
   },
   {
     id: 9,
@@ -179,7 +179,7 @@ const projects: Project[] = [
     impact: ["200 hectares wetland protected", "25 species documented", "5 communities engaged"],
     icon: TreePine,
     color: "bg-emerald-500/10 text-emerald-600",
-    image: "/images/projects/reforestation.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.23.36-Bq5BacYev1XxshwO3GxpaYgN1rM5po.jpeg",
   },
   {
     id: 10,
@@ -194,7 +194,7 @@ const projects: Project[] = [
     impact: ["12,000 trees planned", "8km riverbank restoration", "Fish stocks improvement"],
     icon: TreePine,
     color: "bg-emerald-500/10 text-emerald-600",
-    image: "/images/projects/reforestation.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.23.36-Bq5BacYev1XxshwO3GxpaYgN1rM5po.jpeg",
   },
   {
     id: 11,
@@ -209,7 +209,7 @@ const projects: Project[] = [
     impact: ["3,000 mangroves planned", "50 hectares coastal forest", "Marine protected area"],
     icon: TreePine,
     color: "bg-emerald-500/10 text-emerald-600",
-    image: "/images/projects/reforestation.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.23.36-Bq5BacYev1XxshwO3GxpaYgN1rM5po.jpeg",
   },
   {
     id: 12,
@@ -224,7 +224,7 @@ const projects: Project[] = [
     impact: ["1,000 hectares protected", "Water security improved", "50 rangers trained"],
     icon: TreePine,
     color: "bg-emerald-500/10 text-emerald-600",
-    image: "/images/projects/reforestation.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.23.36-Bq5BacYev1XxshwO3GxpaYgN1rM5po.jpeg",
   },
   {
     id: 13,
@@ -239,7 +239,7 @@ const projects: Project[] = [
     impact: ["5,000 street trees", "20 parks enhanced", "Air quality improved"],
     icon: TreePine,
     color: "bg-emerald-500/10 text-emerald-600",
-    image: "/images/projects/reforestation.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.23.36-Bq5BacYev1XxshwO3GxpaYgN1rM5po.jpeg",
   },
   {
     id: 14,
@@ -254,7 +254,7 @@ const projects: Project[] = [
     impact: ["800 hectares protected", "Endemic species preserved", "Ecotourism potential"],
     icon: TreePine,
     color: "bg-emerald-500/10 text-emerald-600",
-    image: "/images/projects/reforestation.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.23.36-Bq5BacYev1XxshwO3GxpaYgN1rM5po.jpeg",
   },
   {
     id: 15,
@@ -269,7 +269,7 @@ const projects: Project[] = [
     impact: ["5 community forests", "1,500 hectares managed", "Sustainable harvesting plans"],
     icon: TreePine,
     color: "bg-emerald-500/10 text-emerald-600",
-    image: "/images/projects/reforestation.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.23.36-Bq5BacYev1XxshwO3GxpaYgN1rM5po.jpeg",
   },
 
   // CLEAN ENERGY (15 projects)
@@ -301,7 +301,7 @@ const projects: Project[] = [
     impact: ["12 health centers powered", "Vaccine cold chain secured", "24/7 emergency care"],
     icon: Zap,
     color: "bg-yellow-500/10 text-yellow-600",
-    image: "/images/projects/solar-energy.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.00.39%20%281%29-L0L4AOwXrREfF1ADBgkGXWGZuoV8Zk.jpeg",
   },
   {
     id: 18,
@@ -316,7 +316,7 @@ const projects: Project[] = [
     impact: ["3,000 stoves distributed", "60% fuel reduction", "Health improvements"],
     icon: Zap,
     color: "bg-yellow-500/10 text-yellow-600",
-    image: "/images/projects/solar-energy.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.00.39%20%281%29-L0L4AOwXrREfF1ADBgkGXWGZuoV8Zk.jpeg",
   },
   {
     id: 19,
@@ -331,7 +331,7 @@ const projects: Project[] = [
     impact: ["20 solar pumps installed", "Clean water access", "Zero fuel costs"],
     icon: Zap,
     color: "bg-yellow-500/10 text-yellow-600",
-    image: "/images/projects/solar-energy.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.00.39%20%281%29-L0L4AOwXrREfF1ADBgkGXWGZuoV8Zk.jpeg",
   },
   {
     id: 20,
@@ -346,7 +346,7 @@ const projects: Project[] = [
     impact: ["3 mini-grids operational", "New businesses enabled", "Evening study hours"],
     icon: Zap,
     color: "bg-yellow-500/10 text-yellow-600",
-    image: "/images/projects/solar-energy.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.00.39%20%281%29-L0L4AOwXrREfF1ADBgkGXWGZuoV8Zk.jpeg",
   },
   {
     id: 21,
@@ -361,7 +361,7 @@ const projects: Project[] = [
     impact: ["200 technicians certified", "80% employment rate", "Local capacity built"],
     icon: Zap,
     color: "bg-yellow-500/10 text-yellow-600",
-    image: "/images/projects/solar-energy.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.00.39%20%281%29-L0L4AOwXrREfF1ADBgkGXWGZuoV8Zk.jpeg",
   },
   {
     id: 22,
@@ -376,7 +376,7 @@ const projects: Project[] = [
     impact: ["100 digesters installed", "Free cooking fuel", "Organic fertilizer produced"],
     icon: Zap,
     color: "bg-yellow-500/10 text-yellow-600",
-    image: "/images/projects/solar-energy.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.00.39%20%281%29-L0L4AOwXrREfF1ADBgkGXWGZuoV8Zk.jpeg",
   },
   {
     id: 23,
@@ -391,7 +391,7 @@ const projects: Project[] = [
     impact: ["150 street lights", "Improved safety", "Extended business hours"],
     icon: Zap,
     color: "bg-yellow-500/10 text-yellow-600",
-    image: "/images/projects/solar-energy.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.00.39%20%281%29-L0L4AOwXrREfF1ADBgkGXWGZuoV8Zk.jpeg",
   },
   {
     id: 24,
@@ -406,7 +406,7 @@ const projects: Project[] = [
     impact: ["5 cold storage units", "30% less food waste", "Higher farmer incomes"],
     icon: Zap,
     color: "bg-yellow-500/10 text-yellow-600",
-    image: "/images/projects/solar-energy.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.00.39%20%281%29-L0L4AOwXrREfF1ADBgkGXWGZuoV8Zk.jpeg",
   },
   {
     id: 25,
@@ -421,7 +421,7 @@ const projects: Project[] = [
     impact: ["3 micro-hydro sites", "24/7 power supply", "Industrial potential"],
     icon: Zap,
     color: "bg-yellow-500/10 text-yellow-600",
-    image: "/images/projects/solar-energy.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.00.39%20%281%29-L0L4AOwXrREfF1ADBgkGXWGZuoV8Zk.jpeg",
   },
   {
     id: 26,
@@ -436,7 +436,7 @@ const projects: Project[] = [
     impact: ["2,500 systems deployed", "Affordable payments", "Phone charging included"],
     icon: Zap,
     color: "bg-yellow-500/10 text-yellow-600",
-    image: "/images/projects/solar-energy.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.00.39%20%281%29-L0L4AOwXrREfF1ADBgkGXWGZuoV8Zk.jpeg",
   },
   {
     id: 27,
@@ -451,7 +451,7 @@ const projects: Project[] = [
     impact: ["5 production units", "500 tons briquettes/year", "Forest pressure reduced"],
     icon: Zap,
     color: "bg-yellow-500/10 text-yellow-600",
-    image: "/images/projects/solar-energy.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.00.39%20%281%29-L0L4AOwXrREfF1ADBgkGXWGZuoV8Zk.jpeg",
   },
   {
     id: 28,
@@ -466,7 +466,7 @@ const projects: Project[] = [
     impact: ["30 irrigation systems", "Year-round farming", "Double crop yields"],
     icon: Zap,
     color: "bg-yellow-500/10 text-yellow-600",
-    image: "/images/projects/solar-energy.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.00.39%20%281%29-L0L4AOwXrREfF1ADBgkGXWGZuoV8Zk.jpeg",
   },
   {
     id: 29,
@@ -481,7 +481,7 @@ const projects: Project[] = [
     impact: ["100 schools targeted", "Computer labs enabled", "Digital literacy"],
     icon: Zap,
     color: "bg-yellow-500/10 text-yellow-600",
-    image: "/images/projects/solar-energy.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.00.39%20%281%29-L0L4AOwXrREfF1ADBgkGXWGZuoV8Zk.jpeg",
   },
   {
     id: 30,
@@ -496,7 +496,7 @@ const projects: Project[] = [
     impact: ["Policy recommendations", "Stakeholder engagement", "Regulatory framework"],
     icon: Zap,
     color: "bg-yellow-500/10 text-yellow-600",
-    image: "/images/projects/solar-energy.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.00.39%20%281%29-L0L4AOwXrREfF1ADBgkGXWGZuoV8Zk.jpeg",
   },
 
   // MARINE CONSERVATION (15 projects)
@@ -528,7 +528,7 @@ const projects: Project[] = [
     impact: ["500 fishers trained", "Mesh size compliance", "Fish stocks recovering"],
     icon: Waves,
     color: "bg-blue-500/10 text-blue-600",
-    image: "/images/projects/coastal-cleanup.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.22.28-NJLSlteNVMXWN1S21PCg5uUOchHt5E.jpeg",
   },
   {
     id: 33,
@@ -543,7 +543,7 @@ const projects: Project[] = [
     impact: ["2 MPAs proposed", "Community support built", "Baseline surveys completed"],
     icon: Waves,
     color: "bg-blue-500/10 text-blue-600",
-    image: "/images/projects/coastal-cleanup.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.22.28-NJLSlteNVMXWN1S21PCg5uUOchHt5E.jpeg",
   },
   {
     id: 34,
@@ -558,7 +558,7 @@ const projects: Project[] = [
     impact: ["50% plastic reduction target", "Alternatives distributed", "Recycling centers"],
     icon: Waves,
     color: "bg-blue-500/10 text-blue-600",
-    image: "/images/projects/coastal-cleanup.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.22.28-NJLSlteNVMXWN1S21PCg5uUOchHt5E.jpeg",
   },
   {
     id: 35,
@@ -573,7 +573,7 @@ const projects: Project[] = [
     impact: ["4 nesting beaches protected", "200+ nests monitored", "Community rangers trained"],
     icon: Waves,
     color: "bg-blue-500/10 text-blue-600",
-    image: "/images/projects/coastal-cleanup.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.22.28-NJLSlteNVMXWN1S21PCg5uUOchHt5E.jpeg",
   },
   {
     id: 36,
@@ -588,7 +588,7 @@ const projects: Project[] = [
     impact: ["Reef health baseline", "Dive tourism potential", "Conservation zones"],
     icon: Waves,
     color: "bg-blue-500/10 text-blue-600",
-    image: "/images/projects/coastal-cleanup.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.22.28-NJLSlteNVMXWN1S21PCg5uUOchHt5E.jpeg",
   },
   {
     id: 37,
@@ -603,7 +603,7 @@ const projects: Project[] = [
     impact: ["Climate-resilient boats", "Early warning systems", "Diversified livelihoods"],
     icon: Waves,
     color: "bg-blue-500/10 text-blue-600",
-    image: "/images/projects/coastal-cleanup.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.22.28-NJLSlteNVMXWN1S21PCg5uUOchHt5E.jpeg",
   },
   {
     id: 38,
@@ -618,7 +618,7 @@ const projects: Project[] = [
     impact: ["10 hectares restoration", "Fish nursery habitat", "Carbon sequestration"],
     icon: Waves,
     color: "bg-blue-500/10 text-blue-600",
-    image: "/images/projects/coastal-cleanup.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.22.28-NJLSlteNVMXWN1S21PCg5uUOchHt5E.jpeg",
   },
   {
     id: 39,
@@ -633,7 +633,7 @@ const projects: Project[] = [
     impact: ["50 schools reached", "Marine science clubs", "Youth ambassadors"],
     icon: Waves,
     color: "bg-blue-500/10 text-blue-600",
-    image: "/images/projects/coastal-cleanup.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.22.28-NJLSlteNVMXWN1S21PCg5uUOchHt5E.jpeg",
   },
   {
     id: 40,
@@ -648,7 +648,7 @@ const projects: Project[] = [
     impact: ["Community monitors", "Reporting system", "Enforcement support"],
     icon: Waves,
     color: "bg-blue-500/10 text-blue-600",
-    image: "/images/projects/coastal-cleanup.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.22.28-NJLSlteNVMXWN1S21PCg5uUOchHt5E.jpeg",
   },
   {
     id: 41,
@@ -663,7 +663,7 @@ const projects: Project[] = [
     impact: ["Mangrove nurseries", "Fish catch monitoring", "Community ownership"],
     icon: Waves,
     color: "bg-blue-500/10 text-blue-600",
-    image: "/images/projects/coastal-cleanup.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.22.28-NJLSlteNVMXWN1S21PCg5uUOchHt5E.jpeg",
   },
   {
     id: 42,
@@ -678,7 +678,7 @@ const projects: Project[] = [
     impact: ["Processing facilities", "Hygiene standards", "Market linkages"],
     icon: Waves,
     color: "bg-blue-500/10 text-blue-600",
-    image: "/images/projects/coastal-cleanup.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.22.28-NJLSlteNVMXWN1S21PCg5uUOchHt5E.jpeg",
   },
   {
     id: 43,
@@ -693,7 +693,7 @@ const projects: Project[] = [
     impact: ["2km shoreline protected", "Living breakwaters", "Community relocation avoided"],
     icon: Waves,
     color: "bg-blue-500/10 text-blue-600",
-    image: "/images/projects/coastal-cleanup.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.22.28-NJLSlteNVMXWN1S21PCg5uUOchHt5E.jpeg",
   },
   {
     id: 44,
@@ -708,7 +708,7 @@ const projects: Project[] = [
     impact: ["Rescue protocols", "Community responders", "Data collection"],
     icon: Waves,
     color: "bg-blue-500/10 text-blue-600",
-    image: "/images/projects/coastal-cleanup.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.22.28-NJLSlteNVMXWN1S21PCg5uUOchHt5E.jpeg",
   },
   {
     id: 45,
@@ -723,7 +723,7 @@ const projects: Project[] = [
     impact: ["Carbon inventory", "Climate finance potential", "Conservation prioritization"],
     icon: Waves,
     color: "bg-blue-500/10 text-blue-600",
-    image: "/images/projects/coastal-cleanup.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.22.28-NJLSlteNVMXWN1S21PCg5uUOchHt5E.jpeg",
   },
 
   // SUSTAINABLE AGRICULTURE (15 projects)
@@ -755,7 +755,7 @@ const projects: Project[] = [
     impact: ["5 seed banks", "50 varieties preserved", "Seed security improved"],
     icon: Wheat,
     color: "bg-green-500/10 text-green-600",
-    image: "/images/projects/sustainable-farming.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.23.37-yAQRchlrMbzyBMIu0xyyAx43yeMki4.jpeg",
   },
   {
     id: 48,
@@ -770,7 +770,7 @@ const projects: Project[] = [
     impact: ["50 farms certified", "Premium prices", "Export potential"],
     icon: Wheat,
     color: "bg-green-500/10 text-green-600",
-    image: "/images/projects/sustainable-farming.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.23.37-yAQRchlrMbzyBMIu0xyyAx43yeMki4.jpeg",
   },
   {
     id: 49,
@@ -785,7 +785,7 @@ const projects: Project[] = [
     impact: ["10 cooperatives formed", "Collective bargaining", "Processing centers"],
     icon: Wheat,
     color: "bg-green-500/10 text-green-600",
-    image: "/images/projects/sustainable-farming.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.23.37-yAQRchlrMbzyBMIu0xyyAx43yeMki4.jpeg",
   },
   {
     id: 50,
@@ -800,7 +800,7 @@ const projects: Project[] = [
     impact: ["Soil organic matter increased", "Chemical inputs reduced", "Water retention improved"],
     icon: Wheat,
     color: "bg-green-500/10 text-green-600",
-    image: "/images/projects/sustainable-farming.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.23.37-yAQRchlrMbzyBMIu0xyyAx43yeMki4.jpeg",
   },
   {
     id: 51,
@@ -815,7 +815,7 @@ const projects: Project[] = [
     impact: ["600 farmers trained", "70% pesticide reduction", "Beneficial insects protected"],
     icon: Wheat,
     color: "bg-green-500/10 text-green-600",
-    image: "/images/projects/sustainable-farming.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.23.37-yAQRchlrMbzyBMIu0xyyAx43yeMki4.jpeg",
   },
   {
     id: 52,
@@ -830,7 +830,7 @@ const projects: Project[] = [
     impact: ["1,500 farmers trained", "50% more yield", "40% less water"],
     icon: Wheat,
     color: "bg-green-500/10 text-green-600",
-    image: "/images/projects/sustainable-farming.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.23.37-yAQRchlrMbzyBMIu0xyyAx43yeMki4.jpeg",
   },
   {
     id: 53,
@@ -845,7 +845,7 @@ const projects: Project[] = [
     impact: ["40 field schools", "Farmer-led learning", "Knowledge sharing"],
     icon: Wheat,
     color: "bg-green-500/10 text-green-600",
-    image: "/images/projects/sustainable-farming.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.23.37-yAQRchlrMbzyBMIu0xyyAx43yeMki4.jpeg",
   },
   {
     id: 54,
@@ -860,7 +860,7 @@ const projects: Project[] = [
     impact: ["1,000 gardens established", "Nutrition improved", "Food security"],
     icon: Wheat,
     color: "bg-green-500/10 text-green-600",
-    image: "/images/projects/sustainable-farming.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.23.37-yAQRchlrMbzyBMIu0xyyAx43yeMki4.jpeg",
   },
   {
     id: 55,
@@ -875,7 +875,7 @@ const projects: Project[] = [
     impact: ["200 hives distributed", "Pollination improved", "Honey income"],
     icon: Wheat,
     color: "bg-green-500/10 text-green-600",
-    image: "/images/projects/sustainable-farming.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.23.37-yAQRchlrMbzyBMIu0xyyAx43yeMki4.jpeg",
   },
   {
     id: 56,
@@ -890,7 +890,7 @@ const projects: Project[] = [
     impact: ["SMS weather alerts", "Seasonal forecasts", "Risk reduction"],
     icon: Wheat,
     color: "bg-green-500/10 text-green-600",
-    image: "/images/projects/sustainable-farming.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.23.37-yAQRchlrMbzyBMIu0xyyAx43yeMki4.jpeg",
   },
   {
     id: 57,
@@ -905,7 +905,7 @@ const projects: Project[] = [
     impact: ["500 youth engaged", "Modern techniques", "Agribusiness skills"],
     icon: Wheat,
     color: "bg-green-500/10 text-green-600",
-    image: "/images/projects/sustainable-farming.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.23.37-yAQRchlrMbzyBMIu0xyyAx43yeMki4.jpeg",
   },
   {
     id: 58,
@@ -920,7 +920,7 @@ const projects: Project[] = [
     impact: ["Losses halved", "Hermetic storage", "Better prices"],
     icon: Wheat,
     color: "bg-green-500/10 text-green-600",
-    image: "/images/projects/sustainable-farming.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.23.37-yAQRchlrMbzyBMIu0xyyAx43yeMki4.jpeg",
   },
   {
     id: 59,
@@ -935,7 +935,7 @@ const projects: Project[] = [
     impact: ["Manure for soil", "Protein source", "Income diversity"],
     icon: Wheat,
     color: "bg-green-500/10 text-green-600",
-    image: "/images/projects/sustainable-farming.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.23.37-yAQRchlrMbzyBMIu0xyyAx43yeMki4.jpeg",
   },
   {
     id: 60,
@@ -950,7 +950,7 @@ const projects: Project[] = [
     impact: ["Market linkages", "Processing facilities", "Higher incomes"],
     icon: Wheat,
     color: "bg-green-500/10 text-green-600",
-    image: "/images/projects/sustainable-farming.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.23.37-yAQRchlrMbzyBMIu0xyyAx43yeMki4.jpeg",
   },
 
   // YOUTH DEVELOPMENT (15 projects)
@@ -967,7 +967,7 @@ const projects: Project[] = [
     impact: ["200 youth certified", "50 projects launched", "15 districts represented"],
     icon: GraduationCap,
     color: "bg-indigo-500/10 text-indigo-600",
-    image: "/images/projects/workshop.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.23.34-lAO2vzLtpwMhppLjU7zUYa0mMcDkjr.jpeg",
   },
   {
     id: 62,
@@ -982,7 +982,7 @@ const projects: Project[] = [
     impact: ["150 trained", "30 businesses launched", "50 jobs created"],
     icon: GraduationCap,
     color: "bg-indigo-500/10 text-indigo-600",
-    image: "/images/projects/workshop.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.23.34-lAO2vzLtpwMhppLjU7zUYa0mMcDkjr.jpeg",
   },
   {
     id: 63,
@@ -997,7 +997,7 @@ const projects: Project[] = [
     impact: ["30 fellows trained", "100+ stories published", "Public awareness"],
     icon: GraduationCap,
     color: "bg-indigo-500/10 text-indigo-600",
-    image: "/images/projects/workshop.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.23.34-lAO2vzLtpwMhppLjU7zUYa0mMcDkjr.jpeg",
   },
   {
     id: 64,
@@ -1012,7 +1012,7 @@ const projects: Project[] = [
     impact: ["500 applications", "20 finalists", "5 funded projects"],
     icon: GraduationCap,
     color: "bg-indigo-500/10 text-indigo-600",
-    image: "/images/projects/workshop.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.23.34-lAO2vzLtpwMhppLjU7zUYa0mMcDkjr.jpeg",
   },
   {
     id: 65,
@@ -1027,7 +1027,7 @@ const projects: Project[] = [
     impact: ["100 ambassadors", "Community outreach", "Behavior change"],
     icon: GraduationCap,
     color: "bg-indigo-500/10 text-indigo-600",
-    image: "/images/projects/workshop.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.23.34-lAO2vzLtpwMhppLjU7zUYa0mMcDkjr.jpeg",
   },
   {
     id: 66,
@@ -1042,7 +1042,7 @@ const projects: Project[] = [
     impact: ["100 schools", "Regional rounds", "National finals"],
     icon: GraduationCap,
     color: "bg-indigo-500/10 text-indigo-600",
-    image: "/images/projects/workshop.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.23.34-lAO2vzLtpwMhppLjU7zUYa0mMcDkjr.jpeg",
   },
   {
     id: 67,
@@ -1057,7 +1057,7 @@ const projects: Project[] = [
     impact: ["Digital skills", "Online campaigns", "Wider reach"],
     icon: GraduationCap,
     color: "bg-indigo-500/10 text-indigo-600",
-    image: "/images/projects/workshop.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.23.34-lAO2vzLtpwMhppLjU7zUYa0mMcDkjr.jpeg",
   },
   {
     id: 68,
@@ -1072,7 +1072,7 @@ const projects: Project[] = [
     impact: ["Government experience", "Policy insights", "Career pathways"],
     icon: GraduationCap,
     color: "bg-indigo-500/10 text-indigo-600",
-    image: "/images/projects/workshop.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.23.34-lAO2vzLtpwMhppLjU7zUYa0mMcDkjr.jpeg",
   },
   {
     id: 69,
@@ -1087,7 +1087,7 @@ const projects: Project[] = [
     impact: ["Creative expression", "Cultural engagement", "Wider audiences"],
     icon: GraduationCap,
     color: "bg-indigo-500/10 text-indigo-600",
-    image: "/images/projects/workshop.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.23.34-lAO2vzLtpwMhppLjU7zUYa0mMcDkjr.jpeg",
   },
   {
     id: 70,
@@ -1102,7 +1102,7 @@ const projects: Project[] = [
     impact: ["Research skills", "Local data", "Publication opportunities"],
     icon: GraduationCap,
     color: "bg-indigo-500/10 text-indigo-600",
-    image: "/images/projects/workshop.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.23.34-lAO2vzLtpwMhppLjU7zUYa0mMcDkjr.jpeg",
   },
   {
     id: 71,
@@ -1117,7 +1117,7 @@ const projects: Project[] = [
     impact: ["Cross-border learning", "Network building", "Best practices"],
     icon: GraduationCap,
     color: "bg-indigo-500/10 text-indigo-600",
-    image: "/images/projects/workshop.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.23.34-lAO2vzLtpwMhppLjU7zUYa0mMcDkjr.jpeg",
   },
   {
     id: 72,
@@ -1132,7 +1132,7 @@ const projects: Project[] = [
     impact: ["Planning participation", "Youth voices heard", "Better plans"],
     icon: GraduationCap,
     color: "bg-indigo-500/10 text-indigo-600",
-    image: "/images/projects/workshop.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.23.34-lAO2vzLtpwMhppLjU7zUYa0mMcDkjr.jpeg",
   },
   {
     id: 73,
@@ -1147,7 +1147,7 @@ const projects: Project[] = [
     impact: ["Peer network", "Knowledge sharing", "Advocacy power"],
     icon: GraduationCap,
     color: "bg-indigo-500/10 text-indigo-600",
-    image: "/images/projects/workshop.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.23.34-lAO2vzLtpwMhppLjU7zUYa0mMcDkjr.jpeg",
   },
   {
     id: 74,
@@ -1162,7 +1162,7 @@ const projects: Project[] = [
     impact: ["Rapid response capacity", "Project support", "Youth engagement"],
     icon: GraduationCap,
     color: "bg-indigo-500/10 text-indigo-600",
-    image: "/images/projects/workshop.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.23.34-lAO2vzLtpwMhppLjU7zUYa0mMcDkjr.jpeg",
   },
   {
     id: 75,
@@ -1177,7 +1177,7 @@ const projects: Project[] = [
     impact: ["Movement building", "Strategy alignment", "Inspiration"],
     icon: GraduationCap,
     color: "bg-indigo-500/10 text-indigo-600",
-    image: "/images/projects/workshop.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.23.34-lAO2vzLtpwMhppLjU7zUYa0mMcDkjr.jpeg",
   },
 
   // EDUCATION (15 projects)
@@ -1194,7 +1194,7 @@ const projects: Project[] = [
     impact: ["25 school clubs", "5,000 students engaged", "100 teachers trained"],
     icon: Users,
     color: "bg-teal-500/10 text-teal-600",
-    image: "/images/hero-community.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.00.53-ZLF4blEVYSzBs7yBiImSa9Zf8XA9in.jpeg",
   },
   {
     id: 77,
@@ -1209,7 +1209,7 @@ const projects: Project[] = [
     impact: ["Curriculum materials", "Teacher guides", "Student workbooks"],
     icon: Users,
     color: "bg-teal-500/10 text-teal-600",
-    image: "/images/hero-community.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.00.53-ZLF4blEVYSzBs7yBiImSa9Zf8XA9in.jpeg",
   },
   {
     id: 78,
@@ -1224,7 +1224,7 @@ const projects: Project[] = [
     impact: ["500 teachers trained", "Classroom integration", "Student engagement"],
     icon: Users,
     color: "bg-teal-500/10 text-teal-600",
-    image: "/images/hero-community.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.00.53-ZLF4blEVYSzBs7yBiImSa9Zf8XA9in.jpeg",
   },
   {
     id: 79,
@@ -1239,7 +1239,7 @@ const projects: Project[] = [
     impact: ["30 school nurseries", "Hands-on learning", "Trees for communities"],
     icon: Users,
     color: "bg-teal-500/10 text-teal-600",
-    image: "/images/hero-community.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.00.53-ZLF4blEVYSzBs7yBiImSa9Zf8XA9in.jpeg",
   },
   {
     id: 80,
@@ -1254,7 +1254,7 @@ const projects: Project[] = [
     impact: ["100 schools participating", "Knowledge building", "Prizes and recognition"],
     icon: Users,
     color: "bg-teal-500/10 text-teal-600",
-    image: "/images/hero-community.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.00.53-ZLF4blEVYSzBs7yBiImSa9Zf8XA9in.jpeg",
   },
   {
     id: 81,
@@ -1269,7 +1269,7 @@ const projects: Project[] = [
     impact: ["50 remote schools", "Equal access", "Hands-on activities"],
     icon: Users,
     color: "bg-teal-500/10 text-teal-600",
-    image: "/images/hero-community.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.00.53-ZLF4blEVYSzBs7yBiImSa9Zf8XA9in.jpeg",
   },
   {
     id: 82,
@@ -1284,7 +1284,7 @@ const projects: Project[] = [
     impact: ["40 school gardens", "Practical learning", "Nutrition improvement"],
     icon: Users,
     color: "bg-teal-500/10 text-teal-600",
-    image: "/images/hero-community.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.00.53-ZLF4blEVYSzBs7yBiImSa9Zf8XA9in.jpeg",
   },
   {
     id: 83,
@@ -1299,7 +1299,7 @@ const projects: Project[] = [
     impact: ["50 schools equipped", "Data collection", "Scientific thinking"],
     icon: Users,
     color: "bg-teal-500/10 text-teal-600",
-    image: "/images/hero-community.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.00.53-ZLF4blEVYSzBs7yBiImSa9Zf8XA9in.jpeg",
   },
   {
     id: 84,
@@ -1314,7 +1314,7 @@ const projects: Project[] = [
     impact: ["5,000 books distributed", "Library enrichment", "Reading promotion"],
     icon: Users,
     color: "bg-teal-500/10 text-teal-600",
-    image: "/images/hero-community.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.00.53-ZLF4blEVYSzBs7yBiImSa9Zf8XA9in.jpeg",
   },
   {
     id: 85,
@@ -1329,7 +1329,7 @@ const projects: Project[] = [
     impact: ["Standards developed", "Schools certified", "Best practices shared"],
     icon: Users,
     color: "bg-teal-500/10 text-teal-600",
-    image: "/images/hero-community.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.00.53-ZLF4blEVYSzBs7yBiImSa9Zf8XA9in.jpeg",
   },
   {
     id: 86,
@@ -1344,7 +1344,7 @@ const projects: Project[] = [
     impact: ["10 centers established", "Adult education", "Resource libraries"],
     icon: Users,
     color: "bg-teal-500/10 text-teal-600",
-    image: "/images/hero-community.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.00.53-ZLF4blEVYSzBs7yBiImSa9Zf8XA9in.jpeg",
   },
   {
     id: 87,
@@ -1359,7 +1359,7 @@ const projects: Project[] = [
     impact: ["100 field trips", "Nature connection", "Conservation appreciation"],
     icon: Users,
     color: "bg-teal-500/10 text-teal-600",
-    image: "/images/hero-community.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.00.53-ZLF4blEVYSzBs7yBiImSa9Zf8XA9in.jpeg",
   },
   {
     id: 88,
@@ -1374,7 +1374,7 @@ const projects: Project[] = [
     impact: ["50 videos produced", "Local languages", "Free distribution"],
     icon: Users,
     color: "bg-teal-500/10 text-teal-600",
-    image: "/images/hero-community.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.00.53-ZLF4blEVYSzBs7yBiImSa9Zf8XA9in.jpeg",
   },
   {
     id: 89,
@@ -1389,7 +1389,7 @@ const projects: Project[] = [
     impact: ["Parent meetings", "Household practices", "Family engagement"],
     icon: Users,
     color: "bg-teal-500/10 text-teal-600",
-    image: "/images/hero-community.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.00.53-ZLF4blEVYSzBs7yBiImSa9Zf8XA9in.jpeg",
   },
   {
     id: 90,
@@ -1404,7 +1404,7 @@ const projects: Project[] = [
     impact: ["Evidence base", "Best practices", "Improved programs"],
     icon: Users,
     color: "bg-teal-500/10 text-teal-600",
-    image: "/images/hero-community.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.00.53-ZLF4blEVYSzBs7yBiImSa9Zf8XA9in.jpeg",
   },
 ]
 
