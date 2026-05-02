@@ -59,52 +59,50 @@ const team = [
   {
     name: "Alicious Bessiama",
     role: "Founder & Executive Director",
-    bio: "A passionate youth climate advocate committed to environmental justice and sustainable development in Sierra Leone.",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Alicious%20Bessiama-dcELNG8YAPzfIhpMUbATBRpmOq0vWW.jpeg",
+    bio: "Globally recognised youth climate leader with 8 years of experience, driving Sunrise Movement Sierra Leone's strategic vision and scaling youth-led climate, renewable energy, and sustainable development initiatives across the country.",
   },
   {
-    name: "Sample Person 2",
-    role: "Deputy Director",
-    bio: "Sample bio - update with real information.",
+    name: "Benjamin Bockarie",
+    role: "Director of Programs, Grant & Technical Lead",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/BENJAMIN%20BOCKARIE-cFOBB0apwSGb5qcVRNw6x1mLabQLzv.jpg",
+    bio: "Coastal and marine management professional with First-Class academic foundations. Currently completing an MSc in Applied Coastal and Marine Management at University College Cork as an Ireland Africa and Ocean Leaders Fellow.",
   },
   {
-    name: "Sample Person 3",
-    role: "Programs Manager",
-    bio: "Sample bio - update with real information.",
+    name: "George Christopher Lamin",
+    role: "Media & Communication Director",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/GEORGE%20CHRISTOPHER%20LAMIN-6W4UStsIW0ZNB1sYodGgK1O96z3jwb.jpeg",
+    bio: "Communications and media specialist leading storytelling, advocacy, and public engagement strategies. Oversees content creation, digital media campaigns, and knowledge dissemination for enhanced visibility and stakeholder engagement.",
   },
   {
-    name: "Sample Person 4",
-    role: "Communications Lead",
-    bio: "Sample bio - update with real information.",
+    name: "Sarah Pessima",
+    role: "Finance Coordinator",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Serah%20Pessima-UWGqayZT81Fyz73IN58KrL7SCxuZ9b.jpeg",
+    bio: "Finance professional bringing 5 years of experience, strengthening financial management, accountability, and resource stewardship. Oversees budgeting, financial reporting, and compliance processes.",
   },
   {
-    name: "Sample Person 5",
-    role: "Finance Officer",
-    bio: "Sample bio - update with real information.",
+    name: "Abu Bakar Ansumana",
+    role: "Monitoring & Evaluation Coordinator",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ABU%20BAKAR%20ANSUMANA%20%282%29-XFVaa35rOZyv8tbhfMk7ybNTPFyzr1.jpeg",
+    bio: "Public health and social development professional with 7 years of experience leading monitoring, evaluation, and learning systems. Designs frameworks that track results across initiatives advancing inclusive, community-driven climate solutions.",
   },
   {
-    name: "Sample Person 6",
-    role: "Community Outreach Coordinator",
-    bio: "Sample bio - update with real information.",
+    name: "Hassan Abu",
+    role: "Volunteers & Outreach Coordinator",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Hassan%20Abu-D9HSHT5O3CocO69VEFzTUssNTNEI1q.jpeg",
+    bio: "Dedicated climate advocate and emerging leader with 5 years of experience, supporting volunteer mobilisation and community outreach efforts.",
   },
   {
-    name: "Sample Person 7",
-    role: "Youth Engagement Lead",
-    bio: "Sample bio - update with real information.",
+    name: "Jambai Morie",
+    role: "Youth Engagement Coordinator",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/JAMBAI%20MORIE-8SlDAqq1fbV9V45XKKjiP7Vif9w9rK.jpeg",
+    bio: "Passionate climate advocate and youth leader with 5 years of experience advancing grassroots engagement and youth mobilisation efforts.",
   },
   {
-    name: "Sample Person 8",
-    role: "Environmental Projects Lead",
-    bio: "Sample bio - update with real information.",
-  },
-  {
-    name: "Sample Person 9",
-    role: "Partnerships Coordinator",
-    bio: "Sample bio - update with real information.",
-  },
-  {
-    name: "Sample Person 10",
-    role: "Volunteer Coordinator",
-    bio: "Sample bio - update with real information.",
+    name: "Vandi Fabba",
+    role: "Grants & Partnership Coordinator",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/VANDI%20FABBA-2YE5X8Djtij7mXL1zsdR9yMEW8zIhJ.jpeg",
+    bio: "Skilled coordinator with over five years of experience in NGO program management and environmental stewardship. Demonstrates strong expertise in community engagement, partnership coordination and project implementation.",
   },
 ]
 
@@ -226,12 +224,15 @@ export default function AboutPage() {
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 max-w-6xl mx-auto">
             {team.map((member) => (
-              <Card key={member.name} className="bg-card border-none shadow-lg overflow-hidden">
+              <Card key={member.name} className="bg-card border-none shadow-lg overflow-hidden group">
                 <CardContent className="p-6 text-center">
-                  <div className="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                    <span className="text-2xl font-bold text-primary">
-                      {member.name.split(" ").map(n => n[0]).join("")}
-                    </span>
+                  <div className="relative w-28 h-28 rounded-full overflow-hidden mx-auto mb-4 ring-4 ring-primary/10 group-hover:ring-primary/30 transition-all">
+                    <Image
+                      src={member.image}
+                      alt={member.name}
+                      fill
+                      className="object-cover object-top"
+                    />
                   </div>
                   <h3 className="text-lg font-bold text-foreground">{member.name}</h3>
                   <p className="text-primary font-medium text-sm mt-1">{member.role}</p>
