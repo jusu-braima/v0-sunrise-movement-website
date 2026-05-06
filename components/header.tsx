@@ -182,16 +182,10 @@ export function Header() {
                 {/* Mobile CTA Buttons */}
                 <div className="p-4 border-t border-white/10">
                   <div className="flex flex-col gap-3">
-                    <Button variant="outline" asChild className="w-full justify-center gap-2 border-white/30 text-white hover:bg-white/10 hover:text-white">
+                    <Button variant="outline" asChild className="w-full justify-center gap-2 border-blue-500 text-blue-400 hover:bg-blue-500/10 hover:text-blue-300">
                       <Link href="/#partner" onClick={() => setIsOpen(false)}>
                         <Handshake className="h-4 w-4" />
                         Partner With Us
-                      </Link>
-                    </Button>
-                    <Button asChild className="w-full justify-center gap-2 bg-white text-primary hover:bg-white/90">
-                      <Link href="/#donate" onClick={() => setIsOpen(false)}>
-                        <Heart className="h-4 w-4" />
-                        Donate
                       </Link>
                     </Button>
                   </div>
