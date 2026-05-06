@@ -1,15 +1,14 @@
 import { Metadata } from "next"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
-import { Programs } from "@/components/programs"
-import { Projects } from "@/components/projects"
+import { LalehunProject } from "@/components/lalehun-project"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Programs & Projects | Sunrise Movement Sierra Leone",
-  description: "Explore our strategic pillars and active projects creating environmental and social impact across Sierra Leone.",
+  title: "Our Project | Sunrise Movement Sierra Leone",
+  description: "Learn about the Lalehun Solar Energy Initiative - our flagship project bringing clean energy and education to rural Sierra Leone.",
 }
 
 export default function ProgramsPage() {
@@ -23,28 +22,25 @@ export default function ProgramsPage() {
           <div className="max-w-4xl mx-auto text-center">
             <span className="text-primary font-semibold uppercase tracking-wider text-sm">Our Work</span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mt-4 mb-6 text-balance">
-              Programs & Projects
+              Our Project
             </h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Our comprehensive approach addresses climate change through interconnected programs 
-              that empower communities and create lasting environmental impact.
+              The Lalehun Solar Energy Initiative brings clean energy and quality education 
+              to rural communities while empowering youth through skills training.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Strategic Pillars */}
-      <Programs />
-
-      {/* Active Projects */}
-      <Projects />
+      {/* Lalehun Project */}
+      <LalehunProject />
 
       {/* CTA */}
       <section className="py-20 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Support Our Programs</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">Support Our Project</h2>
           <p className="text-primary-foreground/80 max-w-2xl mx-auto mb-8">
-            Your contribution directly funds these life-changing initiatives across Sierra Leone.
+            Your contribution directly funds this life-changing initiative in Lalehun, Sierra Leone.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" variant="secondary" asChild>

@@ -7,19 +7,19 @@ import { Mail, Phone, MapPin, Facebook, Linkedin, Instagram } from "lucide-react
 const quickLinks = [
   { label: "Home", href: "/" },
   { label: "About Us", href: "/about" },
-  { label: "Programs", href: "/programs" },
+  { label: "Our Project", href: "/#lalehun-project" },
   { label: "Impact", href: "/impact" },
   { label: "Get Involved", href: "/#get-involved" },
   { label: "Contact", href: "/contact" },
 ]
 
-const programs = [
-  "Youth Leadership",
-  "Climate Policy",
-  "Sustainable Agriculture",
-  "Clean Energy",
-  "Marine Conservation",
-  "Education & Skills",
+const focusAreas = [
+  "Clean Energy Access",
+  "Quality Education",
+  "Youth Empowerment",
+  "Climate Action",
+  "Community Resilience",
+  "Sustainable Development",
 ]
 
 export function Footer() {
@@ -69,13 +69,13 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Programs */}
+          {/* Focus Areas */}
           <div>
-            <h4 className="text-lg font-semibold text-background mb-6">Our Programs</h4>
+            <h4 className="text-lg font-semibold text-background mb-6">Focus Areas</h4>
             <ul className="space-y-3">
-              {programs.map((program) => (
-                <li key={program}>
-                  <span className="text-background/80 text-sm">{program}</span>
+              {focusAreas.map((area) => (
+                <li key={area}>
+                  <span className="text-background/80 text-sm">{area}</span>
                 </li>
               ))}
             </ul>
