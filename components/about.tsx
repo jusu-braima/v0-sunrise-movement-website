@@ -84,6 +84,25 @@ export function About() {
           </div>
         </AnimateOnScroll>
 
+        {/* Founder Quote Section */}
+        <AnimateOnScroll animation="fade-up" className="mb-16">
+          <div className="relative rounded-2xl overflow-hidden shadow-2xl group">
+            <div className="relative w-full h-auto">
+              <Image
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/BESSIAMA-egvkpN9IMOC9g0PNK3lFbsmT9ukEjI.jpeg"
+                alt="Alicious Bessiama - Founder and Executive Director of Sunrise Movement Sierra Leone"
+                width={1200}
+                height={600}
+                className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-[1.02]"
+              />
+            </div>
+            {/* Animated overlay on hover */}
+            <div className="absolute inset-0 bg-gradient-to-r from-primary/20 via-transparent to-accent/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+            {/* Decorative animated border */}
+            <div className="absolute inset-0 border-4 border-transparent group-hover:border-primary/30 rounded-2xl transition-all duration-500" />
+          </div>
+        </AnimateOnScroll>
+
         {/* Mission & Vision */}
         <div className="grid md:grid-cols-2 gap-8 mb-16">
           <AnimateOnScroll animation="slide-left" delay={100}>
