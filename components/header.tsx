@@ -23,8 +23,8 @@ import {
 const navItems = [
   { label: "Home", href: "/", icon: Home },
   { label: "About", href: "/about", icon: Info },
-  { label: "Our Project", href: "/#lalehun-project", icon: Layers },
-  { label: "Gallery", href: "/#gallery", icon: Camera },
+  { label: "Our Project", href: "/project", icon: Layers },
+  { label: "Gallery", href: "/gallery", icon: Camera },
   { label: "Impact", href: "/impact", icon: BarChart3 },
   { label: "Get Involved", href: "/#get-involved", icon: Users },
   { label: "Contact", href: "/contact", icon: Phone },
