@@ -6,12 +6,12 @@ import { Mail, Phone, MapPin, Facebook, Linkedin, Instagram } from "lucide-react
 
 const quickLinks = [
   { label: "Home", href: "/" },
-  { label: "About Us", href: "/about" },
-  { label: "Our Project", href: "/project" },
-  { label: "Gallery", href: "/gallery" },
-  { label: "Impact", href: "/impact" },
+  { label: "About Us", href: "/#about" },
+  { label: "Our Project", href: "/#lalehun-project" },
+  { label: "Gallery", href: "/#gallery" },
+  { label: "Impact", href: "/#impact" },
   { label: "Get Involved", href: "/#get-involved" },
-  { label: "Contact", href: "/contact" },
+  { label: "Contact", href: "/#contact" },
 ]
 
 const focusAreas = [
