@@ -103,6 +103,39 @@ export function About() {
           </div>
         </AnimateOnScroll>
 
+        {/* Founder Quote Text */}
+        <AnimateOnScroll animation="fade-up" delay={200} className="mb-16">
+          <div className="bg-gradient-to-br from-[#2563eb]/10 via-background to-[#2563eb]/5 rounded-2xl p-8 md:p-12 border border-[#2563eb]/20 shadow-lg">
+            <div className="max-w-4xl mx-auto text-center">
+              <blockquote className="text-lg md:text-xl text-foreground leading-relaxed mb-8 italic">
+                <span className="text-4xl text-[#2563eb] font-serif">&ldquo;</span>
+                Our aim is to strengthen public institutions in their delivery of equitable water services. 
+                We oppose the privatisation of water services, exposing its negative impacts through research 
+                and storytelling, and hosting town hall meetings to promote transparency and accountability 
+                in public water provision. Water must remain a public trust and should never be treated as 
+                a commodity. Public institutions must be supported to serve all people fairly and sustainably.
+                <span className="text-4xl text-[#2563eb] font-serif">&rdquo;</span>
+              </blockquote>
+              <div className="flex flex-col items-center gap-2">
+                <p className="text-xl md:text-2xl font-bold text-[#2563eb]">Alicious Bessiama</p>
+                <p className="text-muted-foreground">Founder and Executive Director</p>
+                <p className="text-muted-foreground">Sunrise Movement Sierra Leone (SM-SL)</p>
+                <a 
+                  href="https://www.blue-community.net" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="mt-4 inline-flex items-center gap-2 text-[#2563eb] hover:text-[#1d4ed8] transition-colors duration-300 font-medium"
+                >
+                  www.blue-community.net
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </AnimateOnScroll>
+
         {/* Mission & Vision */}
         <div className="grid md:grid-cols-2 gap-8 mb-16">
           <AnimateOnScroll animation="slide-left" delay={100}>
