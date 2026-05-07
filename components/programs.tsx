@@ -35,6 +35,33 @@ const projectImages = [
   },
 ]
 
+const beachCleanupImages = [
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.27.02-9FMYLcCrsIH22LMZwwKVn45jskCIFV.jpeg",
+    alt: "Youth volunteers collecting trash on beach",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.22.40-njfSddqjaNTtDc0bK1dTBmjPYcDh2h.jpeg",
+    alt: "Team working together during beach cleanup",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.22.57-jHNpigduBDKK6mBYQOh9h1J9Mo79bC.jpeg",
+    alt: "Volunteers using rakes to collect debris",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.23.02-U8LTf28dKXtKuS1QBNAdYP0byywnQw.jpeg",
+    alt: "Group of volunteers on beach cleanup day",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.27.04-Ts1cUzRwsiWV3kjH4VZNfMVVEf1Fzx.jpeg",
+    alt: "Youth team collecting plastic waste",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.27.00-1zhDQ09ezgEWwlwwJIvT0sUPWy5BX0.jpeg",
+    alt: "Volunteers with cleanup equipment on beach",
+  },
+]
+
 const plannedOutputs = [
   "Solar energy systems installed in primary and secondary schools in Lalehun",
   "60 local youth trained in solar installation, maintenance, and troubleshooting",
@@ -241,6 +268,149 @@ export function Programs() {
             <Button size="lg" asChild>
               <a href="#get-involved">
                 Support This Initiative
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </a>
+            </Button>
+          </AnimateOnScroll>
+        </div>
+
+        {/* Coastal Beach Cleanup Initiative */}
+        <div className="mb-16 pt-16 border-t border-border">
+          <AnimateOnScroll animation="fade-up" className="text-center max-w-4xl mx-auto mb-12">
+            <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-4 text-balance">
+              Coastal Beach Cleanup Initiative
+            </h3>
+            <p className="text-lg text-muted-foreground">
+              Mobilizing youth volunteers to protect Sierra Leone&apos;s coastline and marine ecosystems
+            </p>
+          </AnimateOnScroll>
+
+          {/* Project Overview */}
+          <div className="grid lg:grid-cols-2 gap-12 items-start mb-12">
+            {/* Image Gallery */}
+            <AnimateOnScroll animation="slide-left">
+              <div className="space-y-4">
+                <div className="relative aspect-video rounded-2xl overflow-hidden shadow-xl">
+                  <Image
+                    src={beachCleanupImages[0].src}
+                    alt={beachCleanupImages[0].alt}
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute bottom-4 left-4">
+                    <Badge className="bg-blue-600 text-white">
+                      <MapPin className="w-3 h-3 mr-1" />
+                      Freetown Beaches, Sierra Leone
+                    </Badge>
+                  </div>
+                </div>
+                <div className="grid grid-cols-3 gap-4">
+                  {beachCleanupImages.slice(1, 4).map((img, index) => (
+                    <div key={index} className="relative aspect-square rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+                      <Image
+                        src={img.src}
+                        alt={img.alt}
+                        fill
+                        className="object-cover hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </AnimateOnScroll>
+
+            {/* Project Description */}
+            <AnimateOnScroll animation="slide-right" delay={100}>
+              <div className="space-y-6">
+                <Card className="bg-card border-none shadow-lg">
+                  <CardContent className="p-6">
+                    <p className="text-muted-foreground leading-relaxed mb-4">
+                      The Coastal Beach Cleanup Initiative is a youth-led environmental action program 
+                      dedicated to protecting Sierra Leone&apos;s beautiful coastline from plastic pollution 
+                      and marine debris. Through regular cleanup activities, we engage young volunteers 
+                      in hands-on conservation efforts while raising awareness about ocean health and 
+                      sustainable waste management.
+                    </p>
+                    <p className="text-muted-foreground leading-relaxed">
+                      Our volunteers come together equipped with gloves, rakes, and collection bags to 
+                      remove plastic waste, fishing nets, and other debris from local beaches. This 
+                      initiative not only restores coastal beauty but also protects marine life and 
+                      supports the livelihoods of fishing communities who depend on healthy ocean ecosystems.
+                    </p>
+                    <div className="flex flex-wrap gap-3 mt-4">
+                      <Badge variant="outline" className="bg-blue-50 text-blue-700 border-blue-200">
+                        SDG 14: Life Below Water
+                      </Badge>
+                      <Badge variant="outline" className="bg-emerald-50 text-emerald-700 border-emerald-200">
+                        SDG 13: Climate Action
+                      </Badge>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                {/* Stats Grid */}
+                <div className="grid grid-cols-2 gap-4">
+                  <Card className="bg-blue-500/10 border-blue-500/20">
+                    <CardContent className="p-4 text-center">
+                      <Users className="h-8 w-8 text-blue-600 mx-auto mb-2" />
+                      <div className="text-2xl font-bold text-foreground">50+</div>
+                      <p className="text-sm text-muted-foreground">Youth Volunteers</p>
+                    </CardContent>
+                  </Card>
+                  <Card className="bg-cyan-500/10 border-cyan-500/20">
+                    <CardContent className="p-4 text-center">
+                      <Target className="h-8 w-8 text-cyan-600 mx-auto mb-2" />
+                      <div className="text-2xl font-bold text-foreground">Monthly</div>
+                      <p className="text-sm text-muted-foreground">Cleanup Events</p>
+                    </CardContent>
+                  </Card>
+                </div>
+
+                {/* Key Activities */}
+                <Card className="bg-card border border-border">
+                  <CardContent className="p-4">
+                    <p className="text-xs text-muted-foreground uppercase tracking-wider mb-3">Key Activities</p>
+                    <ul className="space-y-2">
+                      <li className="flex items-start gap-2">
+                        <CheckCircle2 className="h-4 w-4 text-blue-600 mt-0.5 shrink-0" />
+                        <span className="text-sm text-muted-foreground">Regular beach cleanup events along Freetown&apos;s coastline</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckCircle2 className="h-4 w-4 text-blue-600 mt-0.5 shrink-0" />
+                        <span className="text-sm text-muted-foreground">Community awareness campaigns on ocean conservation</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckCircle2 className="h-4 w-4 text-blue-600 mt-0.5 shrink-0" />
+                        <span className="text-sm text-muted-foreground">Youth training in waste management and recycling</span>
+                      </li>
+                    </ul>
+                  </CardContent>
+                </Card>
+              </div>
+            </AnimateOnScroll>
+          </div>
+
+          {/* Additional Images */}
+          <AnimateOnScroll animation="fade-up" delay={200}>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+              {beachCleanupImages.slice(3).map((img, index) => (
+                <div key={index} className="relative aspect-video rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+                  <Image
+                    src={img.src}
+                    alt={img.alt}
+                    fill
+                    className="object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+              ))}
+            </div>
+          </AnimateOnScroll>
+
+          {/* CTA */}
+          <AnimateOnScroll animation="fade-up" delay={300} className="text-center mt-12">
+            <Button size="lg" asChild>
+              <a href="#get-involved">
+                Join Our Next Cleanup
                 <ArrowRight className="ml-2 h-4 w-4" />
               </a>
             </Button>
