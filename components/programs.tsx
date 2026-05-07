@@ -97,6 +97,53 @@ const climateMarchImages = [
   },
 ]
 
+const schoolOutreachImages = [
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.24.08-5xFJWvEnNmOCiHo6JsJLSr5PsF5k26.jpeg",
+    alt: "Volunteer addressing large assembly of students in green uniforms",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.24.49-YSh6ikmQm9R9OB9irwQehWQTJx2iMi.jpeg",
+    alt: "Hundreds of students gathered for climate education session",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.24.31-hFxT94xkVNWCuPJA5G1xEfsUD3lXC1.jpeg",
+    alt: "Volunteer speaking to students in white hijabs",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.24.18-wBXo6sAcUBqwbMh6SkBbpqp0iZlpBR.jpeg",
+    alt: "Volunteer team with students in front of school mural",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.24.33-ZZWVAQTieBQe4dxV5c4ZCYcRolf6Bc.jpeg",
+    alt: "Volunteer team with students outside school offices",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.24.27-d0rvetdXMpAv7loxmQpJnNsfAdkOH3.jpeg",
+    alt: "Five volunteers in orange vests posing together",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.24.15-99iYkZ7hFxpYNK9AUZk3w2edi4BTWK.jpeg",
+    alt: "Large crowd of students in green uniforms at school assembly",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.24.35-yFLgWuLcZFN8pcGJWpzxvxV0vGGxYV.jpeg",
+    alt: "Students in blue and white uniforms gathered under trees",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.24.17-NddBlbFFeRSpJVnoIrk5Nq3wLxBMMY.jpeg",
+    alt: "Volunteer addressing students from behind",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.24.11-YehBBHhjkfwHaPyUgczmTNgNJa393E.jpeg",
+    alt: "Volunteer speaking to large group of students",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.24.31%20%281%29-aGtjQDnpYZ76MOyhUK31SZFKTR6y5y.jpeg",
+    alt: "Volunteer engaging with students in blue uniforms",
+  },
+]
+
 const plannedOutputs = [
   "Solar energy systems installed in primary and secondary schools in Lalehun",
   "60 local youth trained in solar installation, maintenance, and troubleshooting",
@@ -582,6 +629,164 @@ export function Programs() {
             <Button size="lg" asChild>
               <a href="#get-involved">
                 Join the Movement
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </a>
+            </Button>
+          </AnimateOnScroll>
+        </div>
+
+        {/* School Climate Education Outreach */}
+        <div className="mb-16 pt-16 border-t border-border">
+          <AnimateOnScroll animation="fade-up" className="text-center max-w-4xl mx-auto mb-12">
+            <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-4 text-balance">
+              School Climate Education Outreach
+            </h3>
+            <p className="text-lg text-muted-foreground">
+              Empowering the next generation through climate education in schools across Sierra Leone
+            </p>
+          </AnimateOnScroll>
+
+          {/* Project Overview */}
+          <div className="grid lg:grid-cols-2 gap-12 items-start mb-12">
+            {/* Image Gallery */}
+            <AnimateOnScroll animation="slide-left">
+              <div className="space-y-4">
+                <div className="relative aspect-video rounded-2xl overflow-hidden shadow-xl">
+                  <Image
+                    src={schoolOutreachImages[0].src}
+                    alt={schoolOutreachImages[0].alt}
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute bottom-4 left-4">
+                    <Badge className="bg-green-600 text-white">
+                      <MapPin className="w-3 h-3 mr-1" />
+                      Schools Across Sierra Leone
+                    </Badge>
+                  </div>
+                </div>
+                <div className="grid grid-cols-3 gap-4">
+                  {schoolOutreachImages.slice(1, 4).map((img, index) => (
+                    <div key={index} className="relative aspect-square rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+                      <Image
+                        src={img.src}
+                        alt={img.alt}
+                        fill
+                        className="object-cover hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </AnimateOnScroll>
+
+            {/* Project Description */}
+            <AnimateOnScroll animation="slide-right" delay={100}>
+              <div className="space-y-6">
+                <Card className="bg-card border-none shadow-lg">
+                  <CardContent className="p-6">
+                    <p className="text-muted-foreground leading-relaxed mb-4">
+                      The School Climate Education Outreach program brings environmental awareness directly 
+                      to students across Sierra Leone. Our trained volunteers, easily identified by their 
+                      orange safety vests, visit primary and secondary schools to deliver engaging 
+                      presentations on climate change, environmental conservation, and sustainable practices.
+                    </p>
+                    <p className="text-muted-foreground leading-relaxed">
+                      By reaching hundreds of students at each school visit, we are cultivating a generation 
+                      of environmentally conscious young people who understand their role in protecting our 
+                      planet. The program covers topics including waste management, tree planting, water 
+                      conservation, and the impacts of climate change on local communities.
+                    </p>
+                    <div className="flex flex-wrap gap-3 mt-4">
+                      <Badge variant="outline" className="bg-green-50 text-green-700 border-green-200">
+                        SDG 4: Quality Education
+                      </Badge>
+                      <Badge variant="outline" className="bg-emerald-50 text-emerald-700 border-emerald-200">
+                        SDG 13: Climate Action
+                      </Badge>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                {/* Stats Grid */}
+                <div className="grid grid-cols-2 gap-4">
+                  <Card className="bg-green-500/10 border-green-500/20">
+                    <CardContent className="p-4 text-center">
+                      <GraduationCap className="h-8 w-8 text-green-600 mx-auto mb-2" />
+                      <div className="text-2xl font-bold text-foreground">1000+</div>
+                      <p className="text-sm text-muted-foreground">Students Reached</p>
+                    </CardContent>
+                  </Card>
+                  <Card className="bg-teal-500/10 border-teal-500/20">
+                    <CardContent className="p-4 text-center">
+                      <Target className="h-8 w-8 text-teal-600 mx-auto mb-2" />
+                      <div className="text-2xl font-bold text-foreground">10+</div>
+                      <p className="text-sm text-muted-foreground">Schools Visited</p>
+                    </CardContent>
+                  </Card>
+                </div>
+
+                {/* Key Activities */}
+                <Card className="bg-card border border-border">
+                  <CardContent className="p-4">
+                    <p className="text-xs text-muted-foreground uppercase tracking-wider mb-3">Key Activities</p>
+                    <ul className="space-y-2">
+                      <li className="flex items-start gap-2">
+                        <CheckCircle2 className="h-4 w-4 text-green-600 mt-0.5 shrink-0" />
+                        <span className="text-sm text-muted-foreground">Interactive climate education presentations</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckCircle2 className="h-4 w-4 text-green-600 mt-0.5 shrink-0" />
+                        <span className="text-sm text-muted-foreground">Student engagement on environmental conservation</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckCircle2 className="h-4 w-4 text-green-600 mt-0.5 shrink-0" />
+                        <span className="text-sm text-muted-foreground">Formation of school environmental clubs</span>
+                      </li>
+                    </ul>
+                  </CardContent>
+                </Card>
+              </div>
+            </AnimateOnScroll>
+          </div>
+
+          {/* Additional Images */}
+          <AnimateOnScroll animation="fade-up" delay={200}>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {schoolOutreachImages.slice(4, 8).map((img, index) => (
+                <div key={index} className="relative aspect-video rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+                  <Image
+                    src={img.src}
+                    alt={img.alt}
+                    fill
+                    className="object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+              ))}
+            </div>
+          </AnimateOnScroll>
+
+          {/* More Images Row */}
+          <AnimateOnScroll animation="fade-up" delay={250} className="mt-4">
+            <div className="grid grid-cols-3 gap-4">
+              {schoolOutreachImages.slice(8).map((img, index) => (
+                <div key={index} className="relative aspect-video rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+                  <Image
+                    src={img.src}
+                    alt={img.alt}
+                    fill
+                    className="object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+              ))}
+            </div>
+          </AnimateOnScroll>
+
+          {/* CTA */}
+          <AnimateOnScroll animation="fade-up" delay={300} className="text-center mt-12">
+            <Button size="lg" asChild>
+              <a href="#get-involved">
+                Support Our Education Programs
                 <ArrowRight className="ml-2 h-4 w-4" />
               </a>
             </Button>
