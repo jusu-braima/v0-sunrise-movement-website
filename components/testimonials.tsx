@@ -95,14 +95,21 @@ export function Testimonials() {
         {/* Testimonials Carousel */}
         <div className="max-w-4xl mx-auto mb-20">
           <div className="relative">
-            <Card className="bg-card border-none shadow-xl overflow-hidden">
-              <CardContent className="p-6 sm:p-8 md:p-12">
-                <Quote className="h-8 w-8 sm:h-12 sm:w-12 text-primary/20 mb-4 sm:mb-6" />
+            <Card className="bg-card border-2 border-border shadow-elevated overflow-hidden rounded-3xl relative group">
+              {/* Decorative corner accents */}
+              <div className="absolute top-0 left-0 w-20 h-20 border-t-4 border-l-4 border-primary/30 rounded-tl-3xl" />
+              <div className="absolute bottom-0 right-0 w-20 h-20 border-b-4 border-r-4 border-primary/30 rounded-br-3xl" />
+              {/* Background decoration */}
+              <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full -translate-y-32 translate-x-32" />
+              <CardContent className="p-6 sm:p-8 md:p-12 relative">
+                <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mb-6">
+                  <Quote className="h-8 w-8 text-primary" />
+                </div>
                 <blockquote className="text-lg sm:text-xl md:text-2xl text-foreground font-medium leading-relaxed mb-6 sm:mb-8">
                   &ldquo;{testimonials[currentIndex].quote}&rdquo;
                 </blockquote>
-                <div className="flex items-center gap-3 sm:gap-4">
-                  <div className="relative w-12 h-12 sm:w-14 sm:h-14 rounded-full overflow-hidden shrink-0">
+                <div className="flex items-center gap-4">
+                  <div className="relative w-14 h-14 sm:w-16 sm:h-16 rounded-2xl overflow-hidden shrink-0 ring-4 ring-primary/20 shadow-glow">
                     <Image
                       src={testimonials[currentIndex].image}
                       alt={testimonials[currentIndex].name}
@@ -166,11 +173,13 @@ export function Testimonials() {
           {stories.map((story) => (
             <Card 
               key={story.title} 
-              className="group bg-card border border-border hover:border-primary/50 hover:shadow-lg transition-all cursor-pointer"
+              className="group bg-card border-2 border-border hover:border-primary/50 shadow-soft hover:shadow-glow transition-all duration-500 cursor-pointer hover:-translate-y-2 rounded-2xl overflow-hidden relative"
             >
+              {/* Top accent bar */}
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary/60 via-accent/60 to-primary/60" />
               <CardContent className="p-6">
                 <div className="flex items-center gap-2 mb-4">
-                  <span className="px-3 py-1 text-xs font-medium bg-primary/10 text-primary rounded-full">
+                  <span className="px-3 py-1.5 text-xs font-medium bg-primary/10 text-primary rounded-full shadow-sm border border-primary/20">
                     {story.category}
                   </span>
                   <span className="text-xs text-muted-foreground">{story.date}</span>
@@ -180,6 +189,8 @@ export function Testimonials() {
                 </h3>
                 <p className="text-sm text-muted-foreground">{story.excerpt}</p>
               </CardContent>
+              {/* Decorative shape */}
+              <div className="absolute -bottom-6 -right-6 w-20 h-20 rounded-full bg-primary/5 group-hover:bg-primary/10 transition-colors duration-500" />
             </Card>
           ))}
         </div>

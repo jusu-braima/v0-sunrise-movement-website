@@ -117,8 +117,10 @@ export function Hero() {
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 pt-6 sm:pt-8 border-t border-border animate-fade-up-delay-3">
               {stats.map((stat) => (
-                <div key={stat.label} className="text-center p-2 sm:p-0">
-                  <stat.icon className="h-5 w-5 sm:h-6 sm:w-6 mx-auto mb-1 sm:mb-2 text-primary" />
+                <div key={stat.label} className="text-center p-3 sm:p-4 bg-card/50 backdrop-blur-sm rounded-2xl border border-border/50 hover:border-primary/30 hover:bg-card/80 transition-all duration-300 group">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 mx-auto mb-2 rounded-xl bg-primary/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <stat.icon className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />
+                  </div>
                   <div className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground">
                     <AnimatedCounter end={stat.value} suffix={stat.suffix} />
                   </div>
@@ -131,7 +133,13 @@ export function Hero() {
           {/* Hero Image / Logo */}
           <div className="relative flex justify-center lg:justify-end">
             <div className="relative w-[300px] h-[300px] md:w-[400px] md:h-[400px] lg:w-[500px] lg:h-[500px]">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 rounded-full blur-3xl" />
+              {/* Animated rings */}
+              <div className="absolute inset-0 rounded-full border-2 border-primary/20 animate-pulse" />
+              <div className="absolute inset-4 rounded-full border border-primary/10" />
+              <div className="absolute inset-8 rounded-full border border-dashed border-primary/15" />
+              {/* Glow effect */}
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-accent/20 rounded-full blur-3xl" />
+              <div className="absolute inset-12 bg-gradient-to-tr from-primary/20 to-transparent rounded-full blur-2xl" />
               <Image
                 src="/images/logo.jpg"
                 alt="Sunrise Movement Sierra Leone - United for a Greener Tomorrow"

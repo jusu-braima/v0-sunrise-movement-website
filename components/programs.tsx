@@ -354,19 +354,23 @@ export function Programs() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
           {strategicPillars.map((pillar, index) => (
             <AnimateOnScroll key={pillar.title} animation="fade-up" delay={index * 100}>
-              <Card className="h-full bg-card border-none shadow-lg hover:shadow-xl transition-all duration-300 card-hover">
-                <CardContent className="p-6">
+              <Card className="h-full bg-card border-2 border-border/50 shadow-soft hover:shadow-elevated transition-all duration-500 card-hover rounded-3xl overflow-hidden group relative">
+                {/* Top accent line */}
+                <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-transparent via-primary/60 to-transparent group-hover:via-primary transition-all duration-500" />
+                <CardContent className="p-6 relative">
                   <div
-                    className={`w-14 h-14 rounded-xl ${pillar.color} flex items-center justify-center mb-4`}
+                    className={`w-16 h-16 rounded-2xl ${pillar.color} flex items-center justify-center mb-5 shadow-soft group-hover:scale-110 group-hover:rotate-3 transition-all duration-300`}
                   >
-                    <pillar.icon className="h-7 w-7" />
+                    <pillar.icon className="h-8 w-8" />
                   </div>
                   <h3 className="text-xl font-bold text-foreground mb-3">{pillar.title}</h3>
                   <p className="text-muted-foreground mb-4">{pillar.description}</p>
-                  <Badge variant="secondary" className="bg-primary/10 text-primary">
+                  <Badge variant="secondary" className="bg-primary/10 text-primary border border-primary/20 shadow-sm">
                     {pillar.stats}
                   </Badge>
                 </CardContent>
+                {/* Decorative shape */}
+                <div className="absolute -bottom-8 -right-8 w-32 h-32 rounded-full bg-primary/5 group-hover:bg-primary/10 transition-colors duration-500" />
               </Card>
             </AnimateOnScroll>
           ))}

@@ -109,7 +109,10 @@ export function News() {
             {/* Featured Article */}
             {featuredNews && (
               <AnimateOnScroll animation="fade-up" delay={100}>
-                <Card className="bg-card border border-border hover:border-primary/50 hover:shadow-xl transition-all duration-300 overflow-hidden group cursor-pointer hover:-translate-y-1">
+                <Card className="bg-card border-2 border-border hover:border-primary/50 shadow-soft hover:shadow-elevated transition-all duration-500 overflow-hidden group cursor-pointer hover:-translate-y-2 rounded-3xl relative">
+                  {/* Corner accents */}
+                  <div className="absolute top-0 left-0 w-16 h-16 border-t-4 border-l-4 border-primary/30 rounded-tl-3xl z-10" />
+                  <div className="absolute bottom-0 right-0 w-16 h-16 border-b-4 border-r-4 border-primary/30 rounded-br-3xl z-10" />
                   <CardContent className="p-0">
                     <div className="relative aspect-video overflow-hidden">
                       <Image
@@ -120,12 +123,12 @@ export function News() {
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
                       <div className="absolute bottom-4 left-4">
-                        <Badge className="bg-primary text-primary-foreground">Featured</Badge>
+                        <Badge className="bg-primary text-primary-foreground shadow-lg">Featured</Badge>
                       </div>
                     </div>
                     <div className="p-6">
                       <div className="flex items-center gap-3 mb-3">
-                        <Badge variant="secondary">{featuredNews.category}</Badge>
+                        <Badge variant="secondary" className="shadow-sm">{featuredNews.category}</Badge>
                         <span className="flex items-center gap-1 text-sm text-muted-foreground">
                           <Calendar className="h-3.5 w-3.5" />
                           {featuredNews.date}
@@ -146,21 +149,23 @@ export function News() {
               {otherNews.slice(0, 3).map((item, index) => (
                 <AnimateOnScroll key={item.id} animation="fade-up" delay={200 + index * 100}>
                   <Card 
-                    className="bg-card border border-border hover:border-primary/50 hover:shadow-lg transition-all duration-300 group cursor-pointer hover:-translate-y-1 h-full overflow-hidden"
+                    className="bg-card border-2 border-border hover:border-primary/50 shadow-soft hover:shadow-glow transition-all duration-500 group cursor-pointer hover:-translate-y-2 h-full overflow-hidden rounded-2xl"
                   >
                     <CardContent className="p-0">
-                      <div className="relative h-32 overflow-hidden">
+                      <div className="relative h-36 overflow-hidden">
                         <Image
                           src={item.image}
                           alt={item.title}
                           fill
                           className="object-cover transition-transform duration-500 group-hover:scale-105"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                        {/* Subtle corner accent */}
+                        <div className="absolute top-2 right-2 w-8 h-8 border-t-2 border-r-2 border-white/30 rounded-tr-lg" />
                       </div>
-                      <div className="p-4">
+                      <div className="p-5">
                         <div className="flex items-center gap-3 mb-2">
-                          <Badge variant="secondary" className="text-xs">{item.category}</Badge>
+                          <Badge variant="secondary" className="text-xs shadow-sm">{item.category}</Badge>
                           <span className="flex items-center gap-1 text-xs text-muted-foreground">
                             <Calendar className="h-3 w-3" />
                             {item.date}
@@ -186,20 +191,20 @@ export function News() {
               {upcomingEvents.map((event, index) => (
                 <Card 
                   key={event.title} 
-                  className="bg-card border border-border hover:border-primary/50 transition-all duration-300 cursor-pointer hover:-translate-x-1"
+                  className="bg-card border-2 border-border hover:border-primary/50 shadow-soft hover:shadow-glow transition-all duration-500 cursor-pointer hover:-translate-x-1 hover:scale-[1.02] rounded-2xl overflow-hidden group"
                 >
-                  <CardContent className="p-3 sm:p-4">
-                    <div className="flex gap-3 sm:gap-4">
-                      <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-lg bg-primary/10 flex flex-col items-center justify-center shrink-0">
+                  <CardContent className="p-4 sm:p-5">
+                    <div className="flex gap-4">
+                      <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-gradient-to-br from-primary/20 to-primary/5 flex flex-col items-center justify-center shrink-0 border-2 border-primary/20 group-hover:border-primary/40 group-hover:scale-105 transition-all duration-300 shadow-soft">
                         <span className="text-[10px] sm:text-xs text-primary font-medium">
                           {event.date.split(" ")[0]}
                         </span>
-                        <span className="text-base sm:text-lg font-bold text-primary">
+                        <span className="text-lg sm:text-xl font-bold text-primary">
                           {event.date.split(" ")[1].replace(",", "")}
                         </span>
                       </div>
                       <div className="min-w-0 flex-1">
-                        <Badge variant="outline" className="mb-1 sm:mb-2 text-xs">{event.type}</Badge>
+                        <Badge variant="outline" className="mb-1 sm:mb-2 text-xs shadow-sm">{event.type}</Badge>
                         <h4 className="font-semibold text-foreground text-sm leading-tight mb-1 line-clamp-2">
                           {event.title}
                         </h4>
@@ -212,8 +217,11 @@ export function News() {
             </div>
 
             {/* Newsletter Signup */}
-            <Card className="bg-primary text-primary-foreground">
-              <CardContent className="p-6">
+            <Card className="bg-gradient-to-br from-primary to-primary/90 text-primary-foreground rounded-3xl shadow-elevated overflow-hidden relative">
+              {/* Decorative shapes */}
+              <div className="absolute -top-10 -right-10 w-32 h-32 rounded-full bg-white/10" />
+              <div className="absolute -bottom-8 -left-8 w-24 h-24 rounded-full bg-white/5" />
+              <CardContent className="p-6 relative">
                 {subscribed ? (
                   <div className="text-center py-2">
                     <CheckCircle2 className="h-10 w-10 mx-auto mb-3 text-primary-foreground" />
