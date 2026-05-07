@@ -2,7 +2,6 @@ import { Metadata } from "next"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Programs } from "@/components/programs"
-import { Projects } from "@/components/projects"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
@@ -33,11 +32,8 @@ export default function ProgramsPage() {
         </div>
       </section>
 
-      {/* Strategic Pillars */}
+      {/* Programs & Projects */}
       <Programs />
-
-      {/* Active Projects */}
-      <Projects />
 
       {/* CTA */}
       <section className="py-20 bg-primary text-primary-foreground">
