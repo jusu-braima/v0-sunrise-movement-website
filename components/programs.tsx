@@ -404,7 +404,7 @@ export function Programs() {
                     </Badge>
                   </div>
                 </div>
-                <div className="grid grid-cols-3 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                   {blueProjectImages.slice(1, 4).map((img, index) => (
                     <div key={index} className="relative aspect-square rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow">
                       <Image
@@ -525,7 +525,7 @@ export function Programs() {
                     </Badge>
                   </div>
                 </div>
-                <div className="grid grid-cols-3 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                   {climateConferenceImages.slice(1, 4).map((img, index) => (
                     <div key={index} className="relative aspect-square rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow">
                       <Image
@@ -647,7 +647,7 @@ export function Programs() {
                     </Badge>
                   </div>
                 </div>
-                <div className="grid grid-cols-3 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                   {beachCleanupImages.slice(1, 4).map((img, index) => (
                     <div key={index} className="relative aspect-square rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow">
                       <Image
@@ -769,7 +769,7 @@ export function Programs() {
                     </Badge>
                   </div>
                 </div>
-                <div className="grid grid-cols-3 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                   {climateJusticeMarchImages.slice(1, 4).map((img, index) => (
                     <div key={index} className="relative aspect-square rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow">
                       <Image
@@ -892,7 +892,7 @@ export function Programs() {
                     </Badge>
                   </div>
                 </div>
-                <div className="grid grid-cols-3 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                   {schoolEducationImages.slice(1, 4).map((img, index) => (
                     <div key={index} className="relative aspect-square rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow">
                       <Image
@@ -1015,7 +1015,7 @@ export function Programs() {
                     </Badge>
                   </div>
                 </div>
-                <div className="grid grid-cols-3 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                   {capacityBuildingImages.slice(1, 4).map((img, index) => (
                     <div key={index} className="relative aspect-square rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow">
                       <Image
@@ -1098,7 +1098,7 @@ export function Programs() {
 
           {/* More Images */}
           <AnimateOnScroll animation="fade-up" delay={250}>
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               {capacityBuildingImages.slice(7).map((img, index) => (
                 <div key={index} className="relative aspect-video rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow">
                   <Image
@@ -1154,7 +1154,7 @@ export function Programs() {
                     </Badge>
                   </div>
                 </div>
-                <div className="grid grid-cols-3 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                   {youthAdaptationImages.slice(1, 4).map((img, index) => (
                     <div key={index} className="relative aspect-square rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow">
                       <Image
