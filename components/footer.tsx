@@ -8,8 +8,11 @@ const quickLinks = [
   { label: "Home", href: "/" },
   { label: "About Us", href: "/about" },
   { label: "Programs", href: "/programs" },
+  { label: "Gallery", href: "/gallery" },
   { label: "Impact", href: "/impact" },
-  { label: "Get Involved", href: "/#get-involved" },
+  { label: "News", href: "/news" },
+  { label: "Get Involved", href: "/get-involved" },
+  { label: "Partners", href: "/partners" },
   { label: "Contact", href: "/contact" },
 ]
 

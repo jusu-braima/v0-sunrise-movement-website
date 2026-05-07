@@ -90,7 +90,7 @@ export function Hero() {
                 asChild
                 className="relative overflow-hidden group bg-primary hover:bg-primary/90 shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 transition-all duration-300 hover:scale-105 active:scale-95"
               >
-                <Link href="#get-involved">
+                <Link href="/get-involved">
                   <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
                   <span className="relative flex items-center">
                     Join the Movement
@@ -104,7 +104,7 @@ export function Hero() {
                 asChild
                 className="relative overflow-hidden group border-2 border-primary/50 hover:border-primary hover:bg-primary/10 shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 active:scale-95"
               >
-                <Link href="#about">
+                <Link href="/about">
                   <span className="absolute inset-0 bg-gradient-to-r from-primary/0 via-primary/10 to-primary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   <span className="relative flex items-center">
                     <span className="w-2 h-2 rounded-full bg-primary mr-2 animate-pulse" />
