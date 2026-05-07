@@ -15,7 +15,6 @@ import {
   Users, 
   Phone,
   Handshake,
-  Heart,
   X,
   Camera
 } from "lucide-react"
@@ -107,25 +106,14 @@ export function Header() {
           {/* Desktop CTA Buttons */}
           <div className="hidden lg:flex items-center gap-2">
             <Button 
-              variant="outline" 
-              size="sm" 
-              asChild 
-              className="group border-white/50 text-white hover:border-white hover:bg-white/10 transition-all duration-300"
-            >
-              <Link href="/#partner" className="flex items-center gap-1.5">
-                <Handshake className="h-3.5 w-3.5 text-white group-hover:scale-110 transition-transform duration-300" />
-                <span className="hidden xl:inline">Partner With Us</span>
-                <span className="xl:hidden">Partner</span>
-              </Link>
-            </Button>
-            <Button 
               size="sm" 
               asChild 
               className="group bg-white text-green-700 hover:bg-white/90 shadow-lg hover:shadow-white/25 transition-all duration-300"
             >
-              <Link href="/#donate" className="flex items-center gap-1.5">
-                <Heart className="h-3.5 w-3.5 group-hover:scale-110 transition-transform duration-300" />
-                <span>Donate</span>
+              <Link href="/#partner" className="flex items-center gap-1.5">
+                <Handshake className="h-3.5 w-3.5 group-hover:scale-110 transition-transform duration-300" />
+                <span className="hidden xl:inline">Partner With Us</span>
+                <span className="xl:hidden">Partner</span>
               </Link>
             </Button>
           </div>
@@ -182,16 +170,10 @@ export function Header() {
                 {/* Mobile CTA Buttons */}
                 <div className="p-4 border-t border-white/10">
                   <div className="flex flex-col gap-3">
-                    <Button variant="outline" asChild className="w-full justify-center gap-2 border-white/30 text-white hover:bg-white/10 hover:text-white">
+                    <Button asChild className="w-full justify-center gap-2 bg-white text-primary hover:bg-white/90">
                       <Link href="/#partner" onClick={() => setIsOpen(false)}>
                         <Handshake className="h-4 w-4" />
                         Partner With Us
-                      </Link>
-                    </Button>
-                    <Button asChild className="w-full justify-center gap-2 bg-white text-primary hover:bg-white/90">
-                      <Link href="/#donate" onClick={() => setIsOpen(false)}>
-                        <Heart className="h-4 w-4" />
-                        Donate
                       </Link>
                     </Button>
                   </div>

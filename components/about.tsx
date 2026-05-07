@@ -84,6 +84,43 @@ export function About() {
           </div>
         </AnimateOnScroll>
 
+        {/* Blue Community Announcement */}
+        <AnimateOnScroll animation="fade-up" className="mb-16">
+          <Card className="bg-[#2d7fc1] border-none shadow-xl overflow-hidden">
+            <CardContent className="p-0">
+              <div className="grid lg:grid-cols-2 gap-0">
+                {/* Image */}
+                <div className="relative h-[300px] lg:h-auto lg:min-h-[400px]">
+                  <Image
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.27.50%20%281%29-dccsrYN58YdUh0vya8IoKAVQyr8aqG.jpeg"
+                    alt="Alicious Bessiama - Founder and Executive Director of Sunrise Movement Sierra Leone with Blue Community Network announcement"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                {/* Content */}
+                <div className="p-8 lg:p-10 flex flex-col justify-center">
+                  <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
+                    Sunrise Movement Sierra Leone Joins the Global Blue Community Network
+                  </h3>
+                  <p className="text-white/90 leading-relaxed mb-4">
+                    Sunrise Movement Sierra Leone (SM-SL) is proud to announce its official affiliation with the Blue Community Network, becoming the first recognized Blue Community in Sierra Leone. This milestone marks a significant advancement in the organization&apos;s efforts to promote environmental justice, youth empowerment, and equitable access to safe and sustainable water resources.
+                  </p>
+                  <p className="text-white/90 leading-relaxed mb-4">
+                    The Blue Community Network is a global movement committed to recognizing water as a fundamental human right, opposing its commodification, and strengthening public water services. Through this partnership, Sunrise Movement Sierra Leone will expand its grassroots initiatives, deepen community engagement, and advocate for inclusive, rights-based approaches to water governance.
+                  </p>
+                  <p className="text-white/90 leading-relaxed mb-4">
+                    As part of this collaboration, the organization will implement a range of initiatives aimed at strengthening water access and awareness, including community outreach and education on water rights, school-based WASH (Water, Sanitation, and Hygiene) programmes, and capacity-building for youth and local leaders on water justice.
+                  </p>
+                  <p className="text-white/90 leading-relaxed">
+                    This affiliation reinforces the organization&apos;s commitment to advancing sustainable development and aligns with global priorities, including Sustainable Development Goal 6 (Clean Water and Sanitation) and Sustainable Development Goal 13 (Climate Action).
+                  </p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </AnimateOnScroll>
+
         {/* Mission & Vision */}
         <div className="grid md:grid-cols-2 gap-8 mb-16">
           <AnimateOnScroll animation="slide-left" delay={100}>
