@@ -97,9 +97,6 @@ export function Partners() {
               <Button size="lg" asChild>
                 <Link href="#contact">Become a Partner</Link>
               </Button>
-              <Button size="lg" variant="outline" asChild>
-                <Link href="#donate">Support Our Work</Link>
-              </Button>
             </div>
           </div>
 
