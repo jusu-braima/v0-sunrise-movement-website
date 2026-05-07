@@ -144,6 +144,41 @@ const schoolOutreachImages = [
   },
 ]
 
+const capacityBuildingImages = [
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.24.55-mvmEeHfuKG9xx5DWduucWe3bE9PH5s.jpeg",
+    alt: "Participants working collaboratively with laptops and tablets at workshop",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.24.36-2WdeFygRefZaGcO55U8Lrsb9H9qBTt.jpeg",
+    alt: "Workshop group discussion with laptops and documents",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.24.53-OD5L0BkSN2cYH6rYWKh26jtnxzsWMT.jpeg",
+    alt: "Participant presenting flip chart notes to group",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.26.14-9SUFbZtSOqcPEues5e06c63cMYNQTe.jpeg",
+    alt: "Three participants in discussion with Trocaire and Irish Aid branding",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.24.48-W1vg86sxlzAtAVmOwrDMF2qpvge2DP.jpeg",
+    alt: "Participant signing registration documents",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.27.05-LbT5Zi4Y9VO6n38rwDMdPIq3o2o7MZ.jpeg",
+    alt: "Wide view of workshop with multiple working groups",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.24.39-NY2Vn88sES0U0G1FeDDSqQHgqibDok.jpeg",
+    alt: "Small group discussion reviewing documents",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.24.40-3MJfR7xBdrynp51oqMrE1OdP0PZEpu.jpeg",
+    alt: "Conference hall with multiple working groups at WDWF Hall",
+  },
+]
+
 const plannedOutputs = [
   "Solar energy systems installed in primary and secondary schools in Lalehun",
   "60 local youth trained in solar installation, maintenance, and troubleshooting",
@@ -787,6 +822,141 @@ export function Programs() {
             <Button size="lg" asChild>
               <a href="#get-involved">
                 Support Our Education Programs
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </a>
+            </Button>
+          </AnimateOnScroll>
+        </div>
+
+        {/* Capacity Building & Training Workshops */}
+        <div className="mb-16 pt-16 border-t border-border">
+          <AnimateOnScroll animation="fade-up" className="text-center max-w-4xl mx-auto mb-12">
+            <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-4 text-balance">
+              Capacity Building & Training Workshops
+            </h3>
+            <p className="text-lg text-muted-foreground">
+              Strengthening skills and knowledge through collaborative learning and professional development
+            </p>
+          </AnimateOnScroll>
+
+          {/* Project Overview */}
+          <div className="grid lg:grid-cols-2 gap-12 items-start mb-12">
+            {/* Image Gallery */}
+            <AnimateOnScroll animation="slide-left">
+              <div className="space-y-4">
+                <div className="relative aspect-video rounded-2xl overflow-hidden shadow-xl">
+                  <Image
+                    src={capacityBuildingImages[0].src}
+                    alt={capacityBuildingImages[0].alt}
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute bottom-4 left-4">
+                    <Badge className="bg-purple-600 text-white">
+                      <MapPin className="w-3 h-3 mr-1" />
+                      WDWF Hall, Sierra Leone
+                    </Badge>
+                  </div>
+                </div>
+                <div className="grid grid-cols-3 gap-4">
+                  {capacityBuildingImages.slice(1, 4).map((img, index) => (
+                    <div key={index} className="relative aspect-square rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+                      <Image
+                        src={img.src}
+                        alt={img.alt}
+                        fill
+                        className="object-cover hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </AnimateOnScroll>
+
+            {/* Project Description */}
+            <AnimateOnScroll animation="slide-right" delay={100}>
+              <div className="space-y-6">
+                <Card className="bg-card border-none shadow-lg">
+                  <CardContent className="p-6">
+                    <p className="text-muted-foreground leading-relaxed mb-4">
+                      Our Capacity Building and Training Workshops bring together civil society organizations, 
+                      youth leaders, and community stakeholders to strengthen their skills in climate advocacy, 
+                      project management, and sustainable development. These intensive training sessions, 
+                      supported by partners including Trocaire and Irish Aid, equip participants with the 
+                      tools and knowledge needed to drive meaningful change in their communities.
+                    </p>
+                    <p className="text-muted-foreground leading-relaxed">
+                      Through collaborative group work, interactive presentations, and hands-on exercises, 
+                      participants develop practical skills in areas such as climate finance, policy advocacy, 
+                      monitoring and evaluation, and community engagement. The workshops foster networking 
+                      and knowledge sharing among organizations working on environmental and social issues.
+                    </p>
+                    <div className="flex flex-wrap gap-3 mt-4">
+                      <Badge variant="outline" className="bg-purple-50 text-purple-700 border-purple-200">
+                        SDG 17: Partnerships for Goals
+                      </Badge>
+                      <Badge variant="outline" className="bg-emerald-50 text-emerald-700 border-emerald-200">
+                        SDG 13: Climate Action
+                      </Badge>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                {/* Stats Grid */}
+                <div className="grid grid-cols-2 gap-4">
+                  <Card className="bg-purple-500/10 border-purple-500/20">
+                    <CardContent className="p-4 text-center">
+                      <Users className="h-8 w-8 text-purple-600 mx-auto mb-2" />
+                      <div className="text-2xl font-bold text-foreground">50+</div>
+                      <p className="text-sm text-muted-foreground">Participants Trained</p>
+                    </CardContent>
+                  </Card>
+                  <Card className="bg-indigo-500/10 border-indigo-500/20">
+                    <CardContent className="p-4 text-center">
+                      <GraduationCap className="h-8 w-8 text-indigo-600 mx-auto mb-2" />
+                      <div className="text-2xl font-bold text-foreground">Multiple</div>
+                      <p className="text-sm text-muted-foreground">Training Sessions</p>
+                    </CardContent>
+                  </Card>
+                </div>
+
+                {/* Partners */}
+                <Card className="bg-card border border-border">
+                  <CardContent className="p-4">
+                    <p className="text-xs text-muted-foreground uppercase tracking-wider mb-3">Supporting Partners</p>
+                    <div className="flex flex-wrap gap-2">
+                      <Badge variant="secondary" className="text-xs">Trocaire</Badge>
+                      <Badge variant="secondary" className="text-xs">Irish Aid</Badge>
+                      <Badge variant="secondary" className="text-xs">CICN</Badge>
+                      <Badge variant="secondary" className="text-xs">CAF</Badge>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            </AnimateOnScroll>
+          </div>
+
+          {/* Additional Images */}
+          <AnimateOnScroll animation="fade-up" delay={200}>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {capacityBuildingImages.slice(4).map((img, index) => (
+                <div key={index} className="relative aspect-video rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+                  <Image
+                    src={img.src}
+                    alt={img.alt}
+                    fill
+                    className="object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+              ))}
+            </div>
+          </AnimateOnScroll>
+
+          {/* CTA */}
+          <AnimateOnScroll animation="fade-up" delay={300} className="text-center mt-12">
+            <Button size="lg" asChild>
+              <a href="#get-involved">
+                Join Our Training Programs
                 <ArrowRight className="ml-2 h-4 w-4" />
               </a>
             </Button>
