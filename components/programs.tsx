@@ -5,7 +5,6 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { 
-  Sun, 
   GraduationCap, 
   Users, 
   Zap, 
@@ -58,26 +57,10 @@ export function Programs() {
   return (
     <section id="programs" className="py-20 md:py-32">
       <div className="container mx-auto px-4">
-        {/* Section Header */}
-        <AnimateOnScroll animation="fade-up" className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-primary font-semibold uppercase tracking-wider text-sm">What We Do</span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mt-4 mb-6 text-balance">
-            Our Programs and Projects
-          </h2>
-          <p className="text-lg text-muted-foreground">
-            Explore our initiatives making real impact in communities throughout Sierra Leone, 
-            addressing climate change through interconnected programs that empower communities.
-          </p>
-        </AnimateOnScroll>
-
         {/* Lalehun Solar Energy Initiative */}
         <div className="mb-16">
           <AnimateOnScroll animation="fade-up" className="text-center max-w-4xl mx-auto mb-12">
-            <Badge className="mb-4 bg-yellow-500/10 text-yellow-600 border-yellow-500/30">
-              <Sun className="w-3 h-3 mr-1" />
-              Featured Project
-            </Badge>
-            <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mt-4 mb-4 text-balance">
+            <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-4 text-balance">
               Lalehun Solar Energy Initiative
             </h3>
             <p className="text-lg text-muted-foreground">
