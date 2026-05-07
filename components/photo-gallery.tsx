@@ -146,6 +146,36 @@ const galleryImages: GalleryImage[] = [
     alt: "Youth removing debris from beach",
     category: "Environment",
   },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.27.00-M7a6K0emZuNarNNZvH26g9mFCgg5Vj.jpeg",
+    alt: "Volunteers collecting trash on beach with ocean in background",
+    category: "Environment",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.23.02-oesJ4hBMtTh975T5c1JW6DCqEKBm8n.jpeg",
+    alt: "Team filling collection bags with beach debris",
+    category: "Environment",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.27.02-1rxJWxkEyAryVwdy2MOpqIfyb9qLdF.jpeg",
+    alt: "Volunteers sorting waste together on the beach",
+    category: "Environment",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.22.57-tBGZJCiKPDa0hEQkp9biZSh8eMJyGg.jpeg",
+    alt: "Two volunteers using rakes to collect debris from sand",
+    category: "Environment",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.27.04-2O2V68dlwgqvMVysNUb5iRKrff0zRq.jpeg",
+    alt: "Wide shot of cleanup team spread across the beach",
+    category: "Environment",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.22.40-fxrEBbGvfh6aXeb3sLsFsizL6HXhaQ.jpeg",
+    alt: "Four volunteers posing with full collection bag by the ocean",
+    category: "Environment",
+  },
   // Solar Project / Clean Energy
   {
     src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.00.56-duDECbr4fPcKoObj3ZzcSPbNWns7AY.jpeg",

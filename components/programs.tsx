@@ -166,6 +166,30 @@ const beachCleanupImages = [
     src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-04-25%20at%2009.43.53-9mZUl4H0CiNPPmSYCCbV0EhNPqkEyF.jpeg",
     alt: "Sunrise Movement beach cleanup participants group photo",
   },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.27.00-M7a6K0emZuNarNNZvH26g9mFCgg5Vj.jpeg",
+    alt: "Volunteers collecting trash on beach with ocean in background",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.23.02-oesJ4hBMtTh975T5c1JW6DCqEKBm8n.jpeg",
+    alt: "Team filling collection bags with beach debris",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.27.02-1rxJWxkEyAryVwdy2MOpqIfyb9qLdF.jpeg",
+    alt: "Volunteers sorting waste together on the beach",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.22.57-tBGZJCiKPDa0hEQkp9biZSh8eMJyGg.jpeg",
+    alt: "Two volunteers using rakes to collect debris from sand",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.27.04-2O2V68dlwgqvMVysNUb5iRKrff0zRq.jpeg",
+    alt: "Wide shot of cleanup team spread across the beach",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.22.40-fxrEBbGvfh6aXeb3sLsFsizL6HXhaQ.jpeg",
+    alt: "Four volunteers posing with full collection bag by the ocean",
+  },
 ]
 
 // Climate Justice March Images
