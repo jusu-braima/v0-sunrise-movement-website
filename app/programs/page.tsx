@@ -2,7 +2,6 @@ import { Metadata } from "next"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Programs } from "@/components/programs"
-import { AnimatedBackground } from "@/components/animated-background"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
@@ -15,7 +14,6 @@ export const metadata: Metadata = {
 export default function ProgramsPage() {
   return (
     <main className="min-h-screen">
-      <AnimatedBackground variant="particles" />
       <Header />
       
       {/* Hero Section */}

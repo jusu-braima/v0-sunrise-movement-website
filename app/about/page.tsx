@@ -3,7 +3,6 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { About } from "@/components/about"
 import { Testimonials } from "@/components/testimonials"
-import { AnimatedBackground } from "@/components/animated-background"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
@@ -112,7 +111,6 @@ const team = [
 export default function AboutPage() {
   return (
     <main className="min-h-screen">
-      <AnimatedBackground variant="waves" />
       <Header />
       
       {/* Hero Section */}

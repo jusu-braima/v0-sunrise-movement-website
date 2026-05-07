@@ -2,7 +2,6 @@ import { Metadata } from "next"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Contact } from "@/components/contact"
-import { AnimatedBackground } from "@/components/animated-background"
 
 export const metadata: Metadata = {
   title: "Contact Us | Sunrise Movement Sierra Leone",
@@ -12,7 +11,6 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <main className="min-h-screen">
-      <AnimatedBackground variant="waves" />
       <Header />
       
       {/* Hero Section */}
