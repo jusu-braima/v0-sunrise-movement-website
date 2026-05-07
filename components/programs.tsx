@@ -144,6 +144,61 @@ const schoolOutreachImages = [
   },
 ]
 
+const youthAdaptationImages = [
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.27.01-WeZc24cYbrTGqcsjl1fXP83QhQbgAH.jpeg",
+    alt: "Large group photo at Youth Adaptation & SDGs Leadership Conference",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.23.52-ZkhFb6dPT1G7F6e2EU7DusxpEMnzdl.jpeg",
+    alt: "Panel of speakers at conference with GYC and Rural Women Organization branding",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.22.39-OB2k75IFZK8CW6GCUTXLxdRIEbfnmA.jpeg",
+    alt: "Participants in matching pink shirts holding certificates",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.22.06-pnsUxjkPoLHymJPkbcNwn60BiibMCr.jpeg",
+    alt: "Woman speaker presenting with microphone at conference",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.23.09-SIGCU6wVLIKIur9JTIbTXXkVoHDhKU.jpeg",
+    alt: "Certificate presentation ceremony at conference",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.22.46-GhhYY9XFfqwfowNMzLc26TKaqMqIfQ.jpeg",
+    alt: "Young participants seated at conference tables",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.27.04-ATFvqloiDxCepagSuKlm1LZs6TGSHE.jpeg",
+    alt: "Group of six organizers posing at conference venue",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.22.28-lbnuNsIewCB90t5ouy01yKDFAzf47x.jpeg",
+    alt: "Workshop session with participants in group discussions",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.22.25-YEyJmzIj9VZykgdi4xywJis31TvfGi.jpeg",
+    alt: "Participant standing in front of GYC Sierra Leone banner",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.22.49-b1tGAyZKLE6PohxNep9Uawu7cf8AI0.jpeg",
+    alt: "Participants attentively listening at conference session",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.26.48-SRo1xVznnwYNxpUBySr9ENzB6s72Eq.jpeg",
+    alt: "Group photo of conference participants",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.22.56-jgF2gD27glWp1IhwEiMTGmFLDTMZ32.jpeg",
+    alt: "Conference attendees group photo with Youth Adaptation banner",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.22.24-vCXcp5EhvwMRG2QGmt20F4dACH7pGE.jpeg",
+    alt: "Panel discussion on International Womens Day 2026",
+  },
+]
+
 const capacityBuildingImages = [
   {
     src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.24.55-mvmEeHfuKG9xx5DWduucWe3bE9PH5s.jpeg",
@@ -957,6 +1012,157 @@ export function Programs() {
             <Button size="lg" asChild>
               <a href="#get-involved">
                 Join Our Training Programs
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </a>
+            </Button>
+          </AnimateOnScroll>
+        </div>
+
+        {/* Youth Adaptation & SDGs Leadership Conference */}
+        <div className="mb-16 pt-16 border-t border-border">
+          <AnimateOnScroll animation="fade-up" className="text-center max-w-4xl mx-auto mb-12">
+            <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-4 text-balance">
+              Youth Adaptation & SDGs Leadership Conference
+            </h3>
+            <p className="text-lg text-muted-foreground">
+              Accelerating action through young women leading climate adaptation for sustainable development
+            </p>
+          </AnimateOnScroll>
+
+          {/* Project Overview */}
+          <div className="grid lg:grid-cols-2 gap-12 items-start mb-12">
+            {/* Image Gallery */}
+            <AnimateOnScroll animation="slide-left">
+              <div className="space-y-4">
+                <div className="relative aspect-video rounded-2xl overflow-hidden shadow-xl">
+                  <Image
+                    src={youthAdaptationImages[0].src}
+                    alt={youthAdaptationImages[0].alt}
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute bottom-4 left-4">
+                    <Badge className="bg-pink-600 text-white">
+                      <MapPin className="w-3 h-3 mr-1" />
+                      Freetown, Sierra Leone
+                    </Badge>
+                  </div>
+                </div>
+                <div className="grid grid-cols-3 gap-4">
+                  {youthAdaptationImages.slice(1, 4).map((img, index) => (
+                    <div key={index} className="relative aspect-square rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+                      <Image
+                        src={img.src}
+                        alt={img.alt}
+                        fill
+                        className="object-cover hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </AnimateOnScroll>
+
+            {/* Project Description */}
+            <AnimateOnScroll animation="slide-right" delay={100}>
+              <div className="space-y-6">
+                <Card className="bg-card border-none shadow-lg">
+                  <CardContent className="p-6">
+                    <p className="text-muted-foreground leading-relaxed mb-4">
+                      The Youth Adaptation & SDGs Leadership Conference, organized in partnership with Global 
+                      Youth Counterpart for Sustainable Development (GYC), Plan International, and Rural Women 
+                      Organization, brought together young leaders under the theme: &quot;Accelerate Action: Young 
+                      Women Leading Climate Adaptation for Sustainable Development.&quot; This flagship event was 
+                      held in celebration of International Women&apos;s Day 2026.
+                    </p>
+                    <p className="text-muted-foreground leading-relaxed">
+                      The conference featured panel discussions, workshop sessions, and networking opportunities 
+                      focused on empowering young women to take leadership roles in climate adaptation efforts. 
+                      Participants received certificates recognizing their commitment to sustainable development 
+                      and were equipped with practical tools for driving change in their communities.
+                    </p>
+                    <div className="flex flex-wrap gap-3 mt-4">
+                      <Badge variant="outline" className="bg-pink-50 text-pink-700 border-pink-200">
+                        SDG 5: Gender Equality
+                      </Badge>
+                      <Badge variant="outline" className="bg-emerald-50 text-emerald-700 border-emerald-200">
+                        SDG 13: Climate Action
+                      </Badge>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                {/* Stats Grid */}
+                <div className="grid grid-cols-2 gap-4">
+                  <Card className="bg-pink-500/10 border-pink-500/20">
+                    <CardContent className="p-4 text-center">
+                      <Users className="h-8 w-8 text-pink-600 mx-auto mb-2" />
+                      <div className="text-2xl font-bold text-foreground">100+</div>
+                      <p className="text-sm text-muted-foreground">Young Leaders</p>
+                    </CardContent>
+                  </Card>
+                  <Card className="bg-rose-500/10 border-rose-500/20">
+                    <CardContent className="p-4 text-center">
+                      <GraduationCap className="h-8 w-8 text-rose-600 mx-auto mb-2" />
+                      <div className="text-2xl font-bold text-foreground">Certified</div>
+                      <p className="text-sm text-muted-foreground">All Participants</p>
+                    </CardContent>
+                  </Card>
+                </div>
+
+                {/* Partners */}
+                <Card className="bg-card border border-border">
+                  <CardContent className="p-4">
+                    <p className="text-xs text-muted-foreground uppercase tracking-wider mb-3">Organizing Partners</p>
+                    <div className="flex flex-wrap gap-2">
+                      <Badge variant="secondary" className="text-xs">Plan International</Badge>
+                      <Badge variant="secondary" className="text-xs">GYC Sierra Leone</Badge>
+                      <Badge variant="secondary" className="text-xs">Rural Women Organization</Badge>
+                      <Badge variant="secondary" className="text-xs">Eco-Tourism Hub</Badge>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            </AnimateOnScroll>
+          </div>
+
+          {/* Additional Images Grid */}
+          <AnimateOnScroll animation="fade-up" delay={200}>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
+              {youthAdaptationImages.slice(4, 8).map((img, index) => (
+                <div key={index} className="relative aspect-video rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+                  <Image
+                    src={img.src}
+                    alt={img.alt}
+                    fill
+                    className="object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+              ))}
+            </div>
+          </AnimateOnScroll>
+
+          {/* More Images */}
+          <AnimateOnScroll animation="fade-up" delay={250}>
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+              {youthAdaptationImages.slice(8).map((img, index) => (
+                <div key={index} className="relative aspect-video rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+                  <Image
+                    src={img.src}
+                    alt={img.alt}
+                    fill
+                    className="object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+              ))}
+            </div>
+          </AnimateOnScroll>
+
+          {/* CTA */}
+          <AnimateOnScroll animation="fade-up" delay={300} className="text-center mt-12">
+            <Button size="lg" asChild>
+              <a href="#get-involved">
+                Join Future Conferences
                 <ArrowRight className="ml-2 h-4 w-4" />
               </a>
             </Button>
