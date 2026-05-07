@@ -13,10 +13,12 @@ import { Partners } from "@/components/partners"
 import { GetInvolved } from "@/components/get-involved"
 import { Contact } from "@/components/contact"
 import { Footer } from "@/components/footer"
+import { AnimatedBackground } from "@/components/animated-background"
 
 export default function Home() {
   return (
     <main className="min-h-screen">
+      <AnimatedBackground variant="gradient" />
       <Header />
       <Hero />
       <About />

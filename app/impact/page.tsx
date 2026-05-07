@@ -3,6 +3,7 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Impact } from "@/components/impact"
 import { Testimonials } from "@/components/testimonials"
+import { AnimatedBackground } from "@/components/animated-background"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
@@ -72,6 +73,7 @@ const sdgProgress = [
 export default function ImpactPage() {
   return (
     <main className="min-h-screen">
+      <AnimatedBackground variant="gradient" />
       <Header />
       
       {/* Hero Section */}
