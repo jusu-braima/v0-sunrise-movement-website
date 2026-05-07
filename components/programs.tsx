@@ -62,6 +62,41 @@ const beachCleanupImages = [
   },
 ]
 
+const climateMarchImages = [
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.24.12-oW4fTan9lrOysUwpl93FUnyQxfmlmE.jpeg",
+    alt: "Youth Alliance for Sustainable Development COP30 march with banner",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.24.23-nsEN8ZPfniskr51KLqaM1aRqYjomkW.jpeg",
+    alt: "Youth marching with Climate Justice signs",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.24.11-qtxu65CHTIKHSNJXcCJHsdzsfEAKsZ.jpeg",
+    alt: "Protesters with There is No Planet B sign",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.24.10-nskEf3RBx743WvumEbe0LM21LJw82d.jpeg",
+    alt: "Marchers demanding climate accountability now",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.24.42-0JYV8X4vo1UotCkHw8dgYZWQrXdDWx.jpeg",
+    alt: "Young women with Make Earth Cool Again sign",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.24.45-TytX2TQ9S4PdJAcArSDUxjJsNP65O4.jpeg",
+    alt: "Group marching with climate justice placards",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.24.34-Nr2BUufDbObYNql92zLLmweIpEW3sv.jpeg",
+    alt: "Protesters with Climate Justice equals Social Justice signs",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.24.02-oFor4ONOUNOgZHRHmkGPoE7JDZ97SB.jpeg",
+    alt: "COP30 foot walk march in Freetown",
+  },
+]
+
 const plannedOutputs = [
   "Solar energy systems installed in primary and secondary schools in Lalehun",
   "60 local youth trained in solar installation, maintenance, and troubleshooting",
@@ -411,6 +446,142 @@ export function Programs() {
             <Button size="lg" asChild>
               <a href="#get-involved">
                 Join Our Next Cleanup
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </a>
+            </Button>
+          </AnimateOnScroll>
+        </div>
+
+        {/* Climate Justice March - COP30 Advocacy */}
+        <div className="mb-16 pt-16 border-t border-border">
+          <AnimateOnScroll animation="fade-up" className="text-center max-w-4xl mx-auto mb-12">
+            <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-4 text-balance">
+              Climate Justice March - COP30 Advocacy
+            </h3>
+            <p className="text-lg text-muted-foreground">
+              Amplifying youth voices and demanding climate accountability through peaceful civic action
+            </p>
+          </AnimateOnScroll>
+
+          {/* Project Overview */}
+          <div className="grid lg:grid-cols-2 gap-12 items-start mb-12">
+            {/* Image Gallery */}
+            <AnimateOnScroll animation="slide-left">
+              <div className="space-y-4">
+                <div className="relative aspect-video rounded-2xl overflow-hidden shadow-xl">
+                  <Image
+                    src={climateMarchImages[0].src}
+                    alt={climateMarchImages[0].alt}
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute bottom-4 left-4">
+                    <Badge className="bg-orange-600 text-white">
+                      <MapPin className="w-3 h-3 mr-1" />
+                      Freetown, Sierra Leone
+                    </Badge>
+                  </div>
+                </div>
+                <div className="grid grid-cols-3 gap-4">
+                  {climateMarchImages.slice(1, 4).map((img, index) => (
+                    <div key={index} className="relative aspect-square rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+                      <Image
+                        src={img.src}
+                        alt={img.alt}
+                        fill
+                        className="object-cover hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </AnimateOnScroll>
+
+            {/* Project Description */}
+            <AnimateOnScroll animation="slide-right" delay={100}>
+              <div className="space-y-6">
+                <Card className="bg-card border-none shadow-lg">
+                  <CardContent className="p-6">
+                    <p className="text-muted-foreground leading-relaxed mb-4">
+                      In partnership with the Youth Alliance for Sustainable Development (YASDev), Network 
+                      Movement for Youth and Children&apos;s Welfare (NMYCW), and ActionAid Sierra Leone, 
+                      Sunrise Movement Sierra Leone organized the Civil Society and Community COP30 Foot Walk 
+                      in Freetown under the theme: &quot;Climate Promises Must Be Kept: Our Future Cannot Wait - 
+                      COP30 Must Deliver!&quot;
+                    </p>
+                    <p className="text-muted-foreground leading-relaxed">
+                      This peaceful march brought together youth, civil society organizations, and community 
+                      members to demand climate accountability and urgent action from world leaders. Participants 
+                      carried powerful messages including &quot;Climate Justice = Social Justice&quot;, &quot;There is No 
+                      Planet B&quot;, &quot;Make Earth Cool Again&quot;, and &quot;We Are Tired of Empty Promises - We Need Action Now&quot;.
+                    </p>
+                    <div className="flex flex-wrap gap-3 mt-4">
+                      <Badge variant="outline" className="bg-emerald-50 text-emerald-700 border-emerald-200">
+                        SDG 13: Climate Action
+                      </Badge>
+                      <Badge variant="outline" className="bg-orange-50 text-orange-700 border-orange-200">
+                        SDG 16: Peace, Justice & Strong Institutions
+                      </Badge>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                {/* Stats Grid */}
+                <div className="grid grid-cols-2 gap-4">
+                  <Card className="bg-orange-500/10 border-orange-500/20">
+                    <CardContent className="p-4 text-center">
+                      <Users className="h-8 w-8 text-orange-600 mx-auto mb-2" />
+                      <div className="text-2xl font-bold text-foreground">100+</div>
+                      <p className="text-sm text-muted-foreground">Participants</p>
+                    </CardContent>
+                  </Card>
+                  <Card className="bg-emerald-500/10 border-emerald-500/20">
+                    <CardContent className="p-4 text-center">
+                      <Target className="h-8 w-8 text-emerald-600 mx-auto mb-2" />
+                      <div className="text-2xl font-bold text-foreground">COP30</div>
+                      <p className="text-sm text-muted-foreground">Advocacy Focus</p>
+                    </CardContent>
+                  </Card>
+                </div>
+
+                {/* Partners */}
+                <Card className="bg-card border border-border">
+                  <CardContent className="p-4">
+                    <p className="text-xs text-muted-foreground uppercase tracking-wider mb-3">Partners & Supporters</p>
+                    <div className="flex flex-wrap gap-2">
+                      <Badge variant="secondary" className="text-xs">ActionAid Sierra Leone</Badge>
+                      <Badge variant="secondary" className="text-xs">YASDev</Badge>
+                      <Badge variant="secondary" className="text-xs">NMYCW</Badge>
+                      <Badge variant="secondary" className="text-xs">Global Greengrants Fund</Badge>
+                      <Badge variant="secondary" className="text-xs">PACJA</Badge>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            </AnimateOnScroll>
+          </div>
+
+          {/* Additional Images */}
+          <AnimateOnScroll animation="fade-up" delay={200}>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {climateMarchImages.slice(4).map((img, index) => (
+                <div key={index} className="relative aspect-video rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+                  <Image
+                    src={img.src}
+                    alt={img.alt}
+                    fill
+                    className="object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+              ))}
+            </div>
+          </AnimateOnScroll>
+
+          {/* CTA */}
+          <AnimateOnScroll animation="fade-up" delay={300} className="text-center mt-12">
+            <Button size="lg" asChild>
+              <a href="#get-involved">
+                Join the Movement
                 <ArrowRight className="ml-2 h-4 w-4" />
               </a>
             </Button>
