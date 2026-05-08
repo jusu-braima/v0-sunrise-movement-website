@@ -10,13 +10,13 @@ import { ArrowRight, TreePine, Users, Zap, Wheat, GraduationCap, Waves } from "l
 
 export const metadata: Metadata = {
   title: "Impact | Sunrise Movement Sierra Leone",
-  description: "See the measurable impact of our climate programs across Sierra Leone - 20,000+ community members reached and counting.",
+  description: "See the measurable impact of our climate programs across Sierra Leone - 100+ community members reached and counting.",
 }
 
 const impactMetrics = [
   {
     icon: TreePine,
-    value: "10,000+",
+    value: "100+",
     label: "Trees Planted",
     description: "Native species restored in deforested areas",
     color: "bg-emerald-500/10 text-emerald-600",
