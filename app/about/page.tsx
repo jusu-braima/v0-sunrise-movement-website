@@ -137,7 +137,7 @@ export default function AboutPage() {
                   <Calendar className="h-7 w-7 text-primary" />
                 </div>
                 <div>
-                  <p className="text-2xl font-bold text-foreground">Aug 2023</p>
+                  <p className="text-2xl font-bold text-foreground">Aug, 2023</p>
                   <p className="text-sm text-muted-foreground">Founded</p>
                 </div>
               </CardContent>
@@ -148,7 +148,7 @@ export default function AboutPage() {
                   <Users className="h-7 w-7 text-accent" />
                 </div>
                 <div>
-                  <p className="text-2xl font-bold text-foreground">20,000+</p>
+                  <p className="text-2xl font-bold text-foreground">100+</p>
                   <p className="text-sm text-muted-foreground">People Reached</p>
                 </div>
               </CardContent>
