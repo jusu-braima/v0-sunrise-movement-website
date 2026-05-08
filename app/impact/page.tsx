@@ -23,28 +23,28 @@ const impactMetrics = [
   },
   {
     icon: Users,
-    value: "20,000+",
+    value: "100+",
     label: "People Reached",
     description: "Through education, advocacy, and programs",
     color: "bg-teal-500/10 text-teal-600",
   },
   {
     icon: GraduationCap,
-    value: "200+",
+    value: "50+",
     label: "Youth Trained",
     description: "Climate leaders and green technicians",
     color: "bg-indigo-500/10 text-indigo-600",
   },
   {
     icon: Zap,
-    value: "15",
+    value: "10",
     label: "Schools Electrified",
     description: "With clean solar energy systems",
     color: "bg-yellow-500/10 text-yellow-600",
   },
   {
     icon: Wheat,
-    value: "800+",
+    value: "100+",
     label: "Farmers Trained",
     description: "In climate-smart agriculture",
     color: "bg-green-500/10 text-green-600",
@@ -59,14 +59,14 @@ const impactMetrics = [
 ]
 
 const sdgProgress = [
-  { number: 4, name: "Quality Education", progress: 75 },
-  { number: 7, name: "Clean Energy", progress: 60 },
-  { number: 8, name: "Decent Work", progress: 55 },
-  { number: 12, name: "Responsible Consumption", progress: 65 },
-  { number: 13, name: "Climate Action", progress: 80 },
+  { number: 4, name: "Quality Education", progress: 25 },
+  { number: 7, name: "Clean Energy", progress: 20 },
+  { number: 8, name: "Decent Work", progress: 15 },
+  { number: 12, name: "Responsible Consumption", progress: 35 },
+  { number: 13, name: "Climate Action", progress: 50 },
   { number: 14, name: "Life Below Water", progress: 45 },
-  { number: 15, name: "Life on Land", progress: 70 },
-  { number: 16, name: "Peace & Justice", progress: 60 },
+  { number: 15, name: "Life on Land", progress: 20 },
+  { number: 16, name: "Peace & Justice", progress: 30 },
 ]
 
 export default function ImpactPage() {
