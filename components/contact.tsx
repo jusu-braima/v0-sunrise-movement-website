@@ -101,9 +101,9 @@ export function Contact() {
                   href={info.label === "Address" ? GOOGLE_MAPS_LINK : info.href}
                   target={info.label === "Address" ? "_blank" : undefined}
                   rel={info.label === "Address" ? "noopener noreferrer" : undefined}
-                  className="flex items-start gap-3 sm:gap-4 p-3 sm:p-4 bg-secondary/50 rounded-xl hover:bg-secondary transition-colors group"
+                  className="flex items-start gap-4 p-4 sm:p-5 bg-secondary/50 rounded-2xl border-2 border-transparent hover:border-primary/20 hover:bg-secondary shadow-soft hover:shadow-glow transition-all duration-300 group"
                 >
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-gradient-to-br from-primary/15 to-primary/5 flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:scale-105 transition-all duration-300 shadow-soft">
                     <info.icon className="h-5 w-5 sm:h-6 sm:w-6 text-primary group-hover:text-primary-foreground transition-colors" />
                   </div>
                   <div className="min-w-0">
@@ -119,10 +119,10 @@ export function Contact() {
               {/* WhatsApp Quick Contact */}
               <button
                 onClick={handleQuickWhatsApp}
-                className="w-full flex items-start gap-3 sm:gap-4 p-3 sm:p-4 bg-[#25D366]/10 rounded-xl hover:bg-[#25D366]/20 transition-colors group border border-[#25D366]/30"
+                className="w-full flex items-start gap-4 p-4 sm:p-5 bg-[#25D366]/10 rounded-2xl hover:bg-[#25D366]/20 transition-all duration-300 group border-2 border-[#25D366]/30 hover:border-[#25D366]/50 shadow-soft hover:shadow-glow hover:scale-[1.02]"
               >
-                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-[#25D366] flex items-center justify-center shrink-0">
-                  <MessageCircle className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
+                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-gradient-to-br from-[#25D366] to-[#128C7E] flex items-center justify-center shrink-0 shadow-lg group-hover:scale-105 transition-transform duration-300">
+                  <MessageCircle className="h-6 w-6 sm:h-7 sm:w-7 text-white" />
                 </div>
                 <div className="text-left">
                   <p className="text-sm text-muted-foreground">WhatsApp</p>
@@ -132,14 +132,21 @@ export function Contact() {
             </div>
 
             {/* Contact Person */}
-            <div className="p-6 bg-card rounded-xl border border-border">
-              <p className="text-sm text-muted-foreground mb-1">Contact Person</p>
-              <p className="text-xl font-semibold text-foreground">Alicious Bessiama</p>
-              <p className="text-muted-foreground">Founder, Sunrise Movement Sierra Leone</p>
+            <div className="p-6 bg-card rounded-2xl border-2 border-border shadow-soft hover:shadow-glow transition-all duration-300 relative overflow-hidden group">
+              {/* Decorative accent */}
+              <div className="absolute top-0 left-0 w-1.5 h-full bg-gradient-to-b from-primary to-accent rounded-l-2xl" />
+              <div className="pl-4">
+                <p className="text-sm text-muted-foreground mb-1">Contact Person</p>
+                <p className="text-xl font-semibold text-foreground">Alicious Bessiama</p>
+                <p className="text-muted-foreground">Founder, Sunrise Movement Sierra Leone</p>
+              </div>
             </div>
 
             {/* Google Maps */}
-            <div className="rounded-xl overflow-hidden border border-border shadow-lg">
+            <div className="rounded-2xl overflow-hidden border-2 border-border shadow-elevated relative">
+              {/* Corner accents */}
+              <div className="absolute top-0 left-0 w-12 h-12 border-t-4 border-l-4 border-primary/30 rounded-tl-2xl z-10 pointer-events-none" />
+              <div className="absolute bottom-0 right-0 w-12 h-12 border-b-4 border-r-4 border-primary/30 rounded-br-2xl z-10 pointer-events-none" />
               <div className="relative">
                 <iframe
                   src={GOOGLE_MAPS_EMBED}
@@ -156,7 +163,7 @@ export function Contact() {
                   href={GOOGLE_MAPS_LINK}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="absolute bottom-3 right-3 bg-background/90 backdrop-blur-sm px-3 py-1.5 rounded-lg text-sm font-medium text-primary hover:bg-background transition-colors flex items-center gap-2 shadow-md"
+                  className="absolute bottom-4 right-4 bg-background/95 backdrop-blur-sm px-4 py-2 rounded-xl text-sm font-medium text-primary hover:bg-background hover:scale-105 transition-all duration-300 flex items-center gap-2 shadow-lg border border-primary/20"
                 >
                   <MapPin className="h-4 w-4" />
                   Open in Google Maps
@@ -166,11 +173,16 @@ export function Contact() {
           </div>
 
           {/* Contact Form */}
-          <Card className="bg-card border-border shadow-lg">
-            <CardContent className="p-8">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 rounded-lg bg-[#25D366] flex items-center justify-center">
-                  <MessageCircle className="h-5 w-5 text-white" />
+          <Card className="bg-card border-2 border-border shadow-elevated rounded-3xl overflow-hidden relative">
+            {/* Corner decorations */}
+            <div className="absolute top-0 left-0 w-16 h-16 border-t-4 border-l-4 border-primary/20 rounded-tl-3xl" />
+            <div className="absolute bottom-0 right-0 w-16 h-16 border-b-4 border-r-4 border-primary/20 rounded-br-3xl" />
+            {/* Background decoration */}
+            <div className="absolute top-0 right-0 w-48 h-48 bg-[#25D366]/5 rounded-full -translate-y-24 translate-x-24" />
+            <CardContent className="p-8 relative">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-[#25D366] to-[#128C7E] flex items-center justify-center shadow-lg">
+                  <MessageCircle className="h-6 w-6 text-white" />
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-foreground">Send via WhatsApp</h3>

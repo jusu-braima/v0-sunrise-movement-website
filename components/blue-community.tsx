@@ -168,6 +168,34 @@ export function BlueCommunity() {
             </div>
           </AnimateOnScroll>
         </div>
+
+        {/* Founder's Statement - Full Width */}
+        <AnimateOnScroll animation="fade-up" className="mt-12">
+          <Card className="overflow-hidden border-2 border-cyan-200 dark:border-cyan-800 shadow-elevated rounded-3xl">
+            <div className="relative w-full aspect-[16/9] md:aspect-[21/9]">
+              <Image
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Blue%20Ocean-vLbui6BGrgwdYalY2UPyZUf5aUXFCF.jpeg"
+                alt="Alicious Bessiama - Founder and Executive Director of Sunrise Movement Sierra Leone speaking about water rights and the Blue Community initiative"
+                fill
+                className="object-cover object-center"
+              />
+              {/* Corner accents */}
+              <div className="absolute top-4 left-4 w-16 h-16 border-t-4 border-l-4 border-white/40 rounded-tl-2xl" />
+              <div className="absolute bottom-4 right-4 w-16 h-16 border-b-4 border-r-4 border-white/40 rounded-br-2xl" />
+            </div>
+            <CardContent className="p-6 bg-gradient-to-r from-cyan-600 to-blue-700">
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center">
+                  <Droplets className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <p className="text-white font-semibold">Our Commitment to Water Justice</p>
+                  <p className="text-white/80 text-sm">Strengthening public institutions for equitable water services</p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </AnimateOnScroll>
       </div>
     </section>
   )

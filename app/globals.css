@@ -334,3 +334,177 @@ body {
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
+
+/* Enhanced Card Shadows */
+.shadow-soft {
+  box-shadow: 0 4px 20px -2px rgb(0 0 0 / 0.08), 0 2px 8px -2px rgb(0 0 0 / 0.04);
+}
+
+.shadow-glow {
+  box-shadow: 0 8px 32px -4px rgb(0 0 0 / 0.12), 0 4px 16px -4px rgb(0 0 0 / 0.08);
+}
+
+.shadow-elevated {
+  box-shadow: 0 12px 40px -8px rgb(0 0 0 / 0.15), 0 6px 20px -6px rgb(0 0 0 / 0.1);
+}
+
+.shadow-primary-glow {
+  box-shadow: 0 8px 32px -4px var(--primary), 0 4px 16px -4px var(--primary);
+}
+
+/* Decorative Shapes */
+.shape-blob {
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+}
+
+.shape-organic {
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+}
+
+.shape-wave {
+  border-radius: 20% 80% 80% 20% / 50% 50% 50% 50%;
+}
+
+/* Glass morphism effect */
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.glass-strong {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+/* Border decorations */
+.border-gradient {
+  border: 2px solid transparent;
+  background: linear-gradient(var(--card), var(--card)) padding-box,
+              linear-gradient(135deg, var(--primary), var(--accent)) border-box;
+}
+
+.border-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.border-shimmer::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  background: linear-gradient(135deg, var(--primary), var(--accent), var(--primary));
+  border-radius: inherit;
+  z-index: -1;
+}
+
+.border-shimmer::after {
+  content: '';
+  position: absolute;
+  inset: 2px;
+  background: var(--card);
+  border-radius: inherit;
+  z-index: -1;
+}
+
+/* Corner decorations */
+.corner-accent {
+  position: relative;
+}
+
+.corner-accent::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  border-top: 3px solid var(--primary);
+  border-left: 3px solid var(--primary);
+  border-top-left-radius: var(--radius);
+}
+
+.corner-accent::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  border-bottom: 3px solid var(--primary);
+  border-right: 3px solid var(--primary);
+  border-bottom-right-radius: var(--radius);
+}
+
+/* Decorative dots pattern */
+.pattern-dots {
+  background-image: radial-gradient(circle, var(--primary) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Animated border */
+@keyframes border-dance {
+  0%, 100% {
+    clip-path: inset(0 0 98% 0);
+  }
+  25% {
+    clip-path: inset(0 98% 0 0);
+  }
+  50% {
+    clip-path: inset(98% 0 0 0);
+  }
+  75% {
+    clip-path: inset(0 0 0 98%);
+  }
+}
+
+.border-animated {
+  position: relative;
+}
+
+.border-animated::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 2px solid var(--primary);
+  border-radius: inherit;
+  animation: border-dance 4s linear infinite;
+}
+
+/* Floating elements */
+@keyframes float-gentle {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(2deg);
+  }
+}
+
+.float-gentle {
+  animation: float-gentle 4s ease-in-out infinite;
+}
+
+/* Ring decoration */
+.ring-decoration {
+  position: relative;
+}
+
+.ring-decoration::before {
+  content: '';
+  position: absolute;
+  inset: -8px;
+  border: 1px solid var(--primary);
+  border-radius: inherit;
+  opacity: 0.3;
+}
+
+.ring-decoration::after {
+  content: '';
+  position: absolute;
+  inset: -16px;
+  border: 1px dashed var(--primary);
+  border-radius: inherit;
+  opacity: 0.15;
+}

@@ -44,41 +44,45 @@ export function About() {
         <AnimateOnScroll animation="fade-scale" className="mb-16">
           <div className="grid md:grid-cols-3 gap-4">
             {/* Main Team Photo */}
-            <div className="md:col-span-2 relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden shadow-xl group">
+            <div className="md:col-span-2 relative h-[300px] md:h-[400px] rounded-3xl overflow-hidden shadow-elevated group ring-1 ring-primary/10">
+              <div className="absolute inset-0 border-4 border-white/20 rounded-3xl z-10 pointer-events-none" />
               <Image
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.01.25%20%281%29-XAI6Jzsv0e0DuY29yy2vSD82nU6Ptz.jpeg"
                 alt="Sunrise Movement Sierra Leone Team in green SM-SL t-shirts"
                 fill
-                className="object-cover group-hover:scale-105 transition-transform duration-500"
+                className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
               <div className="absolute bottom-6 left-6 right-6">
                 <p className="text-white font-semibold text-lg">Our dedicated team of youth climate activists</p>
                 <p className="text-white/80 text-sm">Working together for a sustainable Sierra Leone</p>
               </div>
+              {/* Corner accents */}
+              <div className="absolute top-4 left-4 w-12 h-12 border-t-4 border-l-4 border-white/40 rounded-tl-xl" />
+              <div className="absolute bottom-4 right-4 w-12 h-12 border-b-4 border-r-4 border-white/40 rounded-br-xl" />
             </div>
             
             {/* Side Images */}
             <div className="flex flex-col gap-4">
-              <div className="relative h-[140px] md:h-[190px] rounded-xl overflow-hidden shadow-lg group">
+              <div className="relative h-[140px] md:h-[190px] rounded-2xl overflow-hidden shadow-glow group ring-1 ring-primary/10">
                 <Image
                   src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.01.24-uLYMyXCbn3uznrFoAtlJyT4HhkdBN3.jpeg"
                   alt="Team with raised fists in solidarity"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-                <p className="absolute bottom-3 left-3 text-white text-sm font-medium">United in Action</p>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                <p className="absolute bottom-3 left-3 text-white text-sm font-medium px-3 py-1 bg-primary/80 rounded-full backdrop-blur-sm">United in Action</p>
               </div>
-              <div className="relative h-[140px] md:h-[190px] rounded-xl overflow-hidden shadow-lg group">
+              <div className="relative h-[140px] md:h-[190px] rounded-2xl overflow-hidden shadow-glow group ring-1 ring-primary/10">
                 <Image
                   src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.01.11-UtxfXZfO1blkKX8pxO8V6UCBZdqRJN.jpeg"
                   alt="Team holding hands showing unity"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-                <p className="absolute bottom-3 left-3 text-white text-sm font-medium">Stronger Together</p>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                <p className="absolute bottom-3 left-3 text-white text-sm font-medium px-3 py-1 bg-primary/80 rounded-full backdrop-blur-sm">Stronger Together</p>
               </div>
             </div>
           </div>
@@ -124,11 +128,12 @@ export function About() {
         {/* Mission & Vision */}
         <div className="grid md:grid-cols-2 gap-8 mb-16">
           <AnimateOnScroll animation="slide-left" delay={100}>
-            <Card className="bg-card border-none shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+            <Card className="bg-card border-2 border-primary/10 shadow-elevated hover:shadow-primary-glow/20 transition-all duration-500 hover:-translate-y-2 rounded-3xl overflow-hidden relative group">
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary via-accent to-primary" />
               <CardContent className="p-8">
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center">
-                    <Target className="h-7 w-7 text-primary" />
+                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center shadow-soft group-hover:scale-110 transition-transform duration-300">
+                    <Target className="h-8 w-8 text-primary" />
                   </div>
                   <h3 className="text-2xl font-bold text-foreground">Our Mission</h3>
                 </div>
@@ -138,15 +143,18 @@ export function About() {
                   justice through innovation, skills development, and accountable grassroots leadership.
                 </p>
               </CardContent>
+              {/* Decorative corner */}
+              <div className="absolute bottom-0 right-0 w-24 h-24 bg-primary/5 rounded-tl-[80px]" />
             </Card>
           </AnimateOnScroll>
 
           <AnimateOnScroll animation="slide-right" delay={200}>
-            <Card className="bg-card border-none shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+            <Card className="bg-card border-2 border-accent/10 shadow-elevated hover:shadow-primary-glow/20 transition-all duration-500 hover:-translate-y-2 rounded-3xl overflow-hidden relative group">
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-accent via-primary to-accent" />
               <CardContent className="p-8">
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="w-14 h-14 rounded-2xl bg-accent/10 flex items-center justify-center">
-                    <Eye className="h-7 w-7 text-accent" />
+                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-accent/20 to-accent/5 flex items-center justify-center shadow-soft group-hover:scale-110 transition-transform duration-300">
+                    <Eye className="h-8 w-8 text-accent" />
                   </div>
                   <h3 className="text-2xl font-bold text-foreground">Our Vision</h3>
                 </div>
@@ -155,6 +163,8 @@ export function About() {
                   sustainable livelihoods, equitable development, and inclusive access to energy and education.
                 </p>
               </CardContent>
+              {/* Decorative corner */}
+              <div className="absolute bottom-0 right-0 w-24 h-24 bg-accent/5 rounded-tl-[80px]" />
             </Card>
           </AnimateOnScroll>
         </div>
@@ -188,9 +198,9 @@ export function About() {
               {sdgs.map((sdg) => (
                 <div
                   key={sdg.number}
-                  className="flex items-center gap-3 p-3 sm:p-4 bg-card rounded-xl border border-border hover:border-primary/50 hover:shadow-md transition-all"
+                  className="flex items-center gap-3 p-3 sm:p-4 bg-card rounded-2xl border-2 border-border hover:border-primary/50 hover:shadow-glow transition-all duration-300 group"
                 >
-                  <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-primary text-primary-foreground flex items-center justify-center font-bold text-sm sm:text-base shrink-0">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-primary to-primary/80 text-primary-foreground flex items-center justify-center font-bold text-sm sm:text-base shrink-0 shadow-soft group-hover:scale-110 transition-transform duration-300">
                     {sdg.number}
                   </div>
                   <span className="text-sm font-medium text-foreground">{sdg.name}</span>

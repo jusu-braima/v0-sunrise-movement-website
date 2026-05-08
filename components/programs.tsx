@@ -166,6 +166,30 @@ const beachCleanupImages = [
     src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-04-25%20at%2009.43.53-9mZUl4H0CiNPPmSYCCbV0EhNPqkEyF.jpeg",
     alt: "Sunrise Movement beach cleanup participants group photo",
   },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.27.00-M7a6K0emZuNarNNZvH26g9mFCgg5Vj.jpeg",
+    alt: "Volunteers collecting trash on beach with ocean in background",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.23.02-oesJ4hBMtTh975T5c1JW6DCqEKBm8n.jpeg",
+    alt: "Team filling collection bags with beach debris",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.27.02-1rxJWxkEyAryVwdy2MOpqIfyb9qLdF.jpeg",
+    alt: "Volunteers sorting waste together on the beach",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.22.57-tBGZJCiKPDa0hEQkp9biZSh8eMJyGg.jpeg",
+    alt: "Two volunteers using rakes to collect debris from sand",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.27.04-2O2V68dlwgqvMVysNUb5iRKrff0zRq.jpeg",
+    alt: "Wide shot of cleanup team spread across the beach",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.22.40-fxrEBbGvfh6aXeb3sLsFsizL6HXhaQ.jpeg",
+    alt: "Four volunteers posing with full collection bag by the ocean",
+  },
 ]
 
 // Climate Justice March Images
@@ -280,6 +304,42 @@ const capacityBuildingImages = [
   },
 ]
 
+// Climate Policy Workshop Images
+const climatePolicyWorkshopImages = [
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.24.53-LWkfnelbDVtQaoLej7xlTisICXzrpW.jpeg",
+    alt: "Workshop participants discussing NDC 2.0 climate policy with flipchart presentation",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.24.39-S4efq2GVy5ePmz9kpjvq0xYRRjCtP4.jpeg",
+    alt: "Small group climate policy discussion with documents and laptops",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.24.36-wvNR7ndFpeou5qdsk6aGmectlZ8Ll2.jpeg",
+    alt: "Participants collaborating at workshop tables with laptops",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.26.14-kVRvIOwXcy6xf0Fmy3PMyi3qfD1Uvw.jpeg",
+    alt: "Three participants in focused discussion reviewing climate policy documents",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.24.55-6D4VekLCzOAf1BaxoF1oMdzQRV2kdA.jpeg",
+    alt: "Large workshop hall with multiple groups working on climate policy development",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.24.48-b3ifv4RjSUWMr6duqMCfMLDhvO3lh5.jpeg",
+    alt: "Participant signing climate policy commitment document",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.27.05-c5wVPpIQfYYEBWfMnPwhzmSDHN8zIP.jpeg",
+    alt: "Workshop participants engaged in collaborative policy drafting session",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.24.40-wFPkaZnessvkcWZgSInnZjgthBudGU.jpeg",
+    alt: "Group discussion session with participants at round tables in workshop hall",
+  },
+]
+
 // Youth Adaptation & SDGs Leadership Conference Images
 const youthAdaptationImages = [
   {
@@ -354,19 +414,23 @@ export function Programs() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
           {strategicPillars.map((pillar, index) => (
             <AnimateOnScroll key={pillar.title} animation="fade-up" delay={index * 100}>
-              <Card className="h-full bg-card border-none shadow-lg hover:shadow-xl transition-all duration-300 card-hover">
-                <CardContent className="p-6">
+              <Card className="h-full bg-card border-2 border-border/50 shadow-soft hover:shadow-elevated transition-all duration-500 card-hover rounded-3xl overflow-hidden group relative">
+                {/* Top accent line */}
+                <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-transparent via-primary/60 to-transparent group-hover:via-primary transition-all duration-500" />
+                <CardContent className="p-6 relative">
                   <div
-                    className={`w-14 h-14 rounded-xl ${pillar.color} flex items-center justify-center mb-4`}
+                    className={`w-16 h-16 rounded-2xl ${pillar.color} flex items-center justify-center mb-5 shadow-soft group-hover:scale-110 group-hover:rotate-3 transition-all duration-300`}
                   >
-                    <pillar.icon className="h-7 w-7" />
+                    <pillar.icon className="h-8 w-8" />
                   </div>
                   <h3 className="text-xl font-bold text-foreground mb-3">{pillar.title}</h3>
                   <p className="text-muted-foreground mb-4">{pillar.description}</p>
-                  <Badge variant="secondary" className="bg-primary/10 text-primary">
+                  <Badge variant="secondary" className="bg-primary/10 text-primary border border-primary/20 shadow-sm">
                     {pillar.stats}
                   </Badge>
                 </CardContent>
+                {/* Decorative shape */}
+                <div className="absolute -bottom-8 -right-8 w-32 h-32 rounded-full bg-primary/5 group-hover:bg-primary/10 transition-colors duration-500" />
               </Card>
             </AnimateOnScroll>
           ))}
@@ -1269,6 +1333,141 @@ export function Programs() {
             <Button size="lg" asChild>
               <a href="#get-involved">
                 Join Future Conferences
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </a>
+            </Button>
+          </AnimateOnScroll>
+        </div>
+
+        {/* Climate Policy Workshop Project */}
+        <div className="mb-16 pt-16 border-t border-border">
+          <AnimateOnScroll animation="fade-up" className="text-center max-w-4xl mx-auto mb-12">
+            <Badge className="bg-teal-600 text-white mb-4">Policy Development</Badge>
+            <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-4 text-balance">
+              Climate Policy Workshop & NDC 2.0 Training
+            </h3>
+            <p className="text-lg text-muted-foreground">
+              Building capacity for climate policy development through collaborative workshops focused on 
+              Sierra Leone&apos;s Nationally Determined Contributions (NDC 2.0) and climate action planning.
+            </p>
+          </AnimateOnScroll>
+
+          {/* Project Overview */}
+          <div className="grid lg:grid-cols-2 gap-12 items-start mb-12">
+            {/* Image Gallery */}
+            <AnimateOnScroll animation="slide-left">
+              <div className="space-y-4">
+                <div className="relative aspect-video rounded-2xl overflow-hidden shadow-xl">
+                  <Image
+                    src={climatePolicyWorkshopImages[0].src}
+                    alt={climatePolicyWorkshopImages[0].alt}
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute bottom-4 left-4">
+                    <Badge className="bg-teal-600 text-white">
+                      <MapPin className="w-3 h-3 mr-1" />
+                      Freetown, Sierra Leone
+                    </Badge>
+                  </div>
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                  {climatePolicyWorkshopImages.slice(1, 4).map((img, index) => (
+                    <div key={index} className="relative aspect-square rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+                      <Image
+                        src={img.src}
+                        alt={img.alt}
+                        fill
+                        className="object-cover hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </AnimateOnScroll>
+
+            {/* Project Description */}
+            <AnimateOnScroll animation="slide-right" delay={100}>
+              <div className="space-y-6">
+                <Card className="bg-card border-none shadow-lg">
+                  <CardContent className="p-6">
+                    <p className="text-muted-foreground leading-relaxed mb-4">
+                      In partnership with Trocaire and Irish Aid, our Climate Policy Workshop brings together 
+                      stakeholders from government, civil society, and youth organizations to develop and 
+                      strengthen Sierra Leone&apos;s climate policies. Participants engage in intensive sessions 
+                      focused on the country&apos;s Nationally Determined Contributions (NDC 2.0) framework.
+                    </p>
+                    <p className="text-muted-foreground leading-relaxed">
+                      The workshop features collaborative group discussions, policy drafting exercises, and 
+                      technical training on climate finance, institutional capacity building, MRV systems, 
+                      gender mainstreaming, and public awareness strategies. Participants develop actionable 
+                      recommendations to advance Sierra Leone&apos;s climate goals and sustainable development agenda.
+                    </p>
+                    <div className="flex flex-wrap gap-3 mt-4">
+                      <Badge variant="outline" className="bg-teal-50 text-teal-700 border-teal-200">
+                        SDG 13: Climate Action
+                      </Badge>
+                      <Badge variant="outline" className="bg-blue-50 text-blue-700 border-blue-200">
+                        SDG 17: Partnerships
+                      </Badge>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                {/* Stats Grid */}
+                <div className="grid grid-cols-2 gap-4">
+                  <Card className="bg-teal-500/10 border-teal-500/20">
+                    <CardContent className="p-4 text-center">
+                      <Users className="h-8 w-8 text-teal-600 mx-auto mb-2" />
+                      <div className="text-2xl font-bold text-foreground">50+</div>
+                      <p className="text-sm text-muted-foreground">Stakeholders Trained</p>
+                    </CardContent>
+                  </Card>
+                  <Card className="bg-emerald-500/10 border-emerald-500/20">
+                    <CardContent className="p-4 text-center">
+                      <Megaphone className="h-8 w-8 text-emerald-600 mx-auto mb-2" />
+                      <div className="text-2xl font-bold text-foreground">NDC 2.0</div>
+                      <p className="text-sm text-muted-foreground">Policy Focus</p>
+                    </CardContent>
+                  </Card>
+                </div>
+
+                {/* Partners */}
+                <Card className="bg-card border border-border">
+                  <CardContent className="p-4">
+                    <p className="text-xs text-muted-foreground uppercase tracking-wider mb-3">Supporting Partners</p>
+                    <div className="flex flex-wrap gap-2">
+                      <Badge variant="secondary" className="text-xs">Trocaire</Badge>
+                      <Badge variant="secondary" className="text-xs">Irish Aid</Badge>
+                      <Badge variant="secondary" className="text-xs">CICN</Badge>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            </AnimateOnScroll>
+          </div>
+
+          {/* Additional Images Grid */}
+          <AnimateOnScroll animation="fade-up" delay={200}>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {climatePolicyWorkshopImages.slice(4).map((img, index) => (
+                <div key={index} className="relative aspect-video rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+                  <Image
+                    src={img.src}
+                    alt={img.alt}
+                    fill
+                    className="object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+              ))}
+            </div>
+          </AnimateOnScroll>
+
+          {/* CTA */}
+          <AnimateOnScroll animation="fade-up" delay={300} className="text-center mt-12">
+            <Button size="lg" asChild>
+              <a href="#get-involved">
+                Join Our Policy Initiatives
                 <ArrowRight className="ml-2 h-4 w-4" />
               </a>
             </Button>

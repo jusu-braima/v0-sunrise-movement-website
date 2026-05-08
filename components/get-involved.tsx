@@ -54,33 +54,39 @@ export function GetInvolved() {
           {opportunities.map((opp, index) => (
             <AnimateOnScroll key={opp.title} animation="fade-scale" delay={index * 100}>
               <Card 
-                className="group bg-card border border-border hover:border-primary hover:shadow-xl transition-all duration-300 flex flex-col hover:-translate-y-2 h-full overflow-hidden"
+                className="group bg-card border-2 border-border hover:border-primary shadow-soft hover:shadow-elevated transition-all duration-500 flex flex-col hover:-translate-y-3 h-full overflow-hidden rounded-3xl relative"
               >
-                <div className="relative h-36 overflow-hidden">
+                {/* Top gradient bar */}
+                <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-primary via-accent to-primary opacity-60 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="relative h-40 overflow-hidden">
                   <Image
                     src={opp.image}
                     alt={opp.title}
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                  <div className="absolute bottom-3 left-3 w-10 h-10 rounded-xl bg-primary/90 flex items-center justify-center">
-                    <opp.icon className="h-5 w-5 text-primary-foreground" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                  {/* Corner accent */}
+                  <div className="absolute top-3 right-3 w-10 h-10 border-t-2 border-r-2 border-white/40 rounded-tr-xl" />
+                  <div className="absolute bottom-3 left-3 w-12 h-12 rounded-2xl bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                    <opp.icon className="h-6 w-6 text-primary-foreground" />
                   </div>
                 </div>
-                <CardHeader className="pb-2 pt-4">
+                <CardHeader className="pb-2 pt-5">
                   <CardTitle className="text-lg font-semibold text-foreground">
                     {opp.title}
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="flex flex-col flex-1 pt-0">
-                  <p className="text-sm text-muted-foreground mb-4 flex-1">
+                  <p className="text-sm text-muted-foreground mb-5 flex-1">
                     {opp.description}
                   </p>
-                  <Button variant="outline" className="w-full group-hover:bg-primary group-hover:text-primary-foreground group-hover:border-primary transition-colors duration-300" asChild>
+                  <Button variant="outline" className="w-full group-hover:bg-primary group-hover:text-primary-foreground group-hover:border-primary transition-colors duration-300 rounded-xl" asChild>
                     <a href={opp.href}>{opp.cta}</a>
                   </Button>
                 </CardContent>
+                {/* Decorative bottom shape */}
+                <div className="absolute -bottom-10 -right-10 w-28 h-28 rounded-full bg-primary/5 group-hover:bg-primary/10 transition-colors duration-500" />
               </Card>
             </AnimateOnScroll>
           ))}

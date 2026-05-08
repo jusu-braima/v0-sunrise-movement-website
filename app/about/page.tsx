@@ -59,52 +59,50 @@ const team = [
   {
     name: "Alicious Bessiama",
     role: "Founder & Executive Director",
-    bio: "A passionate youth climate advocate committed to environmental justice and sustainable development in Sierra Leone.",
+    bio: "Globally recognised youth climate leader with 8 years of experience, driving Sunrise Movement Sierra Leone's strategic vision and scaling youth-led climate, renewable energy, and sustainable development initiatives across the country.",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Alicious%20Bessiama-WDHNISyvc7YYxt6iWaTaaRhIoHUhY7.jpeg",
   },
   {
-    name: "Sample Person 2",
-    role: "Deputy Director",
-    bio: "Sample bio - update with real information.",
+    name: "Sarah Pessima",
+    role: "Finance Coordinator",
+    bio: "Finance professional bringing 5 years of experience to Sunrise Movement Sierra Leone, strengthening financial management, accountability, and resource stewardship. She oversees budgeting, financial reporting, and compliance processes, ensuring effective utilisation of funds to support program delivery, build donor confidence, and sustain the organisation's growth.",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Serah%20Pessima-mf0OERXoaTSUhP9NxzZ8SQ7tB6ILrV.jpeg",
   },
   {
-    name: "Sample Person 3",
-    role: "Programs Manager",
-    bio: "Sample bio - update with real information.",
+    name: "Hassan Abu",
+    role: "Volunteers & Outreach Coordinator",
+    bio: "Dedicated climate advocate and emerging leader with 5 years of experience, supporting Sunrise Movement Sierra Leone's volunteer mobilisation and community outreach.",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Hassan%20Abu-dWEFV1zTWfm95sHCzWOyKB4YYRWeog.jpeg",
   },
   {
-    name: "Sample Person 4",
-    role: "Communications Lead",
-    bio: "Sample bio - update with real information.",
+    name: "Abu Bakar Ansumana",
+    role: "Monitoring and Evaluation Coordinator",
+    bio: "Public health and social development professional with 7 years of experience leading Sunrise Movement Sierra Leone's monitoring, evaluation, and learning systems to strengthen program impact and accountability. He designs frameworks that track results across initiatives that advance inclusive, community-driven climate solutions.",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ABU%20BAKAR%20ANSUMANA%20%282%29-sFpRTuYFFNwmU5JrkcqRWMcjE74hw1.jpeg",
   },
   {
-    name: "Sample Person 5",
-    role: "Finance Officer",
-    bio: "Sample bio - update with real information.",
+    name: "Jambai Morie",
+    role: "Youth Engagement Coordinator",
+    bio: "Passionate climate advocate and youth leader with 5 years of experience advancing Sunrise Movement Sierra Leone's grassroots engagement and youth mobilisation efforts.",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/JAMBAI%20MORIE-jVUv1s5icz417ZKj3jtWvzd4yMYgpV.jpeg",
   },
   {
-    name: "Sample Person 6",
-    role: "Community Outreach Coordinator",
-    bio: "Sample bio - update with real information.",
+    name: "George Christopher Lamin",
+    role: "Media and Communication Director",
+    bio: "Communications and media specialist leading Sunrise Movement Sierra Leone's storytelling, advocacy, and public engagement strategies. He oversees content creation, digital media campaigns, and knowledge dissemination, enhancing the organisation's visibility, stakeholder engagement, and impact in youth-led climate action and sustainable development initiatives.",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/GEORGE%20CHRISTOPHER%20LAMIN-YLbcsjqGSOjzlihFNEDUYKe9FoHYUA.jpeg",
   },
   {
-    name: "Sample Person 7",
-    role: "Youth Engagement Lead",
-    bio: "Sample bio - update with real information.",
+    name: "Benjamin Bockarie",
+    role: "Director of Programs, Grant, and Technical Lead",
+    bio: "A dedicated coastal and marine management professional with First-Class academic foundations and over three years of applied experience in blue economy programming across Sierra Leone, Benjamin brings his expertise to advance Sunrise Movement Sierra Leone's climate adaptation and sustainable development initiatives. Currently completing an MSc in Applied Coastal and Marine Management at University College Cork as an Ireland Africa and Ocean Leaders Fellow, he integrates GIS, remote sensing, habitat mapping, and stakeholder-driven research into organisational programming. Previously as Programme Coordinator at GOAL Global, he led coastal resilience projects that combined sustainable practices with community livelihoods, strengthening project design, grant management, and policy engagement. Benjamin's technical, strategic, and programmatic expertise ensures Sunrise Movement Sierra Leone delivers measurable impact through nature-based solutions, youth engagement, and sustainable community development.",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/BENJAMIN%20BOCKARIE-WF0wTF4QEmMOQKsTdODVU8nNroYgZV.jpg",
   },
   {
-    name: "Sample Person 8",
-    role: "Environmental Projects Lead",
-    bio: "Sample bio - update with real information.",
-  },
-  {
-    name: "Sample Person 9",
-    role: "Partnerships Coordinator",
-    bio: "Sample bio - update with real information.",
-  },
-  {
-    name: "Sample Person 10",
-    role: "Volunteer Coordinator",
-    bio: "Sample bio - update with real information.",
+    name: "Vandi Fabba",
+    role: "Grants and Partnership Coordinator",
+    bio: "Vandi Fabba is a skilled Grants and Partnership Coordinator at Sunrise Movement. With over five years of experience in NGO program management and environmental stewardship. He has demonstrated strong expertise in community engagement, partnership coordination and project implementation. Vandi is deeply passionate about sustainable development, food security and improving livelihoods.",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/VANDI%20FABBA-LyXoaxp5HyKxn2D0zXX8yp8fQ8owZy.jpeg",
   },
 ]
 
@@ -224,19 +222,26 @@ export default function AboutPage() {
             </h2>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 max-w-6xl mx-auto">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 max-w-7xl mx-auto">
             {team.map((member) => (
-              <Card key={member.name} className="bg-card border-none shadow-lg overflow-hidden">
-                <CardContent className="p-6 text-center">
-                  <div className="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                    <span className="text-2xl font-bold text-primary">
-                      {member.name.split(" ").map(n => n[0]).join("")}
-                    </span>
+              <Card key={member.name} className="bg-card border-2 border-border shadow-elevated hover:shadow-glow transition-all duration-500 overflow-hidden rounded-3xl group hover:-translate-y-2 relative flex flex-col">
+                {/* Top accent */}
+                <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-primary via-accent to-primary opacity-60 group-hover:opacity-100 transition-opacity duration-300 z-10" />
+                <CardContent className="p-6 text-center flex flex-col flex-1">
+                  <div className="relative w-36 h-36 rounded-2xl overflow-hidden mx-auto mb-5 ring-4 ring-primary/20 group-hover:ring-primary/40 transition-all duration-300 shadow-glow">
+                    <Image
+                      src={member.image}
+                      alt={member.name}
+                      fill
+                      className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                    />
                   </div>
-                  <h3 className="text-lg font-bold text-foreground">{member.name}</h3>
-                  <p className="text-primary font-medium text-sm mt-1">{member.role}</p>
-                  <p className="text-muted-foreground text-sm mt-3 line-clamp-3">{member.bio}</p>
+                  <h3 className="text-xl font-bold text-foreground">{member.name}</h3>
+                  <p className="text-primary font-semibold text-sm mt-1 mb-3">{member.role}</p>
+                  <p className="text-muted-foreground text-sm leading-relaxed flex-1">{member.bio}</p>
                 </CardContent>
+                {/* Decorative corner */}
+                <div className="absolute -bottom-6 -right-6 w-20 h-20 rounded-full bg-primary/5 group-hover:bg-primary/10 transition-colors duration-500" />
               </Card>
             ))}
           </div>
@@ -260,7 +265,7 @@ export default function AboutPage() {
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
-            <Button size="lg" variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10" asChild>
+            <Button size="lg" variant="outline" className="border-primary-foreground/30 text-white hover:bg-primary-foreground/10" asChild>
               <Link href="/#partner">Partner With Us</Link>
             </Button>
           </div>

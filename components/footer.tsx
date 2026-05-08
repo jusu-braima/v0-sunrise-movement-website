@@ -8,8 +8,11 @@ const quickLinks = [
   { label: "Home", href: "/" },
   { label: "About Us", href: "/about" },
   { label: "Programs", href: "/programs" },
+  { label: "Gallery", href: "/gallery" },
   { label: "Impact", href: "/impact" },
-  { label: "Get Involved", href: "/#get-involved" },
+  { label: "News", href: "/news" },
+  { label: "Get Involved", href: "/get-involved" },
+  { label: "Partners", href: "/partners" },
   { label: "Contact", href: "/contact" },
 ]
 
@@ -118,7 +121,7 @@ export function Footer() {
                   href="https://www.facebook.com/profile.php?id=61550758236703"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full bg-background/10 flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+                  className="w-11 h-11 rounded-xl bg-background/10 flex items-center justify-center hover:bg-primary hover:text-primary-foreground hover:scale-110 hover:shadow-lg transition-all duration-300"
                   aria-label="Follow us on Facebook"
                 >
                   <Facebook className="h-5 w-5" />
@@ -127,7 +130,7 @@ export function Footer() {
                   href="https://www.linkedin.com/company/sunrise-movement-sierra-leone/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full bg-background/10 flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+                  className="w-11 h-11 rounded-xl bg-background/10 flex items-center justify-center hover:bg-primary hover:text-primary-foreground hover:scale-110 hover:shadow-lg transition-all duration-300"
                   aria-label="Follow us on LinkedIn"
                 >
                   <Linkedin className="h-5 w-5" />
@@ -136,7 +139,7 @@ export function Footer() {
                   href="https://www.instagram.com/srm.sl?igsh=MXQzYTI2eWNyNWF6Mw=="
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full bg-background/10 flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+                  className="w-11 h-11 rounded-xl bg-background/10 flex items-center justify-center hover:bg-primary hover:text-primary-foreground hover:scale-110 hover:shadow-lg transition-all duration-300"
                   aria-label="Follow us on Instagram"
                 >
                   <Instagram className="h-5 w-5" />
@@ -145,7 +148,7 @@ export function Footer() {
                   href="https://tiktok.com/@sunrise.movement63"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full bg-background/10 flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+                  className="w-11 h-11 rounded-xl bg-background/10 flex items-center justify-center hover:bg-primary hover:text-primary-foreground hover:scale-110 hover:shadow-lg transition-all duration-300"
                   aria-label="Follow us on TikTok"
                 >
                   <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
