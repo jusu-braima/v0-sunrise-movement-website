@@ -83,7 +83,7 @@ export default function ImpactPage() {
               Measurable Change Across Sierra Leone
             </h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Since our founding in August 2023, we have reached over 20,000 community members 
+              Since our founding in August 2023, we have reached over 10 community members 
               through climate education, advocacy, and environmental restoration programs.
             </p>
           </div>
@@ -122,7 +122,7 @@ export default function ImpactPage() {
               Progress Towards Global Goals
             </h2>
             <p className="text-lg text-muted-foreground">
-              Our programs contribute to 8 Sustainable Development Goals, 
+              Our programs contribute to 5 Sustainable Development Goals, 
               translating global commitments into local action.
             </p>
           </div>
