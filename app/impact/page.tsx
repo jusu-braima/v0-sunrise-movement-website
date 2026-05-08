@@ -10,41 +10,41 @@ import { ArrowRight, TreePine, Users, Zap, Wheat, GraduationCap, Waves } from "l
 
 export const metadata: Metadata = {
   title: "Impact | Sunrise Movement Sierra Leone",
-  description: "See the measurable impact of our climate programs across Sierra Leone - 20,000+ community members reached and counting.",
+  description: "See the measurable impact of our climate programs across Sierra Leone - 100+ community members reached and counting.",
 }
 
 const impactMetrics = [
   {
     icon: TreePine,
-    value: "10,000+",
+    value: "100+",
     label: "Trees Planted",
     description: "Native species restored in deforested areas",
     color: "bg-emerald-500/10 text-emerald-600",
   },
   {
     icon: Users,
-    value: "20,000+",
+    value: "100+",
     label: "People Reached",
     description: "Through education, advocacy, and programs",
     color: "bg-teal-500/10 text-teal-600",
   },
   {
     icon: GraduationCap,
-    value: "200+",
+    value: "50+",
     label: "Youth Trained",
     description: "Climate leaders and green technicians",
     color: "bg-indigo-500/10 text-indigo-600",
   },
   {
     icon: Zap,
-    value: "15",
+    value: "10",
     label: "Schools Electrified",
     description: "With clean solar energy systems",
     color: "bg-yellow-500/10 text-yellow-600",
   },
   {
     icon: Wheat,
-    value: "800+",
+    value: "100+",
     label: "Farmers Trained",
     description: "In climate-smart agriculture",
     color: "bg-green-500/10 text-green-600",
@@ -59,14 +59,14 @@ const impactMetrics = [
 ]
 
 const sdgProgress = [
-  { number: 4, name: "Quality Education", progress: 75 },
-  { number: 7, name: "Clean Energy", progress: 60 },
-  { number: 8, name: "Decent Work", progress: 55 },
-  { number: 12, name: "Responsible Consumption", progress: 65 },
-  { number: 13, name: "Climate Action", progress: 80 },
+  { number: 4, name: "Quality Education", progress: 25 },
+  { number: 7, name: "Clean Energy", progress: 20 },
+  { number: 8, name: "Decent Work", progress: 15 },
+  { number: 12, name: "Responsible Consumption", progress: 35 },
+  { number: 13, name: "Climate Action", progress: 50 },
   { number: 14, name: "Life Below Water", progress: 45 },
-  { number: 15, name: "Life on Land", progress: 70 },
-  { number: 16, name: "Peace & Justice", progress: 60 },
+  { number: 15, name: "Life on Land", progress: 20 },
+  { number: 16, name: "Peace & Justice", progress: 30 },
 ]
 
 export default function ImpactPage() {
@@ -83,7 +83,7 @@ export default function ImpactPage() {
               Measurable Change Across Sierra Leone
             </h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Since our founding in August 2023, we have reached over 20,000 community members 
+              Since our founding in August 2023, we have reached over 10 community members 
               through climate education, advocacy, and environmental restoration programs.
             </p>
           </div>
@@ -122,7 +122,7 @@ export default function ImpactPage() {
               Progress Towards Global Goals
             </h2>
             <p className="text-lg text-muted-foreground">
-              Our programs contribute to 8 Sustainable Development Goals, 
+              Our programs contribute to 5 Sustainable Development Goals, 
               translating global commitments into local action.
             </p>
           </div>
