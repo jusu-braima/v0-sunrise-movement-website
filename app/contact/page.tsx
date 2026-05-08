@@ -18,9 +18,7 @@ export default function ContactPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <span className="text-primary font-semibold uppercase tracking-wider text-sm">Contact Us</span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mt-4 mb-6 text-balance">
-              Let&apos;s Work Together
-            </h1>
+          
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Have questions, want to partner, or ready to join the movement? 
               We&apos;d love to hear from you.
