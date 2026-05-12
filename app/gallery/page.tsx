@@ -2,8 +2,6 @@ import { Metadata } from "next"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { PhotoGallery } from "@/components/photo-gallery"
-import { ClimateConference } from "@/components/climate-conference"
-import { BlueCommunity } from "@/components/blue-community"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { ArrowRight, Camera } from "lucide-react"
@@ -39,12 +37,6 @@ export default function GalleryPage() {
 
       {/* Photo Gallery */}
       <PhotoGallery />
-
-      {/* Climate Conference */}
-      <ClimateConference />
-
-      {/* Blue Community */}
-      <BlueCommunity />
 
       {/* CTA */}
       <section className="py-20 bg-primary text-primary-foreground">

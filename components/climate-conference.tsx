@@ -6,6 +6,17 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { AnimateOnScroll } from "@/components/animate-on-scroll"
 
+const conferenceImages = [
+  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.24.55-kHr8ejpABxaRC0N3DisoLkleqTrmOF.jpeg",
+  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.24.48-MgRgseCxDD3MPprNEmytQEytJjsMqf.jpeg",
+  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.27.05-VAq3GXgkSoqoNHk2X9xlfuYiXYydLk.jpeg",
+  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.24.40-nycAwIlLiWiWLT9pnXoy3faxmwhuFW.jpeg",
+  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.26.14-qx6pFHAEbELYao9J1sPtH4EBQZ83m3.jpeg",
+  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.24.53-eOuMhmxSp7XL0F8ahkLzZRnnDfvf8m.jpeg",
+  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.24.39-w6gvoZRZkgP7D0PzrGFjMALJ15hjWf.jpeg",
+  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.24.36-axdXBmAM3gRXr0GbTnU3ExUu4zxnZR.jpeg",
+]
+
 const speakers = [
   {
     name: "Mrs. Amahle Tuswa",
@@ -171,6 +182,20 @@ export function ClimateConference() {
                   This conference underscores Sunrise Movement Sierra Leone&apos;s commitment to advancing youth-led climate action, 
                   influencing policy conversations, and fostering partnerships that drive a sustainable and greener future.
                 </p>
+              </div>
+              
+              {/* Conference Images Gallery */}
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
+                {conferenceImages.map((image, index) => (
+                  <div key={index} className="relative aspect-square rounded-lg overflow-hidden group">
+                    <Image
+                      src={image}
+                      alt={`Climate Conference moment ${index + 1}`}
+                      fill
+                      className="object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
+                  </div>
+                ))}
               </div>
             </CardContent>
           </Card>
