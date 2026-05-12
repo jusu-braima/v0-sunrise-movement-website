@@ -61,7 +61,7 @@ export function Header() {
                 alt="Sunrise Movement Sierra Leone"
                 width={56}
                 height={56}
-                className="rounded-full w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 ring-2 ring-primary/20 group-hover:ring-primary/50 transition-all duration-300"
+                className="rounded-full w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 ring-2 ring-primary/20 group-hover:ring-primary/50 transition-all duration-300 shadow-lg hover:shadow-xl group-hover:scale-110"
               />
               <div className="absolute inset-0 rounded-full bg-primary/10 scale-0 group-hover:scale-110 transition-transform duration-300" />
             </div>
@@ -141,7 +141,7 @@ export function Header() {
                       alt="Sunrise Movement Sierra Leone"
                       width={48}
                       height={48}
-                      className="rounded-full ring-2 ring-white/30"
+                      className="rounded-full ring-2 ring-white/30 shadow-lg"
                     />
                     <div>
                       <p className="font-bold text-white">Sunrise Movement</p>

@@ -33,13 +33,13 @@ export function Footer() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="space-y-6">
-            <Link href="/" className="flex items-center gap-3">
+            <Link href="/" className="flex items-center gap-3 group">
               <Image
                 src="/images/logo.jpg"
                 alt="Sunrise Movement Sierra Leone"
                 width={56}
                 height={56}
-                className="rounded-full"
+                className="rounded-full shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-300"
               />
               <div>
                 <p className="font-semibold text-background leading-tight">Sunrise Movement</p>
