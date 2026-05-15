@@ -217,6 +217,54 @@ const lalehunSolarImages = [
   },
 ]
 
+// School Climate Education Outreach Images
+const schoolClimateOutreachImages = [
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.24.17-lX8zHIsSMQcuiQrCZWtNCzZKkxdfmU.jpeg",
+    alt: "Presenter in orange vest addressing large group of students in green uniforms at school",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.24.11-lAXOzkoJ16iQLa8mZOVp9G7hkvItlD.jpeg",
+    alt: "Climate educator speaking to students in green uniforms in school courtyard",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.24.08-dWEi4JRDraryymkdDke6FMllpmSOyO.jpeg",
+    alt: "Volunteer in orange vest engaging with students during climate awareness session",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.24.15-dtKrTUpY1iwb5NEHrVAElndg9cpqtf.jpeg",
+    alt: "Students in green uniforms gathered for climate education presentation",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.24.49-nqY83ZqjPSB0DL1bgrPeAuTHsaFZgS.jpeg",
+    alt: "Large assembly of students listening to climate awareness talk",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.24.31-VShduFb14x2K21rSdYbMPmGLaBGMRN.jpeg",
+    alt: "Presenter speaking to students in white hijabs at Muslim school",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.24.35-2Fw5RUIBZeRuyD0Qrw6KOrc4PNpH0y.jpeg",
+    alt: "Students in blue and white uniforms gathered under trees for climate talk",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.24.31%20%281%29-YtSt3XvcG9zxwq0Zq8V2EZsh4VOBZf.jpeg",
+    alt: "Climate educator addressing students in blue uniforms at secondary school",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.24.27-mKt6Dazrz9V6B4LaGSnEaHQR5vaVab.jpeg",
+    alt: "Team of five volunteers in orange vests posing in front of educational mural",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.24.18-uzFWyYE7gKD1MJ8oHE6r0Z65yicIFS.jpeg",
+    alt: "Group photo of volunteers with students in front of educational mural",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.24.33-l1gLVsoTcBQQBI1ocQpUxP0Fol0XHh.jpeg",
+    alt: "Volunteers in orange vests with students in blue uniforms outside school offices",
+  },
+]
+
 // Youth Adaptation & SDGs Leadership Conference Images
 const youthAdaptationImages = [
   {
@@ -501,6 +549,166 @@ export function Programs() {
             <Button size="lg" asChild>
               <a href="#get-involved">
                 Support Clean Energy Access
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </a>
+            </Button>
+          </AnimateOnScroll>
+        </div>
+
+        {/* School Climate Education Outreach */}
+        <div className="mb-16 pt-16 border-t border-border">
+          <AnimateOnScroll animation="fade-up" className="text-center max-w-4xl mx-auto mb-12">
+            <Badge className="bg-orange-600 text-white mb-4">Climate Education</Badge>
+            <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-4 text-balance">
+              School Climate Education Outreach Program
+            </h3>
+            <p className="text-lg text-muted-foreground">
+              Bringing climate awareness directly to schools across Sierra Leone, empowering the next generation of environmental stewards
+            </p>
+          </AnimateOnScroll>
+
+          {/* Project Overview */}
+          <div className="grid lg:grid-cols-2 gap-12 items-start mb-12">
+            {/* Image Gallery */}
+            <AnimateOnScroll animation="slide-left">
+              <div className="space-y-4">
+                <div className="relative aspect-video rounded-2xl overflow-hidden shadow-xl">
+                  <Image
+                    src={schoolClimateOutreachImages[0].src}
+                    alt={schoolClimateOutreachImages[0].alt}
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute bottom-4 left-4">
+                    <Badge className="bg-orange-600 text-white">
+                      <GraduationCap className="w-3 h-3 mr-1" />
+                      Schools Across Sierra Leone
+                    </Badge>
+                  </div>
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                  {schoolClimateOutreachImages.slice(1, 4).map((img, index) => (
+                    <div key={index} className="relative aspect-square rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+                      <Image
+                        src={img.src}
+                        alt={img.alt}
+                        fill
+                        className="object-cover hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </AnimateOnScroll>
+
+            {/* Project Description */}
+            <AnimateOnScroll animation="slide-right" delay={100}>
+              <div className="space-y-6">
+                <Card className="bg-card border-none shadow-lg">
+                  <CardContent className="p-6">
+                    <p className="text-muted-foreground leading-relaxed mb-4">
+                      The School Climate Education Outreach Program brings climate awareness directly to students 
+                      across Sierra Leone. Our trained volunteers visit schools to deliver engaging presentations 
+                      on climate change, environmental conservation, and sustainable practices. The program reaches 
+                      diverse communities including primary schools, secondary schools, and Islamic schools.
+                    </p>
+                    <p className="text-muted-foreground leading-relaxed mb-4">
+                      <strong className="text-foreground">Program Activities:</strong> Interactive climate awareness sessions, 
+                      environmental education workshops, discussions on local climate impacts, and practical guidance 
+                      on how students can contribute to environmental protection in their communities.
+                    </p>
+                    <p className="text-muted-foreground leading-relaxed mb-4">
+                      <strong className="text-foreground">Expected Outcomes:</strong> Increased climate literacy among young 
+                      people, development of environmental stewardship values, creation of school-based environmental 
+                      clubs, and cultivation of the next generation of climate advocates.
+                    </p>
+                    <p className="text-muted-foreground leading-relaxed">
+                      <strong className="text-foreground">Long-term Impact:</strong> By reaching students at formative ages, 
+                      the program aims to create lasting behavioral change and inspire future leaders who will 
+                      champion climate action and sustainable development in Sierra Leone.
+                    </p>
+                    <div className="flex flex-wrap gap-3 mt-4">
+                      <Badge variant="outline" className="bg-orange-50 text-orange-700 border-orange-200">
+                        SDG 4: Quality Education
+                      </Badge>
+                      <Badge variant="outline" className="bg-green-50 text-green-700 border-green-200">
+                        SDG 13: Climate Action
+                      </Badge>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                {/* Stats Grid */}
+                <div className="grid grid-cols-2 gap-4">
+                  <Card className="bg-orange-500/10 border-orange-500/20">
+                    <CardContent className="p-4 text-center">
+                      <GraduationCap className="h-8 w-8 text-orange-600 mx-auto mb-2" />
+                      <div className="text-2xl font-bold text-foreground">10+ Schools</div>
+                      <p className="text-sm text-muted-foreground">Visited</p>
+                    </CardContent>
+                  </Card>
+                  <Card className="bg-emerald-500/10 border-emerald-500/20">
+                    <CardContent className="p-4 text-center">
+                      <Users className="h-8 w-8 text-emerald-600 mx-auto mb-2" />
+                      <div className="text-2xl font-bold text-foreground">1,000+</div>
+                      <p className="text-sm text-muted-foreground">Students Reached</p>
+                    </CardContent>
+                  </Card>
+                </div>
+
+                {/* Focus Areas */}
+                <Card className="bg-card border border-border">
+                  <CardContent className="p-4">
+                    <p className="text-xs text-muted-foreground uppercase tracking-wider mb-3">Focus Areas</p>
+                    <div className="flex flex-wrap gap-2">
+                      <Badge variant="secondary" className="text-xs">Climate Change Basics</Badge>
+                      <Badge variant="secondary" className="text-xs">Environmental Conservation</Badge>
+                      <Badge variant="secondary" className="text-xs">Sustainable Practices</Badge>
+                      <Badge variant="secondary" className="text-xs">Local Climate Impacts</Badge>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            </AnimateOnScroll>
+          </div>
+
+          {/* Additional Images Grid */}
+          <AnimateOnScroll animation="fade-up" delay={200}>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
+              {schoolClimateOutreachImages.slice(4, 8).map((img, index) => (
+                <div key={index} className="relative aspect-video rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+                  <Image
+                    src={img.src}
+                    alt={img.alt}
+                    fill
+                    className="object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+              ))}
+            </div>
+          </AnimateOnScroll>
+
+          {/* More Images */}
+          <AnimateOnScroll animation="fade-up" delay={250}>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+              {schoolClimateOutreachImages.slice(8).map((img, index) => (
+                <div key={index} className="relative aspect-video rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+                  <Image
+                    src={img.src}
+                    alt={img.alt}
+                    fill
+                    className="object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+              ))}
+            </div>
+          </AnimateOnScroll>
+
+          {/* CTA */}
+          <AnimateOnScroll animation="fade-up" delay={300} className="text-center mt-12">
+            <Button size="lg" asChild>
+              <a href="#get-involved">
+                Support Climate Education
                 <ArrowRight className="ml-2 h-4 w-4" />
               </a>
             </Button>
