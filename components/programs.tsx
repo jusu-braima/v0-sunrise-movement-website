@@ -209,6 +209,42 @@ const schoolClimateOutreachImages = [
   },
 ]
 
+// Youth Capacity Building & Classroom Education Images
+const youthCapacityBuildingImages = [
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.25.21%281%29-bUI3N3HAzq9aXuOPVyXpHI1o6CFDmn.jpeg",
+    alt: "Students raising hands enthusiastically during interactive classroom session",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.25.21-HYSCkGlwZFbSPfDgu0f3QIkGv1FUCp.jpeg",
+    alt: "Engaged students in classroom during climate education session",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.26.13-tyqYvF7FGljBbT9sQ1X5FAq5La4opj.jpeg",
+    alt: "Large school assembly with speaker using megaphone, Education is Power mural visible",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.25.32-1g6y7h7IqEAn8ExvTVvNMVfRTBO6tR.jpeg",
+    alt: "Students seated at desks in classroom during learning session",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.27.05-vDfPKRxrKbFvj1v5mDBR3MqzNwCiq8.jpeg",
+    alt: "Youth participants working on laptops at capacity building workshop",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.26.14-b4Qll53x7VXG5a1pUj1azQTKbBVvLG.jpeg",
+    alt: "Facilitators from Trocaire and Irish Aid leading workshop discussion",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.26.44-JTIkda29zXwH9CBFBXuk3hYK2Jnqwk.jpeg",
+    alt: "Youth group engaged in interactive discussion at conference hall",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.26.02%281%29-VhAvL1XZygTJMCQmAnVxCwcsbG9rV4.jpeg",
+    alt: "Female student speaking and presenting to classmates in classroom",
+  },
+]
+
 // Youth Adaptation & SDGs Leadership Conference Images
 const youthAdaptationImages = [
   {
@@ -605,6 +641,151 @@ export function Programs() {
             <Button size="lg" asChild>
               <a href="#get-involved">
                 Support Climate Education
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </a>
+            </Button>
+          </AnimateOnScroll>
+        </div>
+
+        {/* Youth Capacity Building & Classroom Education */}
+        <div className="mb-16 pt-16 border-t border-border">
+          <AnimateOnScroll animation="fade-up" className="text-center max-w-4xl mx-auto mb-12">
+            <Badge className="bg-blue-600 text-white mb-4">Youth Development</Badge>
+            <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-4 text-balance">
+              Youth Capacity Building & Classroom Education
+            </h3>
+            <p className="text-lg text-muted-foreground">
+              Empowering young people through interactive learning sessions and skills development workshops
+            </p>
+          </AnimateOnScroll>
+
+          {/* Project Overview */}
+          <div className="grid lg:grid-cols-2 gap-12 items-start mb-12">
+            {/* Image Gallery */}
+            <AnimateOnScroll animation="slide-left">
+              <div className="space-y-4">
+                <div className="relative aspect-video rounded-2xl overflow-hidden shadow-xl">
+                  <Image
+                    src={youthCapacityBuildingImages[0].src}
+                    alt={youthCapacityBuildingImages[0].alt}
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute bottom-4 left-4">
+                    <Badge className="bg-blue-600 text-white">
+                      <GraduationCap className="w-3 h-3 mr-1" />
+                      Classroom & Workshop Sessions
+                    </Badge>
+                  </div>
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                  {youthCapacityBuildingImages.slice(1, 4).map((img, index) => (
+                    <div key={index} className="relative aspect-square rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+                      <Image
+                        src={img.src}
+                        alt={img.alt}
+                        fill
+                        className="object-cover hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </AnimateOnScroll>
+
+            {/* Project Description */}
+            <AnimateOnScroll animation="slide-right" delay={100}>
+              <div className="space-y-6">
+                <Card className="bg-card border-none shadow-lg">
+                  <CardContent className="p-6">
+                    <p className="text-muted-foreground leading-relaxed mb-4">
+                      The Youth Capacity Building & Classroom Education program combines interactive classroom 
+                      sessions with comprehensive skills development workshops. We engage students directly in 
+                      schools through participatory learning experiences, while also providing intensive training 
+                      for youth leaders through structured workshop programs.
+                    </p>
+                    <p className="text-muted-foreground leading-relaxed mb-4">
+                      <strong className="text-foreground">Classroom Engagement:</strong> Our educators facilitate 
+                      dynamic classroom sessions where students actively participate through discussions, 
+                      presentations, and hands-on activities. Students learn about climate change impacts, 
+                      environmental conservation, and sustainable development goals.
+                    </p>
+                    <p className="text-muted-foreground leading-relaxed mb-4">
+                      <strong className="text-foreground">Capacity Building Workshops:</strong> In partnership with 
+                      organizations like Trocaire and Irish Aid, we conduct intensive workshops that equip young 
+                      people with leadership skills, project management capabilities, and technical knowledge in 
+                      climate action and sustainable development.
+                    </p>
+                    <p className="text-muted-foreground leading-relaxed">
+                      <strong className="text-foreground">Youth Leadership:</strong> The program empowers students 
+                      to become peer educators and climate advocates within their communities, creating a 
+                      multiplier effect for environmental awareness and action.
+                    </p>
+                    <div className="flex flex-wrap gap-3 mt-4">
+                      <Badge variant="outline" className="bg-blue-50 text-blue-700 border-blue-200">
+                        SDG 4: Quality Education
+                      </Badge>
+                      <Badge variant="outline" className="bg-purple-50 text-purple-700 border-purple-200">
+                        SDG 17: Partnerships
+                      </Badge>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                {/* Stats Grid */}
+                <div className="grid grid-cols-2 gap-4">
+                  <Card className="bg-blue-500/10 border-blue-500/20">
+                    <CardContent className="p-4 text-center">
+                      <GraduationCap className="h-8 w-8 text-blue-600 mx-auto mb-2" />
+                      <div className="text-2xl font-bold text-foreground">500+</div>
+                      <p className="text-sm text-muted-foreground">Students Trained</p>
+                    </CardContent>
+                  </Card>
+                  <Card className="bg-purple-500/10 border-purple-500/20">
+                    <CardContent className="p-4 text-center">
+                      <Users className="h-8 w-8 text-purple-600 mx-auto mb-2" />
+                      <div className="text-2xl font-bold text-foreground">15+</div>
+                      <p className="text-sm text-muted-foreground">Workshops Held</p>
+                    </CardContent>
+                  </Card>
+                </div>
+
+                {/* Partners */}
+                <Card className="bg-card border border-border">
+                  <CardContent className="p-4">
+                    <p className="text-xs text-muted-foreground uppercase tracking-wider mb-3">Partners</p>
+                    <div className="flex flex-wrap gap-2">
+                      <Badge variant="secondary" className="text-xs">Trocaire</Badge>
+                      <Badge variant="secondary" className="text-xs">Irish Aid</Badge>
+                      <Badge variant="secondary" className="text-xs">Local Schools</Badge>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            </AnimateOnScroll>
+          </div>
+
+          {/* Additional Images Grid */}
+          <AnimateOnScroll animation="fade-up" delay={200}>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {youthCapacityBuildingImages.slice(4).map((img, index) => (
+                <div key={index} className="relative aspect-video rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+                  <Image
+                    src={img.src}
+                    alt={img.alt}
+                    fill
+                    className="object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+              ))}
+            </div>
+          </AnimateOnScroll>
+
+          {/* CTA */}
+          <AnimateOnScroll animation="fade-up" delay={300} className="text-center mt-12">
+            <Button size="lg" asChild>
+              <a href="#get-involved">
+                Support Youth Development
                 <ArrowRight className="ml-2 h-4 w-4" />
               </a>
             </Button>
