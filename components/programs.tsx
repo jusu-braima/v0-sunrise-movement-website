@@ -133,48 +133,8 @@ const beachCleanupImages = [
   },
 ]
 
-// Lalehun Solar Energy Initiative Images
+// Lalehun Solar Energy Initiative Images - Only verified working images
 const lalehunSolarImages = [
-  {
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.00.39%20%281%29-nhmPI3aI1BBQ1yTXUz0811Ko6SZQUH.jpeg",
-    alt: "Students gathered in front of school building holding Lalehun Solar Energy Initiative banner",
-  },
-  {
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.00.41-SFyv22SwaNCAuuYO5fkL9ZZfWtZYeZ.jpeg",
-    alt: "Community group photo at secondary school with project launch banner",
-  },
-  {
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.00.51-ghTTnCpCdTXN8Ot1FC0Qv0uKX8nZpx.jpeg",
-    alt: "Team members in reflective vests holding project banner at school steps",
-  },
-  {
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.01.05-Tbdgu9Us4EHrtc8OPeaJQcOvyYgJ4S.jpeg",
-    alt: "Sunrise Movement team posing with Lalehun Solar Energy Initiative banner",
-  },
-  {
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.00.40%20%281%29-uJulv36GdLzFbCtnd6RaGLvO869bZh.jpeg",
-    alt: "Team with Youth Empowerment Fund project launching banner",
-  },
-  {
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.00.51%20%281%29-2lIRKjj3TV6r5ATOTjbp6AFd95iZhj.jpeg",
-    alt: "Community gathering with students and parents at launch event",
-  },
-  {
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.00.52%20%281%29-IRMNYaiviwzNamLNAf5Zms5SS3zvGz.jpeg",
-    alt: "Community members including women and children attending launch",
-  },
-  {
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.00.53-CD5GafmqIEGVcwRDHNcvDMQ8JrqraU.jpeg",
-    alt: "Community leader speaking at project launch event",
-  },
-  {
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.00.52-LvKpJ2mepEHyEqgCxrS0jcHLkCTUJM.jpeg",
-    alt: "Large gathering of students in blue uniforms at launch event",
-  },
-  {
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.00.55-SPHXKQhCRbrMuVrqone1QWoA4CETtV.jpeg",
-    alt: "Students group photo at primary school with project banner",
-  },
   {
     src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.00.56-lFiQ7DLhUWs2S19aMKgZfUaG7IuL3L.jpeg",
     alt: "Team kneeling with children and project banner",
@@ -184,32 +144,16 @@ const lalehunSolarImages = [
     alt: "Community group photo with solar energy initiative banner",
   },
   {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.01.05-Tbdgu9Us4EHrtc8OPeaJQcOvyYgJ4S.jpeg",
+    alt: "Sunrise Movement team posing with Lalehun Solar Energy Initiative banner",
+  },
+  {
     src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.00.53%20%281%29-xpRFxU1uuPTwlHphQWHTQ5XnKgX45I.jpeg",
     alt: "Large crowd of students and community members at launch",
   },
   {
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.00.40-krcs9Dl2sFy7b74jeuTVUx7Mf2w1tB.jpeg",
-    alt: "Community gathering under wooden roof structure",
-  },
-  {
     src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.00.08-ilZfuNl0PatXNxE40I4cJJsWmf4oE5.jpeg",
     alt: "Students seated in assembly listening to presentation",
-  },
-  {
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.00.54-Js2B9mnlDSQ4Uuyt66nSwyVKDWrnUe.jpeg",
-    alt: "Community members including children seated indoors",
-  },
-  {
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.01.25-CcgAdxvvQaYF0GaMv8lKtO7GpFtTxs.jpeg",
-    alt: "Sunrise Movement team in green shirts with crossed arms",
-  },
-  {
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.01.24-JNn6iavJ9enWpHuSgHVEvvUdNvBRt9.jpeg",
-    alt: "Team in reflective vests with raised fists from behind",
-  },
-  {
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.01.11-CiLoitPvxaF0CdDdu6aRJqowpM1l9X.jpeg",
-    alt: "Team in reflective vests holding hands in unity",
   },
   {
     src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.01.25%20%281%29-Og8sdOXEQG6Z7UqEtAttk1ivg3R4V3.jpeg",
@@ -482,56 +426,8 @@ export function Programs() {
 
           {/* Additional Images Grid */}
           <AnimateOnScroll animation="fade-up" delay={200}>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
-              {lalehunSolarImages.slice(4, 8).map((img, index) => (
-                <div key={index} className="relative aspect-video rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow">
-                  <Image
-                    src={img.src}
-                    alt={img.alt}
-                    fill
-                    className="object-cover hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-              ))}
-            </div>
-          </AnimateOnScroll>
-
-          {/* More Images */}
-          <AnimateOnScroll animation="fade-up" delay={250}>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
-              {lalehunSolarImages.slice(8, 12).map((img, index) => (
-                <div key={index} className="relative aspect-video rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow">
-                  <Image
-                    src={img.src}
-                    alt={img.alt}
-                    fill
-                    className="object-cover hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-              ))}
-            </div>
-          </AnimateOnScroll>
-
-          {/* Even More Images */}
-          <AnimateOnScroll animation="fade-up" delay={300}>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
-              {lalehunSolarImages.slice(12, 16).map((img, index) => (
-                <div key={index} className="relative aspect-video rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow">
-                  <Image
-                    src={img.src}
-                    alt={img.alt}
-                    fill
-                    className="object-cover hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-              ))}
-            </div>
-          </AnimateOnScroll>
-
-          {/* Final Images */}
-          <AnimateOnScroll animation="fade-up" delay={350}>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {lalehunSolarImages.slice(16).map((img, index) => (
+            <div className="grid grid-cols-2 md:grid-cols-2 gap-4">
+              {lalehunSolarImages.slice(4).map((img, index) => (
                 <div key={index} className="relative aspect-video rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow">
                   <Image
                     src={img.src}
