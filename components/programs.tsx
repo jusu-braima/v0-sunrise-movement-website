@@ -14,6 +14,7 @@ import {
   Users,
   ArrowRight,
   MapPin,
+  Sun,
 } from "lucide-react"
 import { AnimateOnScroll } from "@/components/animate-on-scroll"
 
@@ -132,6 +133,90 @@ const beachCleanupImages = [
   },
 ]
 
+// Lalehun Solar Energy Initiative Images
+const lalehunSolarImages = [
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.00.39%20%281%29-nhmPI3aI1BBQ1yTXUz0811Ko6SZQUH.jpeg",
+    alt: "Students gathered in front of school building holding Lalehun Solar Energy Initiative banner",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.00.41-SFyv22SwaNCAuuYO5fkL9ZZfWtZYeZ.jpeg",
+    alt: "Community group photo at secondary school with project launch banner",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.00.51-ghTTnCpCdTXN8Ot1FC0Qv0uKX8nZpx.jpeg",
+    alt: "Team members in reflective vests holding project banner at school steps",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.01.05-Tbdgu9Us4EHrtc8OPeaJQcOvyYgJ4S.jpeg",
+    alt: "Sunrise Movement team posing with Lalehun Solar Energy Initiative banner",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.00.40%20%281%29-uJulv36GdLzFbCtnd6RaGLvO869bZh.jpeg",
+    alt: "Team with Youth Empowerment Fund project launching banner",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.00.51%20%281%29-2lIRKjj3TV6r5ATOTjbp6AFd95iZhj.jpeg",
+    alt: "Community gathering with students and parents at launch event",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.00.52%20%281%29-IRMNYaiviwzNamLNAf5Zms5SS3zvGz.jpeg",
+    alt: "Community members including women and children attending launch",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.00.53-CD5GafmqIEGVcwRDHNcvDMQ8JrqraU.jpeg",
+    alt: "Community leader speaking at project launch event",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.00.52-LvKpJ2mepEHyEqgCxrS0jcHLkCTUJM.jpeg",
+    alt: "Large gathering of students in blue uniforms at launch event",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.00.55-SPHXKQhCRbrMuVrqone1QWoA4CETtV.jpeg",
+    alt: "Students group photo at primary school with project banner",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.00.56-lFiQ7DLhUWs2S19aMKgZfUaG7IuL3L.jpeg",
+    alt: "Team kneeling with children and project banner",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.00.39-TO1BE6CkPV7lJCiKfjfT0pxpBMjpIR.jpeg",
+    alt: "Community group photo with solar energy initiative banner",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.00.53%20%281%29-xpRFxU1uuPTwlHphQWHTQ5XnKgX45I.jpeg",
+    alt: "Large crowd of students and community members at launch",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.00.40-krcs9Dl2sFy7b74jeuTVUx7Mf2w1tB.jpeg",
+    alt: "Community gathering under wooden roof structure",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.00.08-ilZfuNl0PatXNxE40I4cJJsWmf4oE5.jpeg",
+    alt: "Students seated in assembly listening to presentation",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.00.54-Js2B9mnlDSQ4Uuyt66nSwyVKDWrnUe.jpeg",
+    alt: "Community members including children seated indoors",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.01.25-CcgAdxvvQaYF0GaMv8lKtO7GpFtTxs.jpeg",
+    alt: "Sunrise Movement team in green shirts with crossed arms",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.01.24-JNn6iavJ9enWpHuSgHVEvvUdNvBRt9.jpeg",
+    alt: "Team in reflective vests with raised fists from behind",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.01.11-CiLoitPvxaF0CdDdu6aRJqowpM1l9X.jpeg",
+    alt: "Team in reflective vests holding hands in unity",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2005.01.25%20%281%29-Og8sdOXEQG6Z7UqEtAttk1ivg3R4V3.jpeg",
+    alt: "Sunrise Movement team portrait in green shirts",
+  },
+]
+
 // Youth Adaptation & SDGs Leadership Conference Images
 const youthAdaptationImages = [
   {
@@ -226,6 +311,200 @@ export function Programs() {
               </Card>
             </AnimateOnScroll>
           ))}
+        </div>
+
+        {/* Lalehun Solar Energy Initiative */}
+        <div className="mb-16 pt-16 border-t border-border">
+          <AnimateOnScroll animation="fade-up" className="text-center max-w-4xl mx-auto mb-12">
+            <Badge className="bg-yellow-600 text-white mb-4">Clean Energy</Badge>
+            <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-4 text-balance">
+              Lalehun Solar Energy Initiative Project Launch
+            </h3>
+            <p className="text-lg text-muted-foreground">
+              Enhancing access to clean energy, strengthening education systems, and advancing youth empowerment in rural Sierra Leone
+            </p>
+          </AnimateOnScroll>
+
+          {/* Project Overview */}
+          <div className="grid lg:grid-cols-2 gap-12 items-start mb-12">
+            {/* Image Gallery */}
+            <AnimateOnScroll animation="slide-left">
+              <div className="space-y-4">
+                <div className="relative aspect-video rounded-2xl overflow-hidden shadow-xl">
+                  <Image
+                    src={lalehunSolarImages[0].src}
+                    alt={lalehunSolarImages[0].alt}
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute bottom-4 left-4">
+                    <Badge className="bg-yellow-600 text-white">
+                      <MapPin className="w-3 h-3 mr-1" />
+                      Lalehun, Penguia Chiefdom
+                    </Badge>
+                  </div>
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                  {lalehunSolarImages.slice(1, 4).map((img, index) => (
+                    <div key={index} className="relative aspect-square rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+                      <Image
+                        src={img.src}
+                        alt={img.alt}
+                        fill
+                        className="object-cover hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </AnimateOnScroll>
+
+            {/* Project Description */}
+            <AnimateOnScroll animation="slide-right" delay={100}>
+              <div className="space-y-6">
+                <Card className="bg-card border-none shadow-lg">
+                  <CardContent className="p-6">
+                    <p className="text-muted-foreground leading-relaxed mb-4">
+                      Sunrise Movement Sierra Leone has launched the Lalehun Solar Energy Initiative in Lalehun, 
+                      Penguia Chiefdom, to enhance access to clean energy, strengthen education systems, and 
+                      advance youth empowerment in rural Sierra Leone. The initiative contributes to SDG 7 
+                      (Affordable and Clean Energy) and SDG 4 (Quality Education), while supporting inclusive 
+                      climate adaptation and community resilience.
+                    </p>
+                    <p className="text-muted-foreground leading-relaxed mb-4">
+                      <strong className="text-foreground">Planned Outputs:</strong> Solar energy systems will be installed in 
+                      the only primary and secondary schools in Lalehun, aiming to provide reliable electricity 
+                      and improve learning conditions. In parallel, 60 local youth, with a strong focus on young 
+                      women, will be trained in solar installation, maintenance, and troubleshooting, building 
+                      technical capacity within the community.
+                    </p>
+                    <p className="text-muted-foreground leading-relaxed mb-4">
+                      <strong className="text-foreground">Expected Outcomes:</strong> The initiative is expected to improve access 
+                      to quality education through reliable energy, strengthen local skills for employment, and 
+                      increase youth participation in climate action and sustainable development.
+                    </p>
+                    <p className="text-muted-foreground leading-relaxed">
+                      <strong className="text-foreground">Anticipated Impact:</strong> By integrating renewable energy with capacity 
+                      building, the initiative aims to contribute to resilient community systems, inclusive economic 
+                      opportunities, and scalable models for rural clean energy solutions in Sierra Leone.
+                    </p>
+                    <div className="flex flex-wrap gap-3 mt-4">
+                      <Badge variant="outline" className="bg-yellow-50 text-yellow-700 border-yellow-200">
+                        SDG 7: Affordable & Clean Energy
+                      </Badge>
+                      <Badge variant="outline" className="bg-blue-50 text-blue-700 border-blue-200">
+                        SDG 4: Quality Education
+                      </Badge>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                {/* Stats Grid */}
+                <div className="grid grid-cols-2 gap-4">
+                  <Card className="bg-yellow-500/10 border-yellow-500/20">
+                    <CardContent className="p-4 text-center">
+                      <Sun className="h-8 w-8 text-yellow-600 mx-auto mb-2" />
+                      <div className="text-2xl font-bold text-foreground">2 Schools</div>
+                      <p className="text-sm text-muted-foreground">Solar Installation</p>
+                    </CardContent>
+                  </Card>
+                  <Card className="bg-emerald-500/10 border-emerald-500/20">
+                    <CardContent className="p-4 text-center">
+                      <Users className="h-8 w-8 text-emerald-600 mx-auto mb-2" />
+                      <div className="text-2xl font-bold text-foreground">60 Youth</div>
+                      <p className="text-sm text-muted-foreground">Training Program</p>
+                    </CardContent>
+                  </Card>
+                </div>
+
+                {/* Partners */}
+                <Card className="bg-card border border-border">
+                  <CardContent className="p-4">
+                    <p className="text-xs text-muted-foreground uppercase tracking-wider mb-3">Supporting Partners</p>
+                    <div className="flex flex-wrap gap-2">
+                      <Badge variant="secondary" className="text-xs">European Union</Badge>
+                      <Badge variant="secondary" className="text-xs">Global Youth Mobilisation</Badge>
+                      <Badge variant="secondary" className="text-xs">Youth Empowerment Fund</Badge>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            </AnimateOnScroll>
+          </div>
+
+          {/* Additional Images Grid */}
+          <AnimateOnScroll animation="fade-up" delay={200}>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
+              {lalehunSolarImages.slice(4, 8).map((img, index) => (
+                <div key={index} className="relative aspect-video rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+                  <Image
+                    src={img.src}
+                    alt={img.alt}
+                    fill
+                    className="object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+              ))}
+            </div>
+          </AnimateOnScroll>
+
+          {/* More Images */}
+          <AnimateOnScroll animation="fade-up" delay={250}>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
+              {lalehunSolarImages.slice(8, 12).map((img, index) => (
+                <div key={index} className="relative aspect-video rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+                  <Image
+                    src={img.src}
+                    alt={img.alt}
+                    fill
+                    className="object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+              ))}
+            </div>
+          </AnimateOnScroll>
+
+          {/* Even More Images */}
+          <AnimateOnScroll animation="fade-up" delay={300}>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
+              {lalehunSolarImages.slice(12, 16).map((img, index) => (
+                <div key={index} className="relative aspect-video rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+                  <Image
+                    src={img.src}
+                    alt={img.alt}
+                    fill
+                    className="object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+              ))}
+            </div>
+          </AnimateOnScroll>
+
+          {/* Final Images */}
+          <AnimateOnScroll animation="fade-up" delay={350}>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {lalehunSolarImages.slice(16).map((img, index) => (
+                <div key={index} className="relative aspect-video rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+                  <Image
+                    src={img.src}
+                    alt={img.alt}
+                    fill
+                    className="object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+              ))}
+            </div>
+          </AnimateOnScroll>
+
+          {/* CTA */}
+          <AnimateOnScroll animation="fade-up" delay={400} className="text-center mt-12">
+            <Button size="lg" asChild>
+              <a href="#get-involved">
+                Support Clean Energy Access
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </a>
+            </Button>
+          </AnimateOnScroll>
         </div>
 
         {/* Youth Adaptation & SDGs Leadership Conference */}
