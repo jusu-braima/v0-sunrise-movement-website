@@ -52,18 +52,30 @@ export function HomePartnersPreview() {
               {/* Award Highlight */}
               <Card className="bg-gradient-to-r from-yellow-50 to-amber-50 dark:from-yellow-950/30 dark:to-amber-950/30 border-2 border-yellow-300 dark:border-yellow-700 rounded-2xl shadow-glow overflow-hidden relative">
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-yellow-200/20 to-transparent" />
-                <CardContent className="p-5 flex items-center gap-4 relative">
-                  <div className="relative w-16 h-16 shrink-0">
-                    <div className="absolute -inset-1 bg-gradient-to-br from-yellow-400 to-amber-500 rounded-2xl opacity-30" />
-                    <Image
-                      src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.23.26-GQOF8ZAJMW5ZPzTAb6qlaSV1235pRK.jpeg"
-                      alt="SDG 13 World Gold Award"
-                      width={64}
-                      height={64}
-                      className="object-cover rounded-xl relative shadow-lg"
-                    />
+                <CardContent className="p-5 flex flex-col sm:flex-row items-center gap-4 relative">
+                  <div className="flex gap-3 shrink-0">
+                    <div className="relative">
+                      <div className="absolute -inset-1 bg-gradient-to-br from-yellow-400 to-amber-500 rounded-2xl opacity-30" />
+                      <Image
+                        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.23.16-xGkx76DEL6KmcVZNYHQ2KOUVb4kuwe.jpeg"
+                        alt="SDG 13 World Gold Award Certificate"
+                        width={80}
+                        height={100}
+                        className="object-cover rounded-xl relative shadow-lg"
+                      />
+                    </div>
+                    <div className="relative">
+                      <div className="absolute -inset-1 bg-gradient-to-br from-yellow-400 to-amber-500 rounded-2xl opacity-30" />
+                      <Image
+                        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.23.03-xwrmoAUZQHbTjZar0tUATJeD5noRNl.jpeg"
+                        alt="SDG 13 World Gold Award Trophy"
+                        width={80}
+                        height={100}
+                        className="object-cover rounded-xl relative shadow-lg"
+                      />
+                    </div>
                   </div>
-                  <div className="flex-1">
+                  <div className="flex-1 text-center sm:text-left">
                     <Badge className="bg-gradient-to-r from-yellow-500 to-amber-500 text-white mb-1 shadow-sm">
                       <Award className="w-3 h-3 mr-1" />
                       Award Winner
