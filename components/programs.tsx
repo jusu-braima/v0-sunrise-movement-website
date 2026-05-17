@@ -57,7 +57,7 @@ const strategicPillars = [
     description:
       "Engaging communities and policymakers to drive meaningful climate action at local and national levels.",
     color: "bg-rose-500/10 text-rose-600 dark:text-rose-400",
-    stats: "20,000+ people reached",
+    stats: "50+ people reached",
   },
   {
     icon: Waves,

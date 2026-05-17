@@ -37,7 +37,7 @@ function AnimatedCounter({ end, duration = 2000, suffix = "" }: { end: number; d
 }
 
 const stats = [
-  { icon: Users, value: 20000, suffix: "+", label: "Community Members Reached" },
+  { icon: Users, value: 50, suffix: "+", label: "Community Members Reached" },
   { icon: TreePine, value: 8, suffix: "", label: "Strategic Pillars" },
   { icon: Globe, value: 8, suffix: "", label: "SDGs Addressed" },
   { icon: Zap, value: 2023, suffix: "", label: "Year Founded" },

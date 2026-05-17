@@ -9,19 +9,19 @@ import { AnimateOnScroll } from "@/components/animate-on-scroll"
 const impactStats = [
   {
     icon: Users,
-    value: "20,000+",
+    value: "50+",
     label: "People Reached",
     description: "Through education and programs",
   },
   {
     icon: TreePine,
-    value: "10,000+",
+    value: "50+",
     label: "Trees Planted",
     description: "In restoration projects",
   },
   {
     icon: GraduationCap,
-    value: "200+",
+    value: "50+",
     label: "Youth Trained",
     description: "As climate leaders",
   },

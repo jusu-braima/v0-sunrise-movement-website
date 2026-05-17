@@ -23,9 +23,9 @@ const locations: Location[] = [
     type: "headquarters",
     description: "Our headquarters and primary operations center. Home to reforestation, agriculture, and youth leadership programs.",
     stats: [
-      { label: "People Reached", value: "12,000+" },
-      { label: "Trees Planted", value: "8,000+" },
-      { label: "Youth Trained", value: "150+" },
+      { label: "People Reached", value: "50+" },
+      { label: "Trees Planted", value: "50+" },
+      { label: "Youth Trained", value: "50+" },
     ],
     googleMapsUrl: "https://www.google.com/maps/place/Bo,+Sierra+Leone",
     embedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126551.55002270883!2d-11.81574565!3d7.96472!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xf0bcc87c5e4a651%3A0x4ea5b2b2f3c3a4e1!2sBo%2C%20Sierra%20Leone!5e0!3m2!1sen!2sus!4v1710000000000!5m2!1sen!2sus",
@@ -36,9 +36,9 @@ const locations: Location[] = [
     type: "active",
     description: "Northern operations hub with focus on clean energy access and sustainable agriculture training.",
     stats: [
-      { label: "People Reached", value: "5,000+" },
+      { label: "People Reached", value: "50+" },
       { label: "Schools Electrified", value: "10" },
-      { label: "Farmers Trained", value: "400+" },
+      { label: "Farmers Trained", value: "50+" },
     ],
     googleMapsUrl: "https://www.google.com/maps/place/Bombali+District,+Sierra+Leone",
     embedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d506206.2000907137!2d-12.3!3d9.1!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xf0a8e1f7c5a7b1d%3A0x2b3c4d5e6f7a8b9c!2sBombali%20District%2C%20Sierra%20Leone!5e0!3m2!1sen!2sus!4v1710000000001!5m2!1sen!2sus",
@@ -49,7 +49,7 @@ const locations: Location[] = [
     type: "project",
     description: "Coastal conservation programs and youth advocacy initiatives in the capital region.",
     stats: [
-      { label: "People Reached", value: "3,000+" },
+      { label: "People Reached", value: "50+" },
       { label: "Coastline Cleaned", value: "5km" },
       { label: "Youth Volunteers", value: "50+" },
     ],
@@ -215,12 +215,12 @@ export function SierraLeoneMap() {
             <div className="grid grid-cols-3 gap-2 sm:gap-4">
               <div className="text-center p-2 sm:p-4 bg-card rounded-xl border border-border hover:border-primary/50 transition-colors">
                 <Users className="h-5 w-5 sm:h-6 sm:w-6 text-primary mx-auto mb-1 sm:mb-2" />
-                <p className="text-base sm:text-xl font-bold text-foreground">20,000+</p>
+                <p className="text-base sm:text-xl font-bold text-foreground">50+</p>
                 <p className="text-[10px] sm:text-xs text-muted-foreground">Total Reached</p>
               </div>
               <div className="text-center p-2 sm:p-4 bg-card rounded-xl border border-border hover:border-primary/50 transition-colors">
                 <TreePine className="h-5 w-5 sm:h-6 sm:w-6 text-primary mx-auto mb-1 sm:mb-2" />
-                <p className="text-base sm:text-xl font-bold text-foreground">10,000+</p>
+                <p className="text-base sm:text-xl font-bold text-foreground">50+</p>
                 <p className="text-[10px] sm:text-xs text-muted-foreground">Trees Planted</p>
               </div>
               <div className="text-center p-2 sm:p-4 bg-card rounded-xl border border-border hover:border-primary/50 transition-colors">
