@@ -40,8 +40,8 @@ const timeline = [
   },
   {
     date: "March 2024",
-    title: "10 Community Members Reached",
-    description: "Milestone of reaching 10,000 people through our programs and advocacy.",
+    title: "50+ Community Members Reached",
+    description: "Milestone of reaching 50+ people through our programs and advocacy.",
   },
   {
     date: "June 2024",
@@ -50,8 +50,8 @@ const timeline = [
   },
   {
     date: "December 2024",
-    title: "100+ Impacted",
-    description: "Expanded reach to over 20,000 community members across multiple districts.",
+    title: "50+ Impacted",
+    description: "Expanded reach to over 50+ community members across multiple districts.",
   },
 ]
 

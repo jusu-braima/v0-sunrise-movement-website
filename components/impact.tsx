@@ -8,7 +8,7 @@ import { AnimateOnScroll } from "@/components/animate-on-scroll"
 const impactStats = [
   {
     icon: Users,
-    value: 20000,
+    value: 50,
     suffix: "+",
     label: "Community Members Reached",
     description: "Through climate education, advocacy, and empowerment programs",
@@ -22,14 +22,14 @@ const impactStats = [
   },
   {
     icon: Sun,
-    value: 60,
+    value: 50,
     suffix: "+",
     label: "Youth Trained in Solar",
     description: "Through the Lalehun Solar Energy Initiative",
   },
   {
     icon: TreePine,
-    value: 10000,
+    value: 50,
     suffix: "+",
     label: "Trees Planted",
     description: "Restoring ecosystems across multiple districts",

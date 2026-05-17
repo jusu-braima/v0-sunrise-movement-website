@@ -6,7 +6,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Users, TreePine, Globe, Zap } from "lucide-react"
 
-function AnimatedCounter({ end, duration = 2000, suffix = "" }: { end: number; duration?: number; suffix?: string }) {
+function AnimatedCounter({ end, duration = 2000, suffix = "", noFormat = false }: { end: number; duration?: number; suffix?: string; noFormat?: boolean }) {
   const [count, setCount] = useState(0)
   const [hasAnimated, setHasAnimated] = useState(false)
 
@@ -31,16 +31,16 @@ function AnimatedCounter({ end, duration = 2000, suffix = "" }: { end: number; d
 
   return (
     <span>
-      {count.toLocaleString()}{suffix}
+      {noFormat ? count : count.toLocaleString()}{suffix}
     </span>
   )
 }
 
 const stats = [
-  { icon: Users, value: 20000, suffix: "+", label: "Community Members Reached" },
+  { icon: Users, value: 50, suffix: "+", label: "Community Members Reached" },
   { icon: TreePine, value: 8, suffix: "", label: "Strategic Pillars" },
   { icon: Globe, value: 8, suffix: "", label: "SDGs Addressed" },
-  { icon: Zap, value: 2023, suffix: "", label: "Year Founded" },
+  { icon: Zap, value: 2023, suffix: "", label: "Year Founded", noFormat: true },
 ]
 
 export function Hero() {
@@ -122,7 +122,7 @@ export function Hero() {
                     <stat.icon className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />
                   </div>
                   <div className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground">
-                    <AnimatedCounter end={stat.value} suffix={stat.suffix} />
+                    <AnimatedCounter end={stat.value} suffix={stat.suffix} noFormat={stat.noFormat} />
                   </div>
                   <p className="text-[10px] sm:text-xs md:text-sm text-muted-foreground leading-tight">{stat.label}</p>
                 </div>

@@ -57,7 +57,7 @@ const strategicPillars = [
     description:
       "Engaging communities and policymakers to drive meaningful climate action at local and national levels.",
     color: "bg-rose-500/10 text-rose-600 dark:text-rose-400",
-    stats: "20,000+ people reached",
+    stats: "50+ people reached",
   },
   {
     icon: Waves,
@@ -298,6 +298,82 @@ const youthAdaptationImages = [
   {
     src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.22.24-vCXcp5EhvwMRG2QGmt20F4dACH7pGE.jpeg",
     alt: "Panel discussion on International Womens Day 2026",
+  },
+]
+
+// COP30 Climate March Images
+const cop30ClimateMarchImages = [
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.24.34-jXDpoClwUUVY6UTOXgDbPjleYvT8Vs.jpeg",
+    alt: "Protesters holding Climate Justice = Social Justice signs during COP30 march",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.24.23-R6Km1lPxAR6G6WuLrOYzGmwNzfswm9.jpeg",
+    alt: "Youth marchers with signs including Once the Earth heats UP it will take many years to cool down",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.24.12-lxZfCQlgnA4Y13lVfq2Dk4Jc96Wtjv.jpeg",
+    alt: "March with YASDev banner - Climate Promises Must Be Kept COP30 Must Deliver",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.24.10-uFgMI07eaqrunbGTvYY6FKdb21tMRi.jpeg",
+    alt: "Protesters with signs We are tired with empty promises We need Action NOW",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.24.45-ItV7n3oEBtjiJDiOIpZuMYNMNxOz5m.jpeg",
+    alt: "Group of marchers holding Climate Justice = Social Justice signs under trees",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.24.42-ObyOlWHON6p9LAkY5lEPfTX91kELte.jpeg",
+    alt: "Two women smiling and holding Make Earth Cool Again sign",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.24.11-lNb5aspsu3WRCc5nw2quvLf9AAbuPD.jpeg",
+    alt: "Man holding There is no Planet B sign during climate march",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.24.02-eOJZ72xBRvJ33EwCSBStCfTuxm6GWZ.jpeg",
+    alt: "Large march with YASDev banner demanding climate action and accountability",
+  },
+]
+
+// Climate Change Webinar Images
+const climateChangeWebinarImages = [
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.23.15-aejTQRwPX47RcDgH24oui1qZ1nQURd.jpeg",
+    alt: "Climate Change and Its Impact on National Development event poster with all speakers",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.23.08-9TesX96t93HDx1tEjQmtGlWr43NVz2.jpeg",
+    alt: "Dictionary Debonair - Moderator from Sierra Leone",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.23.12-W9Tuo4YJkVGeMO33srwKZTb6ILFsbD.jpeg",
+    alt: "Mr. Emmanuel D. George - Speaker from Nigeria on Climate Justice and Equity",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.23.11-I8sAggG1S8EWnfwCyUoNhDhdyPD9dI.jpeg",
+    alt: "Joshua Aruna - Speaker from Gambia on Climate Change and Economic Growth",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.22.59-bBHQUKo59YzRszhBvlKEOjTcTTADsh.jpeg",
+    alt: "Mrs. Amahle Tuswa - Speaker from South Africa on Youth Engagement",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.23.26-RpiCFUc0JwKfXdwA2eIaAt8Uv5uXdX.jpeg",
+    alt: "John Mwiti - Speaker from Kenya on Government and Policy-Making",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.23.19-yvvAQ0M21fmoPVaB8iLHeoFH9RQjdm.jpeg",
+    alt: "Abdul Ija Ismail - Speaker from Mozambique on Climate Change and Poverty",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.23.12%281%29-UbQjiR8nTzWY6DEYU3EK5xkcS7h6Ge.jpeg",
+    alt: "African Youth Adaptation Network - Announcing In-Country Focal Points",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.23.14-h8Oz42pc268P5BSXXYsLFHGUKLBxdH.jpeg",
+    alt: "African Youth Adaptation Network member organizations from across Africa",
   },
 ]
 
@@ -1060,6 +1136,157 @@ export function Programs() {
             <Button size="lg" asChild>
               <a href="#get-involved">
                 Join Our Policy Initiatives
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </a>
+            </Button>
+          </AnimateOnScroll>
+        </div>
+
+        {/* COP30 Climate March */}
+        <div className="mb-16 pt-16 border-t border-border">
+          <AnimateOnScroll animation="fade-up" className="text-center max-w-4xl mx-auto mb-12">
+            <Badge className="bg-rose-600 text-white mb-4">Climate Advocacy</Badge>
+            <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-4 text-balance">
+              COP30 Civil Society & Community Foot Walk
+            </h3>
+            <p className="text-lg text-muted-foreground">
+              Voices from the Frontlines: Bridging Broken Climate Promises through Action and Accountability
+            </p>
+          </AnimateOnScroll>
+
+          {/* Project Description - Text at Top */}
+          <AnimateOnScroll animation="fade-up" delay={100}>
+            <div className="max-w-4xl mx-auto mb-12">
+              <Card className="bg-card border-none shadow-lg">
+                <CardContent className="p-6">
+                  <p className="text-muted-foreground leading-relaxed">
+                    In partnership with Youth Alliance for Sustainable Development (YASDev), Network Movement for 
+                    Youth and Children&apos;s Welfare (NMYCW), and with support from ActionAid Sierra Leone, Sunrise 
+                    Movement Sierra Leone joined the Civil Society and Community COP30 Foot Walk in Freetown. Under 
+                    the theme &quot;Climate Promises Must Be Kept: Our Future Cannot Wait - COP30 Must Deliver!&quot;, 
+                    participants marched through the streets demanding climate accountability and urgent action. 
+                    Youth activists carried powerful messages including &quot;Climate Justice = Social Justice&quot;, 
+                    &quot;There is No Planet B&quot;, &quot;Make Earth Cool Again&quot;, and &quot;We Are Tired of Empty 
+                    Promises - We Need Action NOW&quot;. The march amplified the voices of those most affected by 
+                    climate change, calling on world leaders to honor their commitments and deliver meaningful 
+                    climate action at COP30.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+          </AnimateOnScroll>
+
+          {/* Images Below */}
+          <AnimateOnScroll animation="fade-up" delay={200}>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
+              {cop30ClimateMarchImages.slice(0, 4).map((img, index) => (
+                <div key={index} className="relative aspect-video rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+                  <Image
+                    src={img.src}
+                    alt={img.alt}
+                    fill
+                    className="object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+              ))}
+            </div>
+          </AnimateOnScroll>
+
+          <AnimateOnScroll animation="fade-up" delay={250}>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {cop30ClimateMarchImages.slice(4).map((img, index) => (
+                <div key={index} className="relative aspect-video rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+                  <Image
+                    src={img.src}
+                    alt={img.alt}
+                    fill
+                    className="object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+              ))}
+            </div>
+          </AnimateOnScroll>
+
+          {/* CTA */}
+          <AnimateOnScroll animation="fade-up" delay={300} className="text-center mt-12">
+            <Button size="lg" asChild>
+              <a href="#get-involved">
+                Join Our Climate Advocacy
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </a>
+            </Button>
+          </AnimateOnScroll>
+        </div>
+
+        {/* Climate Change Webinar */}
+        <div className="mb-16 pt-16 border-t border-border">
+          <AnimateOnScroll animation="fade-up" className="text-center max-w-4xl mx-auto mb-12">
+            <Badge className="bg-blue-600 text-white mb-4">Virtual Conference</Badge>
+            <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-4 text-balance">
+              Climate Change and Its Impact on National Development
+            </h3>
+            <p className="text-lg text-muted-foreground">
+              Pan-African Virtual Dialogue | September 15-16, 2023
+            </p>
+          </AnimateOnScroll>
+
+          {/* Project Description - Text at Top */}
+          <AnimateOnScroll animation="fade-up" delay={100}>
+            <div className="max-w-4xl mx-auto mb-12">
+              <Card className="bg-card border-none shadow-lg">
+                <CardContent className="p-6">
+                  <p className="text-muted-foreground leading-relaxed">
+                    Sunrise Movement Sierra Leone hosted a groundbreaking two-day virtual conference bringing together 
+                    young climate leaders from across Africa to discuss &quot;Climate Change and Its Impact on National 
+                    Development.&quot; The event featured speakers from six African nations including Nigeria, Kenya, 
+                    South Africa, Gambia, Mozambique, and Sierra Leone, each addressing critical topics such as climate 
+                    justice and equity, the link between climate change and economic growth, youth engagement in climate 
+                    action, government policy-making, and climate change&apos;s relationship with poverty. The conference, 
+                    moderated by Dictionary Debonair from Sierra Leone, was held via WhatsApp and connected with the 
+                    African Youth Adaptation Network - a continent-wide coalition of youth organizations from over 15 
+                    countries working together on climate adaptation strategies.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+          </AnimateOnScroll>
+
+          {/* Images Below */}
+          <AnimateOnScroll animation="fade-up" delay={200}>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-4">
+              {climateChangeWebinarImages.slice(0, 6).map((img, index) => (
+                <div key={index} className="relative aspect-[3/4] rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+                  <Image
+                    src={img.src}
+                    alt={img.alt}
+                    fill
+                    className="object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+              ))}
+            </div>
+          </AnimateOnScroll>
+
+          <AnimateOnScroll animation="fade-up" delay={250}>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              {climateChangeWebinarImages.slice(6).map((img, index) => (
+                <div key={index} className="relative aspect-video rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+                  <Image
+                    src={img.src}
+                    alt={img.alt}
+                    fill
+                    className="object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+              ))}
+            </div>
+          </AnimateOnScroll>
+
+          {/* CTA */}
+          <AnimateOnScroll animation="fade-up" delay={300} className="text-center mt-12">
+            <Button size="lg" asChild>
+              <a href="#get-involved">
+                Join Our Webinars
                 <ArrowRight className="ml-2 h-4 w-4" />
               </a>
             </Button>

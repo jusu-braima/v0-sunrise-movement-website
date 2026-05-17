@@ -508,3 +508,170 @@ body {
   border-radius: inherit;
   opacity: 0.15;
 }
+
+/* Award Winner Animations */
+@keyframes shimmer-sweep {
+  0% {
+    transform: translateX(-100%) skewX(-15deg);
+  }
+  100% {
+    transform: translateX(200%) skewX(-15deg);
+  }
+}
+
+@keyframes sparkle {
+  0%, 100% {
+    opacity: 0;
+    transform: scale(0) rotate(0deg);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1) rotate(180deg);
+  }
+}
+
+@keyframes glow-pulse {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(234, 179, 8, 0.3), 0 0 40px rgba(234, 179, 8, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(234, 179, 8, 0.5), 0 0 60px rgba(234, 179, 8, 0.2);
+  }
+}
+
+@keyframes border-glow {
+  0%, 100% {
+    border-color: rgb(253, 224, 71);
+  }
+  50% {
+    border-color: rgb(251, 191, 36);
+  }
+}
+
+@keyframes trophy-bounce {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-3px) scale(1.02);
+  }
+}
+
+@keyframes star-twinkle {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+.award-card {
+  animation: glow-pulse 3s ease-in-out infinite, border-glow 2s ease-in-out infinite;
+  position: relative;
+  overflow: hidden;
+}
+
+.award-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  animation: shimmer-sweep 3s ease-in-out infinite;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.award-image-glow {
+  animation: trophy-bounce 2s ease-in-out infinite;
+  position: relative;
+}
+
+.award-image-glow::before {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  background: linear-gradient(135deg, #fbbf24, #f59e0b, #fbbf24);
+  border-radius: 1rem;
+  opacity: 0.6;
+  animation: glow-pulse 2s ease-in-out infinite;
+  z-index: -1;
+}
+
+.sparkle {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: radial-gradient(circle, #fbbf24 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.sparkle-1 {
+  top: 10%;
+  left: 5%;
+  animation: sparkle 2s ease-in-out infinite;
+}
+
+.sparkle-2 {
+  top: 20%;
+  right: 10%;
+  animation: sparkle 2s ease-in-out infinite 0.3s;
+}
+
+.sparkle-3 {
+  bottom: 30%;
+  left: 15%;
+  animation: sparkle 2s ease-in-out infinite 0.6s;
+}
+
+.sparkle-4 {
+  bottom: 15%;
+  right: 5%;
+  animation: sparkle 2s ease-in-out infinite 0.9s;
+}
+
+.sparkle-5 {
+  top: 50%;
+  left: 2%;
+  animation: sparkle 2s ease-in-out infinite 1.2s;
+}
+
+.star-decoration {
+  position: absolute;
+  color: #fbbf24;
+  animation: star-twinkle 1.5s ease-in-out infinite;
+}
+
+.star-1 {
+  top: -8px;
+  left: 20%;
+  animation-delay: 0s;
+}
+
+.star-2 {
+  top: -8px;
+  right: 20%;
+  animation-delay: 0.5s;
+}
+
+.star-3 {
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation-delay: 0.25s;
+}
+
+.award-badge {
+  animation: trophy-bounce 1.5s ease-in-out infinite;
+}
