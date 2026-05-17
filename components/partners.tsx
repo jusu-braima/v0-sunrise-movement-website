@@ -1,7 +1,7 @@
 "use client"
 
 import Image from "next/image"
-import { CheckCircle2, Shield, BarChart3, Globe, Heart, Award } from "lucide-react"
+import { CheckCircle2, Shield, BarChart3, Globe, Heart, Award, Star } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
@@ -55,13 +55,22 @@ export function Partners() {
             </div>
 
             {/* Award Highlight */}
-            <Card className="bg-gradient-to-r from-yellow-50 to-amber-50 dark:from-yellow-950/30 dark:to-amber-950/30 border-2 border-yellow-300 dark:border-yellow-700 rounded-2xl shadow-glow overflow-hidden relative">
-              {/* Shimmer effect */}
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-yellow-200/30 to-transparent animate-pulse" />
-              <CardContent className="p-5 flex flex-col sm:flex-row items-center gap-4 relative">
+            <Card className="award-card bg-gradient-to-r from-yellow-50 to-amber-50 dark:from-yellow-950/30 dark:to-amber-950/30 border-2 border-yellow-300 dark:border-yellow-700 rounded-2xl shadow-glow overflow-hidden relative">
+              {/* Sparkle effects */}
+              <div className="sparkle sparkle-1" />
+              <div className="sparkle sparkle-2" />
+              <div className="sparkle sparkle-3" />
+              <div className="sparkle sparkle-4" />
+              <div className="sparkle sparkle-5" />
+              
+              {/* Star decorations */}
+              <Star className="star-decoration star-1 w-4 h-4 fill-yellow-400" />
+              <Star className="star-decoration star-2 w-4 h-4 fill-yellow-400" />
+              <Star className="star-decoration star-3 w-5 h-5 fill-amber-400" />
+              
+              <CardContent className="p-5 flex flex-col sm:flex-row items-center gap-4 relative z-10">
                 <div className="flex gap-3 shrink-0">
-                  <div className="relative">
-                    <div className="absolute -inset-1 bg-gradient-to-br from-yellow-400 to-amber-500 rounded-2xl opacity-30" />
+                  <div className="award-image-glow relative">
                     <Image
                       src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.23.16-xGkx76DEL6KmcVZNYHQ2KOUVb4kuwe.jpeg"
                       alt="SDG 13 World Gold Award Certificate"
@@ -70,8 +79,7 @@ export function Partners() {
                       className="object-cover rounded-xl relative shadow-lg"
                     />
                   </div>
-                  <div className="relative">
-                    <div className="absolute -inset-1 bg-gradient-to-br from-yellow-400 to-amber-500 rounded-2xl opacity-30" />
+                  <div className="award-image-glow relative" style={{ animationDelay: '0.5s' }}>
                     <Image
                       src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.23.03-xwrmoAUZQHbTjZar0tUATJeD5noRNl.jpeg"
                       alt="SDG 13 World Gold Award Trophy"
@@ -82,7 +90,7 @@ export function Partners() {
                   </div>
                 </div>
                 <div className="flex-1 text-center sm:text-left">
-                  <Badge className="bg-gradient-to-r from-yellow-500 to-amber-500 text-white mb-1 shadow-sm">
+                  <Badge className="award-badge bg-gradient-to-r from-yellow-500 to-amber-500 text-white mb-1 shadow-sm">
                     <Award className="w-3 h-3 mr-1" />
                     Award Winner
                   </Badge>
