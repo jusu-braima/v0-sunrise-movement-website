@@ -24,8 +24,8 @@ const quickLinks = [
   {
     icon: Phone,
     title: "Call Us",
-    description: "+232 78 361 084",
-    href: "tel:+23278361084",
+    description: "+232 76 709 191",
+    href: "tel:+23276709191",
     color: "bg-green-500/10 text-green-600",
   },
   {
