@@ -301,6 +301,42 @@ const youthAdaptationImages = [
   },
 ]
 
+// COP30 Climate March Images
+const cop30ClimateMarchImages = [
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.24.34-jXDpoClwUUVY6UTOXgDbPjleYvT8Vs.jpeg",
+    alt: "Protesters holding Climate Justice = Social Justice signs during COP30 march",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.24.23-R6Km1lPxAR6G6WuLrOYzGmwNzfswm9.jpeg",
+    alt: "Youth marchers with signs including Once the Earth heats UP it will take many years to cool down",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.24.12-lxZfCQlgnA4Y13lVfq2Dk4Jc96Wtjv.jpeg",
+    alt: "March with YASDev banner - Climate Promises Must Be Kept COP30 Must Deliver",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.24.10-uFgMI07eaqrunbGTvYY6FKdb21tMRi.jpeg",
+    alt: "Protesters with signs We are tired with empty promises We need Action NOW",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.24.45-ItV7n3oEBtjiJDiOIpZuMYNMNxOz5m.jpeg",
+    alt: "Group of marchers holding Climate Justice = Social Justice signs under trees",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.24.42-ObyOlWHON6p9LAkY5lEPfTX91kELte.jpeg",
+    alt: "Two women smiling and holding Make Earth Cool Again sign",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.24.11-lNb5aspsu3WRCc5nw2quvLf9AAbuPD.jpeg",
+    alt: "Man holding There is no Planet B sign during climate march",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-04-26%20at%2004.24.02-eOJZ72xBRvJ33EwCSBStCfTuxm6GWZ.jpeg",
+    alt: "Large march with YASDev banner demanding climate action and accountability",
+  },
+]
+
 export function Programs() {
   return (
     <section id="programs" className="py-20 md:py-32 bg-gradient-to-b from-background via-secondary/20 to-background">
@@ -1060,6 +1096,82 @@ export function Programs() {
             <Button size="lg" asChild>
               <a href="#get-involved">
                 Join Our Policy Initiatives
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </a>
+            </Button>
+          </AnimateOnScroll>
+        </div>
+
+        {/* COP30 Climate March */}
+        <div className="mb-16 pt-16 border-t border-border">
+          <AnimateOnScroll animation="fade-up" className="text-center max-w-4xl mx-auto mb-12">
+            <Badge className="bg-rose-600 text-white mb-4">Climate Advocacy</Badge>
+            <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-4 text-balance">
+              COP30 Civil Society & Community Foot Walk
+            </h3>
+            <p className="text-lg text-muted-foreground">
+              Voices from the Frontlines: Bridging Broken Climate Promises through Action and Accountability
+            </p>
+          </AnimateOnScroll>
+
+          {/* Project Description - Text at Top */}
+          <AnimateOnScroll animation="fade-up" delay={100}>
+            <div className="max-w-4xl mx-auto mb-12">
+              <Card className="bg-card border-none shadow-lg">
+                <CardContent className="p-6">
+                  <p className="text-muted-foreground leading-relaxed">
+                    In partnership with Youth Alliance for Sustainable Development (YASDev), Network Movement for 
+                    Youth and Children&apos;s Welfare (NMYCW), and with support from ActionAid Sierra Leone, Sunrise 
+                    Movement Sierra Leone joined the Civil Society and Community COP30 Foot Walk in Freetown. Under 
+                    the theme &quot;Climate Promises Must Be Kept: Our Future Cannot Wait - COP30 Must Deliver!&quot;, 
+                    participants marched through the streets demanding climate accountability and urgent action. 
+                    Youth activists carried powerful messages including &quot;Climate Justice = Social Justice&quot;, 
+                    &quot;There is No Planet B&quot;, &quot;Make Earth Cool Again&quot;, and &quot;We Are Tired of Empty 
+                    Promises - We Need Action NOW&quot;. The march amplified the voices of those most affected by 
+                    climate change, calling on world leaders to honor their commitments and deliver meaningful 
+                    climate action at COP30.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+          </AnimateOnScroll>
+
+          {/* Images Below */}
+          <AnimateOnScroll animation="fade-up" delay={200}>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
+              {cop30ClimateMarchImages.slice(0, 4).map((img, index) => (
+                <div key={index} className="relative aspect-video rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+                  <Image
+                    src={img.src}
+                    alt={img.alt}
+                    fill
+                    className="object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+              ))}
+            </div>
+          </AnimateOnScroll>
+
+          <AnimateOnScroll animation="fade-up" delay={250}>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {cop30ClimateMarchImages.slice(4).map((img, index) => (
+                <div key={index} className="relative aspect-video rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+                  <Image
+                    src={img.src}
+                    alt={img.alt}
+                    fill
+                    className="object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+              ))}
+            </div>
+          </AnimateOnScroll>
+
+          {/* CTA */}
+          <AnimateOnScroll animation="fade-up" delay={300} className="text-center mt-12">
+            <Button size="lg" asChild>
+              <a href="#get-involved">
+                Join Our Climate Advocacy
                 <ArrowRight className="ml-2 h-4 w-4" />
               </a>
             </Button>
