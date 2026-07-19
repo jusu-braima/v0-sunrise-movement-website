@@ -379,7 +379,42 @@ const climateChangeWebinarImages = [
 
 // Eco Champion Project: Trash 2 Cash Images
 const ecoChampionImages: { src: string; alt: string }[] = [
-  // Images will be added here once provided
+  {
+    src: "/eco-champion/group-baskets.jpg",
+    alt: "Students gathered with color-coded Trash 2 Cash collection baskets outside their school",
+  },
+  {
+    src: "/eco-champion/waste-sorting-bins.jpg",
+    alt: "SM-SL facilitator demonstrating waste sorting with labeled Paper, Organic and Plastic bins",
+  },
+  {
+    src: "/eco-champion/team-gate.jpg",
+    alt: "Sunrise Movement Sierra Leone team members in safety vests at a participating school gate",
+  },
+  {
+    src: "/eco-champion/student-speaking-1.jpg",
+    alt: "A student leader speaking at the Eco Champion Project event",
+  },
+  {
+    src: "/eco-champion/student-speaking-2.jpg",
+    alt: "A student sharing ideas during the Eco Champion Project leadership session",
+  },
+  {
+    src: "/eco-champion/team-banner.jpg",
+    alt: "SM-SL team in front of the Eco Champion Project partner banner",
+  },
+  {
+    src: "/eco-champion/group-redemption.jpg",
+    alt: "Students and facilitators gathered for the Trash 2 Cash launch at a Makeni school",
+  },
+  {
+    src: "/eco-champion/student-presenting.jpg",
+    alt: "A student presenting alongside SM-SL youth volunteers in green vests",
+  },
+  {
+    src: "/eco-champion/volunteer-banner.jpg",
+    alt: "A youth volunteer in front of the Eco Champion Project Trash 2 Cash banner",
+  },
 ]
 
 export function Programs() {
