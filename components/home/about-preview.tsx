@@ -40,7 +40,8 @@ export function HomeAboutPreview() {
                     </div>
                     <h3 className="font-semibold text-foreground mb-2">Our Mission</h3>
                     <p className="text-sm text-muted-foreground">
-                      Empower communities to address climate change through education and action.
+                      Empower young people and communities to lead innovative solutions through education,
+                      collaboration, and community-driven action.
                     </p>
                   </CardContent>
                 </Card>
@@ -51,7 +52,8 @@ export function HomeAboutPreview() {
                     </div>
                     <h3 className="font-semibold text-foreground mb-2">Our Vision</h3>
                     <p className="text-sm text-muted-foreground">
-                      A climate-resilient Sierra Leone with equitable development for all.
+                      A world where people and communities lead sustainable solutions and people and nature thrive
+                      together.
                     </p>
                   </CardContent>
                 </Card>
