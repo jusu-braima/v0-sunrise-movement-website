@@ -377,6 +377,46 @@ const climateChangeWebinarImages = [
   },
 ]
 
+// Eco Champion Project: Trash 2 Cash Images
+const ecoChampionImages: { src: string; alt: string }[] = [
+  {
+    src: "/eco-champion/group-baskets.jpg",
+    alt: "Students gathered with color-coded Trash 2 Cash collection baskets outside their school",
+  },
+  {
+    src: "/eco-champion/waste-sorting-bins.jpg",
+    alt: "SM-SL facilitator demonstrating waste sorting with labeled Paper, Organic and Plastic bins",
+  },
+  {
+    src: "/eco-champion/team-gate.jpg",
+    alt: "Sunrise Movement Sierra Leone team members in safety vests at a participating school gate",
+  },
+  {
+    src: "/eco-champion/student-speaking-1.jpg",
+    alt: "A student leader speaking at the Eco Champion Project event",
+  },
+  {
+    src: "/eco-champion/student-speaking-2.jpg",
+    alt: "A student sharing ideas during the Eco Champion Project leadership session",
+  },
+  {
+    src: "/eco-champion/team-banner.jpg",
+    alt: "SM-SL team in front of the Eco Champion Project partner banner",
+  },
+  {
+    src: "/eco-champion/group-redemption.jpg",
+    alt: "Students and facilitators gathered for the Trash 2 Cash launch at a Makeni school",
+  },
+  {
+    src: "/eco-champion/student-presenting.jpg",
+    alt: "A student presenting alongside SM-SL youth volunteers in green vests",
+  },
+  {
+    src: "/eco-champion/volunteer-banner.jpg",
+    alt: "A youth volunteer in front of the Eco Champion Project Trash 2 Cash banner",
+  },
+]
+
 export function Programs() {
   return (
     <section id="programs" className="py-20 md:py-32 bg-gradient-to-b from-background via-secondary/20 to-background">
@@ -415,6 +455,161 @@ export function Programs() {
               </Card>
             </AnimateOnScroll>
           ))}
+        </div>
+
+        {/* Eco Champion Project: Trash 2 Cash */}
+        <div className="mb-16 pt-16 border-t border-border">
+          <AnimateOnScroll animation="fade-up" className="text-center max-w-4xl mx-auto mb-12">
+            <Badge className="bg-emerald-600 text-white mb-4">Waste Management</Badge>
+            <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-4 text-balance">
+              Eco Champion Project: Turning Waste into Opportunity in Sierra Leone
+            </h3>
+            <p className="text-lg text-muted-foreground">
+              Tackling plastic waste in schools and communities while empowering young people to become leaders of
+              environmental change
+            </p>
+          </AnimateOnScroll>
+
+          {/* Project Description - Text at Top */}
+          <AnimateOnScroll animation="fade-up" delay={100}>
+            <div className="max-w-4xl mx-auto mb-12">
+              <Card className="bg-card border-none shadow-lg mb-6">
+                <CardContent className="p-6">
+                  <p className="text-muted-foreground leading-relaxed mb-4">
+                    Sunrise Movement Sierra Leone (SM-SL) launched the Eco Champion Project: Trash 2 Cash to tackle the
+                    growing challenge of plastic waste in schools and communities while empowering young people to
+                    become leaders of environmental change.
+                  </p>
+                  <p className="text-muted-foreground leading-relaxed mb-4">
+                    Across Sierra Leone, poor waste management continues to contribute to environmental pollution,
+                    blocked drainage systems, flooding, and public health risks. At the same time, many young people
+                    lack meaningful opportunities to participate in addressing these challenges. The Eco Champion
+                    Project was designed to bridge this gap by transforming schools into centers of environmental
+                    stewardship, innovation, and youth leadership.
+                  </p>
+                  <p className="text-muted-foreground leading-relaxed mb-4">
+                    The initiative commenced in Makeni with a Teacher and Student Leadership Training Workshop, bringing
+                    together educators, student leaders from five participating schools, youth representatives, local
+                    authorities, and university students. The training strengthened participants&apos; knowledge of
+                    sustainable waste management, environmental leadership, climate responsibility, and practical
+                    approaches for driving change within their schools and communities.
+                  </p>
+                  <p className="text-muted-foreground leading-relaxed mb-3">
+                    <strong className="text-foreground">Through the project, SM-SL is supporting the establishment of:</strong>
+                  </p>
+                  <ul className="list-disc pl-6 mb-4 space-y-2 text-muted-foreground">
+                    <li>Student Green Clubs to promote peer-led environmental action and leadership.</li>
+                    <li>
+                      Waste Sorting Stations to improve waste segregation and responsible disposal practices within
+                      schools.
+                    </li>
+                    <li>
+                      Practical recycling and reuse initiatives, including eco-brick production, plant nurseries, school
+                      beautification activities, and other environmentally sustainable solutions.
+                    </li>
+                  </ul>
+                  <p className="text-muted-foreground leading-relaxed mb-4">
+                    The project is directly engaging 110 teachers and student leaders, equipping them with the
+                    knowledge, skills, and tools needed to champion sustainability within their schools and inspire
+                    positive environmental action across their communities.
+                  </p>
+                  <p className="text-muted-foreground leading-relaxed mb-4">
+                    Beyond improving sanitation and environmental awareness, the Eco Champion Project promotes a
+                    circular economy approach to waste management by demonstrating how plastic waste can be transformed
+                    into valuable resources. The initiative also encourages creativity, innovation, and entrepreneurship
+                    among young people, helping them view environmental challenges as opportunities for sustainable
+                    development.
+                  </p>
+                  <p className="text-muted-foreground leading-relaxed mb-4">
+                    The Eco Champion Project reflects Sunrise Movement Sierra Leone&apos;s broader commitment to youth
+                    empowerment, climate action, environmental sustainability, and community resilience. By combining
+                    environmental education with practical action, the initiative provides a scalable model for building
+                    cleaner schools, greener communities, and a more sustainable future for Sierra Leone.
+                  </p>
+                  <p className="text-muted-foreground leading-relaxed mb-4">
+                    As the project grows, Sunrise Movement Sierra Leone welcomes partnerships with schools, local
+                    authorities, development partners, private sector actors, and global stakeholders committed to
+                    advancing youth-led environmental solutions and sustainable development.
+                  </p>
+                  <p className="text-foreground font-medium leading-relaxed italic">
+                    Turning waste into opportunity. Empowering young people to lead change. Building a cleaner and more
+                    resilient Sierra Leone.
+                  </p>
+                  <div className="flex flex-wrap gap-3 mt-4">
+                    <Badge variant="outline" className="bg-emerald-50 text-emerald-700 border-emerald-200">
+                      SDG 11: Sustainable Cities & Communities
+                    </Badge>
+                    <Badge variant="outline" className="bg-green-50 text-green-700 border-green-200">
+                      SDG 12: Responsible Consumption
+                    </Badge>
+                    <Badge variant="outline" className="bg-blue-50 text-blue-700 border-blue-200">
+                      SDG 13: Climate Action
+                    </Badge>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Stats and Focus Areas Row */}
+              <div className="grid md:grid-cols-3 gap-4">
+                <Card className="bg-emerald-500/10 border-emerald-500/20">
+                  <CardContent className="p-4 text-center">
+                    <Users className="h-8 w-8 text-emerald-600 mx-auto mb-2" />
+                    <div className="text-2xl font-bold text-foreground">110</div>
+                    <p className="text-sm text-muted-foreground">Teachers & Student Leaders</p>
+                  </CardContent>
+                </Card>
+                <Card className="bg-green-500/10 border-green-500/20">
+                  <CardContent className="p-4 text-center">
+                    <GraduationCap className="h-8 w-8 text-green-600 mx-auto mb-2" />
+                    <div className="text-2xl font-bold text-foreground">5 Schools</div>
+                    <p className="text-sm text-muted-foreground">Participating in Makeni</p>
+                  </CardContent>
+                </Card>
+                <Card className="bg-card border border-border">
+                  <CardContent className="p-4">
+                    <p className="text-xs text-muted-foreground uppercase tracking-wider mb-2">Focus Areas</p>
+                    <div className="flex flex-wrap gap-2">
+                      <Badge variant="secondary" className="text-xs">Green Clubs</Badge>
+                      <Badge variant="secondary" className="text-xs">Waste Sorting</Badge>
+                      <Badge variant="secondary" className="text-xs">Eco-Bricks</Badge>
+                      <Badge variant="secondary" className="text-xs">Recycling</Badge>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+          </AnimateOnScroll>
+
+          {/* Images Below */}
+          {ecoChampionImages.length > 0 && (
+            <AnimateOnScroll animation="fade-up" delay={200}>
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                {ecoChampionImages.map((img, index) => (
+                  <div
+                    key={index}
+                    className="relative aspect-video rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow"
+                  >
+                    <Image
+                      src={img.src}
+                      alt={img.alt}
+                      fill
+                      className="object-cover hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                ))}
+              </div>
+            </AnimateOnScroll>
+          )}
+
+          {/* CTA */}
+          <AnimateOnScroll animation="fade-up" delay={300} className="text-center mt-12">
+            <Button size="lg" asChild>
+              <a href="#get-involved">
+                Partner With the Eco Champion Project
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </a>
+            </Button>
+          </AnimateOnScroll>
         </div>
 
         {/* Lalehun Solar Energy Initiative */}

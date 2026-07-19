@@ -138,9 +138,9 @@ export function About() {
                   <h3 className="text-2xl font-bold text-foreground">Our Mission</h3>
                 </div>
                 <p className="text-muted-foreground leading-relaxed">
-                  Empower young people and communities across Sierra Leone to address climate change, 
-                  expand clean energy access, promote sustainable agriculture, and strengthen environmental 
-                  justice through innovation, skills development, and accountable grassroots leadership.
+                  To empower young people and communities with the knowledge, skills, and opportunities to lead
+                  innovative solutions that advance sustainability, resilience, and inclusive development through
+                  education, collaboration, and community-driven action.
                 </p>
               </CardContent>
               {/* Decorative corner */}
@@ -159,8 +159,8 @@ export function About() {
                   <h3 className="text-2xl font-bold text-foreground">Our Vision</h3>
                 </div>
                 <p className="text-muted-foreground leading-relaxed">
-                  A climate-resilient Sierra Leone where youth leadership drives environmental stewardship, 
-                  sustainable livelihoods, equitable development, and inclusive access to energy and education.
+                  A world where young people and communities are empowered to lead sustainable solutions, build
+                  resilient societies, and create a future where people and nature thrive together.
                 </p>
               </CardContent>
               {/* Decorative corner */}
