@@ -159,7 +159,7 @@ export default function AboutPage() {
                   <MapPin className="h-7 w-7 text-primary" />
                 </div>
                 <div>
-                  <p className="text-2xl font-bold text-foreground">2</p>
+                  <p className="text-2xl font-bold text-foreground">5</p>
                   <p className="text-sm text-muted-foreground">Districts Active</p>
                 </div>
               </CardContent>
